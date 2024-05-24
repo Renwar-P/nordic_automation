@@ -27,12 +27,12 @@ vars
 /*
 global
 */
-*, *::before, *::after {
+/**, *::before, *::after {
     margin: 0;
     padding: 0;
     border: 0;
     box-sizing: border-box;
-}
+}*/
 
 *:focus {
     outline: none;
@@ -76,12 +76,11 @@ carousel
             --_item-height: calc(var(--carousel-item-height) * 0.75);
     }
 }
-
-@media only screen and (max-width: 32rem) {
+@media only screen and (max-width: 370px) {
     .carousel {
-            --_diameter: calc(var(--carousel-diameter) * 0.6);
-            --_item-width: calc(var(--carousel-item-width) * 0.6);
-            --_item-height: calc(var(--carousel-item-height) * 0.6);
+        --_diameter: calc(var(--carousel-diameter) * 0.4);
+        --_item-width: calc(var(--carousel-item-width) * 0.4);
+        --_item-height: calc(var(--carousel-item-height) * 0.4);
     }
 }
 
@@ -194,6 +193,13 @@ carousel
     box-shadow: 0 0 var(--carousel-item-glow-size) transparent;
     animation: carousel-item-rotation-reverse calc(var(--carousel-animation-duration) / 2) reverse linear infinite var(--_direction-animation-play-state);
     position: absolute;
+  
+}
+
+
+.carousel-item-wrapper .carousel-item {
+
+    display: block !important;
 }
 
 @keyframes carousel-item-rotation-reverse {
@@ -307,28 +313,11 @@ carousel
     transform: rotateY(359deg); /* Correct the mirroring */
 }
 
-
-.navbar {
-    background-color: #333;
-   
-}
-.navbar a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-.navbar a:hover {
-    background-color: #ddd;
-    color: black;
-}
 .active {
     background-color: #666;
 }
 /* Responsive styles */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 500px) {
     .navbar a {
         float: none;
         display: block;
@@ -340,6 +329,15 @@ carousel
         flex-direction: column;
 
     }
+
+
+    .logo {
+
+        width: 50px;
+        height: 40px;
+    }
+
+   
 }
 
 
@@ -372,17 +370,23 @@ carousel
         color: white; /* Set the color of the links to white */
         text-decoration: none; /* Remove underline */
         margin-bottom: 5px;
+        justify-content: space-between;
+        padding-left: 60px;
     }
 
     .footer .middle-div {
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        justify-content: left;
         padding: 5px;
         justify-content: space-evenly;
     }
 
-
+    .footer .right-div  {
+       
+        justify-content: center;
+        
+    }
 
     .footer .right-div i {
         display: flex;
@@ -397,10 +401,58 @@ carousel
         text-align: center;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        
     }
 
     .footer i, a{
 
         color: white;
+        
     }
+
+
+    .bi-envelope::before {
+        content: "\f32f";
+        margin-right: 10px;
+    }
+
+    .bi-telephone::before {
+        content: "\f5c1";
+        margin-right: 10px;
+    }
+
+
+    .logo {
+
+        width: 150px;
+        height: 100px;
+    }
+
+
+    .bg-light {
+        --bs-bg-opacity: 1;
+        background-color: rgb(248 249 250 / 0%) !important;
+    }
+
+
+    .navbar-brand img {
+        height: 80px;
+        width: auto;
+    }
+
+    .navbar-nav {
+        margin: auto;
+    }
+
+    .navbar-nav .nav-link {
+        color: white !important;
+    }
+
+.navbar-icons img {
+
+
+    width: 25px;
+    height: 20px;
+}
+   
+    
