@@ -66,6 +66,7 @@ carousel
     perspective-origin: var(--carousel-3d-perspective-origin);
     width: var(--_diameter);
     height: var(--_diameter);
+    background: linear-gradient(0deg, #03071c 0%, #060b2e 100%);
     /* border: 1px solid #ffffff; */
 }
 
@@ -76,11 +77,17 @@ carousel
             --_item-height: calc(var(--carousel-item-height) * 0.75);
     }
 }
-@media only screen and (max-width: 370px) {
+@media only screen and (max-width: 400px) {
     .carousel {
         --_diameter: calc(var(--carousel-diameter) * 0.4);
         --_item-width: calc(var(--carousel-item-width) * 0.4);
         --_item-height: calc(var(--carousel-item-height) * 0.4);
+    }
+
+    .logo.img-fluid
+    {
+
+        margin-right: 50px;
     }
 }
 
@@ -316,29 +323,6 @@ carousel
 .active {
     background-color: #666;
 }
-/* Responsive styles */
-@media screen and (max-width: 500px) {
-    .navbar a {
-        float: none;
-        display: block;
-        text-align: left;
-    }
-
-    .footer {
-        display: flex;
-        flex-direction: column;
-
-    }
-
-
-    .logo {
-
-        width: 50px;
-        height: 40px;
-    }
-
-   
-}
 
 
 
@@ -346,88 +330,63 @@ carousel
     background: linear-gradient(0deg, #03071c 0%, #060b2e 100%);
     color: white;
     padding: 40px 20px;
-    height: 300px;
-    
-        background-color: #f8f9fa;
-      
-        display: flex;
-        justify-content: space-between;
-    }
+    width: 100%;
+}
 
-    /* Styling for individual divs */
-  
+.footer .container-fluid {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+}
 
-    /* Optional: Add some borders for clarity */
-    
-    
-   
+.footer .left-div {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    color: white;
+    margin-bottom: 5px;
+    justify-content: space-between;
+    padding-left: 60px;
+}
 
-    /* Styling for individual divs */
-    .footer .left-div {
-        display: flex;
-        flex-direction: column;
-        text-align: left;
-        color: white; /* Set the color of the links to white */
-        text-decoration: none; /* Remove underline */
-        margin-bottom: 5px;
-        justify-content: space-between;
-        padding-left: 60px;
-    }
+.footer .middle-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 5px;
+}
 
-    .footer .middle-div {
-        display: flex;
-        flex-direction: row;
-        justify-content: left;
-        padding: 5px;
-        justify-content: space-evenly;
-    }
+.footer .right-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-    .footer .right-div  {
-       
-        justify-content: center;
-        
-    }
+.footer .right-div img {
+    max-width: 150px;
+    height: auto;
+}
 
-    .footer .right-div i {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        padding: 5px;
-    }
+.footer i, .footer a {
+    color: white;
+}
 
-    .footer div {
-        flex: 1;
-        padding: 10px;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        
-    }
+.footer i::before {
+    margin-right: 10px;
+}
 
-    .footer i, a{
+.bi-envelope::before {
+    content: "\f32f";
+}
 
-        color: white;
-        
-    }
+.bi-telephone::before {
+    content: "\f5c1";
+}
 
-
-    .bi-envelope::before {
-        content: "\f32f";
-        margin-right: 10px;
-    }
-
-    .bi-telephone::before {
-        content: "\f5c1";
-        margin-right: 10px;
-    }
-
-
-    .logo {
-
-        width: 150px;
-        height: 100px;
-    }
-
+.logo {
+    width: 150px;
+    height: auto;
+}
 
     .bg-light {
         --bs-bg-opacity: 1;
@@ -455,4 +414,33 @@ carousel
     height: 20px;
 }
    
-    
+.video-background {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.video-background video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    text-align: center;
+    color: white;
+}
+
+.text-overlay h1 {
+    font-size: 3rem;
+    /* Additional styling for your text */
+}
