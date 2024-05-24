@@ -1,85 +1,123 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="//cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-    <header>
-        <h1>Min Hemsida</h1>
-    </header>
+    <!-- Navbar -->
+   
+    <nav class="navbar sticky-top bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Default</a>
+        </div>
+      </nav>
 
-    <main>
-        <div class="carousel">
-            <div class="carousel-control-button left"><input type="radio" name="carousel-control-input"></div>
-            <div class="carousel-control-button right"><input type="radio" name="carousel-control-input" checked></div>
-            <div class="carousel-rotation-direction">
-                <ul class="carousel-item-wrapper" style="--_num-elements: 11">
-                    <li class="carousel-item" style="--_index: 1; --_image-url: url('images/blue_head.png')">
-                        <a href="https://unsplash.com/de/fotos/ein-hohes-gebaude-mit-einer-uhr-an-der-seite-cI09n4yMIYc" target="_blank">
-                            <span class="carousel-title">PROJEKT</span>
-                        </a>
-                    </li>
-                    <li class="carousel-item" style="--_index: 2; --_image-url: url('images/green_head.png')">
-                        <a href="https://unsplash.com/de/fotos/ein-hohes-gebaude-mit-einer-uhr-an-der-seite-cI09n4yMIYc" target="_blank">
-                            <span class="carousel-title">KOD</span>
-                        </a>
-                    </li>
-                    <li class="carousel-item" style="--_index: 3; --_image-url: url('images/orange_head.png')">
-                        <a href="https://unsplash.com/de/fotos/ein-sehr-hohes-gebaude-mit-vielen-fenstern-ivYgEOo7MnQ" target="_blank">
-                            <span class="carousel-title">SHOP</span>
-                        </a>
-                    </li>
-                    <li class="carousel-item" style="--_index: 4; --_image-url: url('images/blue_head.png')">
-                        <a href="https://unsplash.com/de/fotos/ein-hohes-gebaude-mit-einer-uhr-an-der-seite-cI09n4yMIYc" target="_blank">
-                            <span class="carousel-title">PROJEKT</span>
-                        </a>
-                    </li>
-                    <li class="carousel-item" style="--_index: 5; --_image-url: url('images/green_head.png')">
-                        <a href="https://unsplash.com/de/fotos/ein-hohes-gebaude-mit-einer-uhr-an-der-seite-cI09n4yMIYc" target="_blank">
-                            <span class="carousel-title">KOD</span>
-                        </a>
-                    </li>
-                    <li class="carousel-item" style="--_index: 6; --_image-url: url('images/orange_head.png')">
-                        <a href="https://unsplash.com/de/fotos/ein-hohes-gebaude-mit-einer-uhr-an-der-seite-cI09n4yMIYc" target="_blank">
-                            <span class="carousel-title">SHOP</span>
-                        </a>
-                    </li>
-                    <li class="carousel-item" style="--_index: 7; --_image-url: url('images/blue_head.png')">
-                        <a href="https://unsplash.com/de/fotos/nahaufnahme-des-weissen-gebaudes-tKnda8e9ejM" target="_blank">
-                            <span class="carousel-title">PROJEKT</span>
-                        </a>
-                    </li>
-                    <li class="carousel-item" style="--_index: 8; --_image-url: url('images/green_head.png')">
-                        <a href="https://unsplash.com/de/fotos/ein-hohes-gebaude-mit-zwei-balkonen-und-einer-uhr-sYg7bcIodC8" target="_blank">
-                            <span class="carousel-title">KOD</span>
-                        </a>
-                    </li>
-                    <li class="carousel-item" style="--_index: 9; --_image-url: url('images/orange_head.png')">
-                        <a href="https://unsplash.com/de/fotos/eine-nahaufnahme-der-seite-eines-gebaudes-VvhIUx1lITA" target="_blank">
-                            <span class="carousel-title">SHOP</span>
-                        </a>
-                    </li>
-                    <li class="carousel-item" style="--_index: 10; --_image-url: url('images/blue_head.png')">
-                        <a href="https://unsplash.com/de/fotos/eine-wand-aus-metallquadraten-und-quadraten-a_XIDnN6C0Y" target="_blank">
-                            <span class="carousel-title">PROJEKT</span>
-                        </a>
-                    </li>
-                    <li class="carousel-item" style="--_index: 11; --_image-url: url('images/orange_head.png')">
-                        <a href="https://unsplash.com/de/fotos/eine-nahaufnahme-einer-metallstruktur-mit-einem-himmelshintergrund-9u9t6gP8R-s" target="_blank">
-                            <span class="carousel-title">SHOP</span>
-                        </a>
-                    </li>
-                    <li class="carousel-ground"></li>
-                </ul>
+    <!-- Content -->
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col">
+                <div class="carousel">
+                    <div class="carousel-control-button left"><input type="radio" name="carousel-control-input"></div>
+                    <div class="carousel-control-button right"><input type="radio" name="carousel-control-input" checked></div>
+                    <div class="carousel-rotation-direction">
+                        <ul class="carousel-item-wrapper" style="--_num-elements: 11">
+                            <li class="carousel-item" style="--_index: 1; --_image-url: url('images/blue_head.png')">
+                                <a href="https://unsplash.com/de/fotos/ein-hohes-gebaude-mit-einer-uhr-an-der-seite-cI09n4yMIYc" target="_blank">
+                                    <span class="carousel-title">PROJEKT</span>
+                                </a>
+                            </li>
+                            <li class="carousel-item" style="--_index: 2; --_image-url: url('images/green_head.png')">
+                                <a href="https://unsplash.com/de/fotos/ein-hohes-gebaude-mit-einer-uhr-an-der-seite-cI09n4yMIYc" target="_blank">
+                                    <span class="carousel-title">KOD</span>
+                                </a>
+                            </li>
+                            <li class="carousel-item" style="--_index: 3; --_image-url: url('images/orange_head.png')">
+                                <a href="https://unsplash.com/de/fotos/ein-sehr-hohes-gebaude-mit-vielen-fenstern-ivYgEOo7MnQ" target="_blank">
+                                    <span class="carousel-title">SHOP</span>
+                                </a>
+                            </li>
+                            <li class="carousel-item" style="--_index: 4; --_image-url: url('images/blue_head.png')">
+                                <a href="https://unsplash.com/de/fotos/ein-hohes-gebaude-mit-einer-uhr-an-der-seite-cI09n4yMIYc" target="_blank">
+                                    <span class="carousel-title">PROJEKT</span>
+                                </a>
+                            </li>
+                            <li class="carousel-item" style="--_index: 5; --_image-url: url('images/green_head.png')">
+                                <a href="https://unsplash.com/de/fotos/ein-hohes-gebaude-mit-einer-uhr-an-der-seite-cI09n4yMIYc" target="_blank">
+                                    <span class="carousel-title">KOD</span>
+                                </a>
+                            </li>
+                            <li class="carousel-item" style="--_index: 6; --_image-url: url('images/orange_head.png')">
+                                <a href="https://unsplash.com/de/fotos/ein-hohes-gebaude-mit-einer-uhr-an-der-seite-cI09n4yMIYc" target="_blank">
+                                    <span class="carousel-title">SHOP</span>
+                                </a>
+                            </li>
+                            <li class="carousel-item" style="--_index: 7; --_image-url: url('images/blue_head.png')">
+                                <a href="https://unsplash.com/de/fotos/nahaufnahme-des-weissen-gebaudes-tKnda8e9ejM" target="_blank">
+                                    <span class="carousel-title">PROJEKT</span>
+                                </a>
+                            </li>
+                            <li class="carousel-item" style="--_index: 8; --_image-url: url('images/green_head.png')">
+                                <a href="https://unsplash.com/de/fotos/ein-hohes-gebaude-mit-zwei-balkonen-und-einer-uhr-sYg7bcIodC8" target="_blank">
+                                    <span class="carousel-title">KOD</span>
+                                </a>
+                            </li>
+                            <li class="carousel-item" style="--_index: 9; --_image-url: url('images/orange_head.png')">
+                                <a href="https://unsplash.com/de/fotos/eine-nahaufnahme-der-seite-eines-gebaudes-VvhIUx1lITA" target="_blank">
+                                    <span class="carousel-title">SHOP</span>
+                                </a>
+                            </li>
+                            <li class="carousel-item" style="--_index: 10; --_image-url: url('images/blue_head.png')">
+                                <a href="https://unsplash.com/de/fotos/eine-wand-aus-metallquadraten-und-quadraten-a_XIDnN6C0Y" target="_blank">
+                                    <span class="carousel-title">PROJEKT</span>
+                                </a>
+                            </li>
+                            <li class="carousel-item" style="--_index: 11; --_image-url: url('images/orange_head.png')">
+                                <a href="https://unsplash.com/de/fotos/eine-nahaufnahme-einer-metallstruktur-mit-einem-himmelshintergrund-9u9t6gP8R-s" target="_blank">
+                                    <span class="carousel-title">SHOP</span>
+                                </a>
+                            </li>
+                            <li class="carousel-ground"></li>
+                        </ul>
+                    </div>
+                </div>
+
+
             </div>
         </div>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Min Hemsida</p>
+        
+    </div>
+    <footer class="footer">
+        <div class="left-div">
+            <!-- Email link -->
+            <i class="bi bi-envelope"><a href="mailto:inquiry@nordicautomation.se">inquiry@nordicautomation.se</a></i>
+            <!-- Phone link -->
+            <i class="bi bi-telephone"><a href="tel:+4687103331">+ 46 8 71 03331</a></i>
+            <!-- Additional info -->
+            <span>Nordic Automation AB</span>
+            <span>Moms: SE559353937101</span>
+            <span>Stockholm</span>
+            <span>GDPR</span>
+        </div>
+        <div class="middle-div">
+            <a href="https://x.com/N_Automation_" target="_blank"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://www.instagram.com/nordicautomation/" target="_blank"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/nordic-automation/posts/?feedView=all" target="_blank"><i class="bi bi-linkedin"></i></a>
+        </div>
+        <div class="right-div"> <img src="images/nordicautomationlogotyptm_logga.png" style="width: 150px; height: 150px;" alt=""></div>
     </footer>
+    
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
 </body>
 </html>
