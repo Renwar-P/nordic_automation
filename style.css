@@ -414,19 +414,31 @@ carousel
     height: 20px;
 }
    
-.video-background {
+.container-fluid {
     position: relative;
     width: 100%;
-    height: 100vh;
     overflow: hidden;
 }
 
-.video-background video {
+.video-background, .image-background {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* or any height you need */
+}
+
+.background-media {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Ensure the media is behind the text */
+}
+
+.background-image {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
     object-fit: cover;
 }
 
@@ -441,6 +453,20 @@ carousel
 }
 
 .text-overlay h1 {
+    font-size: 3rem;
+    /* Additional styling for your text */
+}
+.text-overlay-about-us {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    z-index: 1;
+    text-align: left;
+    color: white;
+}
+
+.text-overlay-about-us h1 {
     font-size: 3rem;
     /* Additional styling for your text */
 }
