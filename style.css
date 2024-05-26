@@ -66,7 +66,7 @@ carousel
     perspective-origin: var(--carousel-3d-perspective-origin);
     width: var(--_diameter);
     height: var(--_diameter);
-    background: linear-gradient(0deg, #03071c 0%, #060b2e 100%);
+    background:#000000;
     /* border: 1px solid #ffffff; */
 }
 
@@ -425,7 +425,7 @@ carousel
     width: 100%;
     height: 100vh; /* or any height you need */
 }
-
+/* Background media styles */
 .background-media {
     position: absolute;
     top: 0;
@@ -436,12 +436,14 @@ carousel
     z-index: -1; /* Ensure the media is behind the text */
 }
 
+/* Background image styles */
 .background-image {
     width: 100%;
     height: auto; /* Maintain aspect ratio */
     object-fit: cover;
 }
 
+/* General text overlay styles */
 .text-overlay {
     position: absolute;
     top: 50%;
@@ -452,10 +454,26 @@ carousel
     color: white;
 }
 
-.text-overlay h1 {
-    font-size: 3rem;
-    /* Additional styling for your text */
+/* Specific text overlay styles for robots section */
+.text-overlay-robots h1,
+.text-overlay-robots p {
+    margin-left: 300px;
+    z-index: 1;
+    text-align: center;
+    color: white;
+    width: 200px;
 }
+
+.text-overlay-robots h1 {
+    font-size: 3rem;
+    margin-top: 100px;
+}
+
+.text-overlay-robots p {
+    font-size: 1rem;
+}
+
+/* Specific text overlay styles for about us section */
 .text-overlay-about-us {
     position: absolute;
     top: 50%;
@@ -471,3 +489,47 @@ carousel
     /* Additional styling for your text */
 }
 
+/* Image background container styles */
+.text-overlay-ai_background {
+    position: absolute;
+    top: 50%;
+    left: 75%; /* Position on the right */
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white; /* Adjust as needed */
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5); /* Optional: Adds a background to the text */
+    border-radius: 10px; /* Optional: Adds rounded corners */
+}
+
+/* Responsive typography for AI background section */
+.text-overlay-ai_background h1 {
+    font-size: 3vw; /* Responsive font size */
+}
+
+.text-overlay-ai_background p {
+    font-size: 1.5vw; /* Responsive font size */
+}
+
+/* Media query to center the text on smaller screens */
+@media (max-width: 768px) {
+    .text-overlay-ai_background {
+        left: 50%; /* Center horizontally */
+    }
+}
+
+.carousel {
+   
+ 
+    justify-content: center;
+}
+
+.carousel-item-wrapper {
+    list-style: none;
+    padding: 0;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px; /* Space between header and carousel */
+}
