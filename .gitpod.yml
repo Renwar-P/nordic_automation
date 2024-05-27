@@ -3,8 +3,7 @@ image:
 tasks:
   - init: . ${GITPOD_REPO_ROOT}/.vscode/init_tasks.sh
     command: /home/gitpod/.pg_ctl/bin/pg_start > /dev/null
-  - command: . ${GITPOD_REPO_ROOT}/.vscode/uptime.sh &
-
+  - command: node server.js
 
 vscode:
   extensions:
@@ -17,8 +16,6 @@ vscode:
     - ms-toolsai.jupyter-keymap
     - ms-toolsai.jupyter-renderers
 
-
 ports:
   - port: 8080
     onOpen: open-preview
-
