@@ -477,15 +477,23 @@ carousel
 .text-overlay-about-us {
     position: absolute;
     top: 50%;
-    left: 10%;
+    left: 5%;
+    right: 50%;
     transform: translateY(-50%);
     z-index: 1;
     text-align: left;
     color: white;
 }
 
+.text-overlay-about-us p {
+  
+    text-align: left;
+    color: white;
+    font-size: 1 rem;
+}
+
 .text-overlay-about-us h1 {
-    font-size: 3rem;
+    font-size: 4rem;
     /* Additional styling for your text */
 }
 
@@ -498,23 +506,40 @@ carousel
     text-align: center;
     color: white; /* Adjust as needed */
     padding: 20px;
-    background: rgba(0, 0, 0, 0.5); /* Optional: Adds a background to the text */
-    border-radius: 10px; /* Optional: Adds rounded corners */
+
 }
 
 /* Responsive typography for AI background section */
 .text-overlay-ai_background h1 {
-    font-size: 3vw; /* Responsive font size */
+    font-size: 5vw; /* Responsive font size */
 }
 
 .text-overlay-ai_background p {
-    font-size: 1.5vw; /* Responsive font size */
+    font-size: 2vw; /* Responsive font size */
 }
 
 /* Media query to center the text on smaller screens */
 @media (max-width: 768px) {
     .text-overlay-ai_background {
         left: 50%; /* Center horizontally */
+        
+    }
+    .text-overlay-ai_background p {
+
+        font-size: 7vw;
+    }
+
+    .text-overlay-ai_background h1 {
+        font-size: 10vw; /* Responsive font size */
+    }
+
+    .text-overlay-about-us {
+       
+        right: 30%;
+        transform: translateY(-50%);
+        z-index: 1;
+        text-align: left;
+        color: white;
     }
 }
 
