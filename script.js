@@ -35,3 +35,37 @@ document.addEventListener('DOMContentLoaded', () => {
     // Start the video
     video.play();
 });
+
+
+
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    const titleDivs = document.querySelectorAll('.title-div');
+    const forms = document.querySelectorAll('.form-div');
+
+    titleDivs.forEach(div => {
+        div.addEventListener('click', () => {
+            forms.forEach(form => form.style.display = 'none');
+            document.querySelector(div.getAttribute('data-target')).style.display = 'block';
+        });
+    });
+
+    const sendEmail = (formId) => {
+        const form = document.getElementById(formId);
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+                .then(() => {
+                    alert('Email sent successfully!');
+                }, (error) => {
+                    alert('Failed to send email. Error: ' + JSON.stringify(error));
+                });
+        });
+    };
+
+    sendEmail('form1-content');
+    sendEmail('form2-content');
+    sendEmail('form3-content');
+    sendEmail('form4-content');
+});

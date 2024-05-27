@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Reveal on Click</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .shop-first-form {
+            cursor: pointer;
+            padding: 20px;
+            text-align: center;
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            margin: 10px 0;
+        }
+
+        .form-container {
+            display: none;
+            padding: 20px;
+            border: 1px solid #dee2e6;
+            background-color: #ffffff;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" style="padding: 0 15%;">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-10">
+                <div class="shop-first-form" onclick="toggleForm('form1')">Title 1</div>
+                <div id="form1" class="form-container">
+                    <form id="form1-inner" action="https://formsubmit.co/renwar_86@hotmail.com" method="POST">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="question1">Question 1</label>
+                            <input type="text" class="form-control" id="question1" name="question1" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="question2">Question 2</label>
+                            <input type="text" class="form-control" id="question2" name="question2" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleForm(formId) {
+            var form = document.getElementById(formId);
+            if (form.style.display === "none" || form.style.display === "") {
+                form.style.display = "block";
+            } else {
+                form.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
