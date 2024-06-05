@@ -85,83 +85,66 @@
    
                
 
-
-   <div class="container-fluid">
-    <div class="row">
-        <!-- Carousel Div -->
-        <div class="col-lg-8 col-md-8 col-sm-12 carousel">
-            <div class="carousel-control-button left"><input type="radio" name="carousel-control-input"></div>
-            <div class="carousel-control-button right"><input type="radio" name="carousel-control-input" checked></div>
-            <div class="carousel-rotation-direction">
-                <ul class="carousel-item-wrapper" style="--_num-elements: 11">
-                    <li class="carousel-item" style="--_index: 1; --_image-url: url('images/blue_head.png')">
-                        <a href="https://unsplash.com/de/fotos/ein-hohes-gebaude-mit-einer-uhr-an-der-seite-cI09n4yMIYc" target="_blank">
-                            <span class="carousel-title">PROJEKT</span>
-                        </a>
-                    </li>
-                    <li class="carousel-item" style="--_index: 2; --_image-url: url('images/green_head.png')">
-                        <a href="https://unsplash.com/de/fotos/ein-hohes-gebaude-mit-einer-uhr-an-der-seite-cI09n4yMIYc" target="_blank">
-                            <span class="carousel-title">KOD</span>
-                        </a>
-                    </li>
-                    <li class="carousel-item" style="--_index: 3; --_image-url: url('images/orange_head.png')">
-                        <a href="shop.html" target="_blank">
-                            <span class="carousel-title">SHOP</span>
-                        </a>
-                    </li>
-                    <li class="carousel-item" style="--_index: 4; --_image-url: url('images/blue_head.png')">
-                        <a href="https://unsplash.com/de/fotos/ein-hohes-gebaude-mit-einer-uhr-an-der-seite-cI09n4yMIYc" target="_blank">
-                            <span class="carousel-title">PROJEKT</span>
-                        </a>
-                    </li>
-                    <li class="carousel-item" style="--_index: 5; --_image-url: url('images/green_head.png')">
-                        <a href="https://unsplash.com/de/fotos/ein-hohes-gebaude-mit-einer-uhr-an-der-seite-cI09n4yMIYc" target="_blank">
-                            <span class="carousel-title">KOD</span>
-                        </a>
-                    </li>
-                    <li class="carousel-item" style="--_index: 6; --_image-url: url('images/orange_head.png')">
-                        <a href="shop.html" target="_blank">
-                            <span class="carousel-title">SHOP</span>
-                        </a>
-                    </li>
-                    <li class="carousel-item" style="--_index: 7; --_image-url: url('images/blue_head.png')">
-                        <a href="https://unsplash.com/de/fotos/nahaufnahme-des-weissen-gebaudes-tKnda8e9ejM" target="_blank">
-                            <span class="carousel-title">PROJEKT</span>
-                        </a>
-                    </li>
-                    <li class="carousel-item" style="--_index: 8; --_image-url: url('images/green_head.png')">
-                        <a href="https://unsplash.com/de/fotos/ein-hohes-gebaude-mit-zwei-balkonen-und-einer-uhr-sYg7bcIodC8" target="_blank">
-                            <span class="carousel-title">KOD</span>
-                        </a>
-                    </li>
-                    <li class="carousel-item" style="--_index: 9; --_image-url: url('images/orange_head.png')">
-                        <a href="shop.html" target="_blank">
-                            <span class="carousel-title">SHOP</span>
-                        </a>
-                    </li>
-                    <li class="carousel-item" style="--_index: 10; --_image-url: url('images/blue_head.png')">
-                        <a href="https://unsplash.com/de/fotos/eine-wand-aus-metallquadraten-und-quadraten-a_XIDnN6C0Y" target="_blank">
-                            <span class="carousel-title">PROJEKT</span>
-                        </a>
-                    </li>
-                    <li class="carousel-item" style="--_index: 11; --_image-url: url('images/orange_head.png')">
-                        <a href="shop.html" target="_blank">
-                            <span class="carousel-title">SHOP</span>
-                        </a>
-                    </li>
-                    <li class="carousel-ground"></li>
-                </ul>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Carousel Div -->
+            <div class="col-lg-8 col-md-8 col-sm-12">
+                <div id="uniqueCarouselIndicators" class="carousel slide unique-carousel" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#uniqueCarouselIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#uniqueCarouselIndicators" data-slide-to="1"></li>
+                        <li data-target="#uniqueCarouselIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <a href="https://unsplash.com/de/fotos/ein-hohes-gebaude-mit-einer-uhr-an-der-seite-cI09n4yMIYc" target="_blank">
+                                <img src="images/blue_head.png" class="d-block w-100" alt="First Slide">
+                                <div class="carousel-caption d-md-block">
+                                    <h5>PROJEKT</h5>
+                                    <p>Description for the first slide.</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="https://unsplash.com/de/fotos/ein-hohes-gebaude-mit-einer-uhr-an-der-seite-cI09n4yMIYc" target="_blank">
+                                <img src="images/green_head.png" class="d-block w-100" alt="Second Slide">
+                                <div class="carousel-caption d-md-block">
+                                    <h5>KOD</h5>
+                                    <p>Description for the second slide.</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="shop.html" target="_blank">
+                                <img src="images/orange_head.png" class="d-block w-100" alt="Third Slide">
+                                <div class="carousel-caption d-md-block">
+                                    <h5>SHOP</h5>
+                                    <p>Description for the third slide.</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#uniqueCarouselIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#uniqueCarouselIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
             </div>
-        </div>
-        <!-- Text Div -->
-        <div class="col-lg-4 col-md-4 d-none d-md-block text-content">
-            <div class="text-overlay-robots">
-                <h1>Your Text Here</h1>
-                <p>This is some descriptive text. This section will be hidden on small screens.</p>
+    
+            <!-- Text Div -->
+            <div class="col-lg-4 col-md-4 d-none d-md-block text-content">
+                <div class="text-overlay-robots">
+                    <h1>Your Text Here</h1>
+                    <p>This is some descriptive text. This section will be hidden on small screens.</p>
+                </div>
             </div>
         </div>
     </div>
-</div>    
+    
 
 
 
@@ -205,6 +188,9 @@
     
     
     <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
