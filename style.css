@@ -93,7 +93,17 @@ carousel
 
 
 .footer {
-    background: linear-gradient(0deg, #03071c 0%, #060b2e 100%);
+    background: 
+    linear-gradient(0deg, 
+        rgba(6, 11, 46, 1) 0%, 
+        rgba(5, 26, 134, 1) 50%, 
+        rgba(6, 11, 46, 1) 100%),
+    radial-gradient(circle at top, transparent, rgba(6, 11, 46, 0.5)), 
+    radial-gradient(circle at bottom, transparent, rgba(6, 11, 46, 0.5)),
+    radial-gradient(circle at left, transparent, rgba(6, 11, 46, 0.5)),
+    radial-gradient(circle at right, transparent, rgba(6, 11, 46, 0.5));
+background-size: cover;
+background-blend-mode: overlay;
     color: white;
     padding: 40px 20px;
     width: 100%;
@@ -269,7 +279,7 @@ carousel
     top: 50%;
     left: 75%; /* Position on the right */
     transform: translate(-50%, -50%);
-    text-align: center;
+    text-align: right;
     color: white; /* Adjust as needed */
     padding: 20px;
 
@@ -287,7 +297,7 @@ carousel
 /* Media query to center the text on smaller screens */
 @media (max-width: 768px) {
     .text-overlay-ai_background {
-        left: 50%; /* Center horizontally */
+        left: 70%; /* Center horizontally */
         
     }
     .text-overlay-ai_background p {
@@ -442,4 +452,11 @@ background-blend-mode: overlay;
     radial-gradient(circle at right, transparent, rgba(6, 11, 46, 0.5));
 background-size: cover;
 background-blend-mode: overlay;
+}
+
+
+#robot_section {
+
+
+    background-color: #000000;
 }
