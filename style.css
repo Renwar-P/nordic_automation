@@ -401,17 +401,45 @@ position: relative !important;
 #blue_head {
 
 
-    background: linear-gradient(0deg, #051a86 0%, #060b2e 100%);
+    background: 
+    linear-gradient(0deg, 
+        rgba(6, 11, 46, 1) 0%, 
+        rgba(5, 26, 134, 1) 50%, 
+        rgba(6, 11, 46, 1) 100%),
+    radial-gradient(circle at top, transparent, rgba(6, 11, 46, 0.5)), 
+    radial-gradient(circle at bottom, transparent, rgba(6, 11, 46, 0.5)),
+    radial-gradient(circle at left, transparent, rgba(6, 11, 46, 0.5)),
+    radial-gradient(circle at right, transparent, rgba(6, 11, 46, 0.5));
+background-size: cover;
+background-blend-mode: overlay;
 }
 
 #green_head {
 
-
-    background: linear-gradient(0deg, #159044 0%, #060b2e 100%);
+    background: 
+    linear-gradient(0deg, 
+        rgba(6, 11, 46, 1) 0%, 
+        rgba(21, 144, 68, 1) 50%, 
+        rgba(6, 11, 46, 1) 100%),
+    radial-gradient(circle at top, transparent, rgba(6, 11, 46, 0.5)), 
+    radial-gradient(circle at bottom, transparent, rgba(6, 11, 46, 0.5)),
+    radial-gradient(circle at left, transparent, rgba(6, 11, 46, 0.5)),
+    radial-gradient(circle at right, transparent, rgba(6, 11, 46, 0.5));
+background-size: cover;
+background-blend-mode: overlay;
 }
 
 #orange_head {
 
-
-    background: linear-gradient(0deg, #b96505 0%, #060b2e 100%);
+    background: 
+    linear-gradient(0deg, 
+        rgba(6, 11, 46, 1) 0%, 
+        rgba(185, 101, 5, 1) 50%, 
+        rgba(6, 11, 46, 1) 100%),
+    radial-gradient(circle at top, transparent, rgba(6, 11, 46, 0.5)), 
+    radial-gradient(circle at bottom, transparent, rgba(6, 11, 46, 0.5)),
+    radial-gradient(circle at left, transparent, rgba(6, 11, 46, 0.5)),
+    radial-gradient(circle at right, transparent, rgba(6, 11, 46, 0.5));
+background-size: cover;
+background-blend-mode: overlay;
 }
