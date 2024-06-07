@@ -346,6 +346,7 @@ border-color: #fff;
     display: block !important;
     background-color: rgba(0, 0, 0, 0.5);
     padding: 0.5rem;
+    margin-bottom: -25px;
     border-radius: 0.5rem;
 }
 .unique-carousel .carousel-caption p {
@@ -386,4 +387,31 @@ border-color: #fff;
         margin-top: 10px;
     }
 
+}
+
+
+
+.carousel-indicators {
+
+
+position: relative !important; 
+}
+
+
+#blue_head {
+
+
+    background: linear-gradient(0deg, #051a86 0%, #060b2e 100%);
+}
+
+#green_head {
+
+
+    background: linear-gradient(0deg, #159044 0%, #060b2e 100%);
+}
+
+#orange_head {
+
+
+    background: linear-gradient(0deg, #b96505 0%, #060b2e 100%);
 }
