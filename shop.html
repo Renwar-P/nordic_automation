@@ -13,17 +13,39 @@
             cursor: pointer;
             padding: 20px;
             text-align: center;
-            background-color: #f8f9fa;
+            background: 
+    linear-gradient(0deg, 
+        rgba(6, 11, 46, 1) 0%, 
+        rgba(185, 101, 5, 1) 50%, 
+        rgba(6, 11, 46, 1) 100%),
+    radial-gradient(circle at top, transparent, rgba(6, 11, 46, 0.5)), 
+    radial-gradient(circle at bottom, transparent, rgba(6, 11, 46, 0.5)),
+    radial-gradient(circle at left, transparent, rgba(6, 11, 46, 0.5)),
+    radial-gradient(circle at right, transparent, rgba(6, 11, 46, 0.5));
             border: 1px solid #dee2e6;
             margin: 10px 0;
+            color: white;
         }
 
         .form-container {
             display: none;
             padding: 20px;
             border: 1px solid #dee2e6;
-            background-color: #ffffff;
+            background: 
+    linear-gradient(0deg, 
+        rgba(6, 11, 46, 1) 0%, 
+        rgba(185, 101, 5, 1) 50%, 
+        rgba(6, 11, 46, 1) 100%),
+    radial-gradient(circle at top, transparent, rgba(6, 11, 46, 0.5)), 
+    radial-gradient(circle at bottom, transparent, rgba(6, 11, 46, 0.5)),
+    radial-gradient(circle at left, transparent, rgba(6, 11, 46, 0.5)),
+    radial-gradient(circle at right, transparent, rgba(6, 11, 46, 0.5));
             margin: 10px 0;
+        }
+
+        label {
+
+            color: white;
         }
 
     </style>
@@ -94,24 +116,77 @@
     <div class="container-fluid" id="shop-forms">
         <div class="row justify-content-center">
             <div class="col-12 col-md-10">
-                <div class="shop-first-form" onclick="toggleForm('form1')">Title 1</div>
+                <div class="shop-first-form" onclick="toggleForm('form1')">Kabel</div>
                 <div id="form1" class="form-container">
                     <form id="form1-inner" action="https://formsubmit.co/5626dce5f295e0317018275f67245482" method="POST">
                         <div class="form-group">
-                            <label for="name">Name</label>
+                            <label for="name">Företag*</label>
                             <input type="text" class="form-control" id="name" name="name" required>
                         </div>
+                       
                         <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" class="form-control" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="question1">Question 1</label>
+                            <label for="question1">Kontaktperson*</label>
                             <input type="text" class="form-control" id="question1" name="question1" required>
                         </div>
                         <div class="form-group">
-                            <label for="question2">Question 2</label>
-                            <input type="text" class="form-control" id="question2" name="question2" required>
+                            <label for="email">E-post*</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="question2">Organisationsnr*</label>
+                            <input type="text" class="form-control" id="question2" name="Organisationsnr*" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="question3">Mobilnr*</label>
+                            <input type="text" class="form-control" id="question3" name="Mobilnr" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="question4">Användning eller användning av kabeln?</label>
+                            <input type="text" class="form-control" id="question4" name="Användning eller användning av kabeln?" >
+                        </div>
+                        <div class="form-group">
+                            <label for="question5">Nödvändig typ eller kategori av kabel, såsom koaxial, multi-pair, multi-ledare eller tvinnat par?</label>
+                            <input type="text" class="form-control" id="question5" name="Nödvändig typ eller kategori av kabel, såsom koaxial, multi-pair, multi-ledare eller tvinnat par?" >
+                        </div>
+                        <div class="form-group">
+                            <label for="question6">Erfordras färg eller märkning av kabeln?</label>
+                            <input type="text" class="form-control" id="question6" name="Erfordras färg eller märkning av kabeln?" >
+                        </div>
+                        <div class="form-group">
+                            <label for="question7">Erforderlig diameter eller mått på kabeln?</label>
+                            <input type="text" class="form-control" id="question7" name="Erforderlig diameter eller mått på kabeln?" >
+                        </div>
+                        <div class="form-group">
+                            <label for="question8">Erforderlig märkspänning eller elektrisk kapacitet för kabeln?</label>
+                            <input type="text" class="form-control" id="question8" name="Erforderlig märkspänning eller elektrisk kapacitet för kabeln?">
+                        </div>
+                        <div class="form-group">
+                            <label for="question9">Erforderlig strömstyrka eller kapacitet för kabeln?</label>
+                            <input type="text" class="form-control" id="question9" name="Erforderlig strömstyrka eller kapacitet för kabeln?" >
+                        </div>
+                        <div class="form-group">
+                            <label for="question10">Erforderlig längd eller mängd kabel behövs för applikationen?</label>
+                            <input type="text" class="form-control" id="question10" name="Erforderlig längd eller mängd kabel behövs för applikationen?">
+                        </div>
+                        <div class="form-group">
+                            <label for="question11">Erforderlig temperaturklassning eller kabelns driftområde?</label>
+                            <input type="text" class="form-control" id="question11" name="Erforderlig temperaturklassning eller kabelns driftområde?" >
+                        </div>
+                        <div class="form-group">
+                            <label for="question12">Krävs skärmning eller isolering av kabeln?</label>
+                            <input type="text" class="form-control" id="question12" name="Krävs skärmning eller isolering av kabeln?" >
+                        </div>
+                        <div class="form-group">
+                            <label for="question13">Erforderlig nivå av fukt eller väderbeständighet för kabeln?</label>
+                            <input type="text" class="form-control" id="question13" name="Erforderlig nivå av fukt eller väderbeständighet för kabeln?" >
+                        </div>
+                        <div class="form-group">
+                            <label for="question14">Erforderlig nivå av brand- eller flammotstånd hos kabeln?</label>
+                            <input type="text" class="form-control" id="question14" name="Erforderlig nivå av brand- eller flammotstånd hos kabeln?" >
+                        </div>
+                        <div class="form-group">
+                            <label for="question15">Finns det några andra specifika krav eller hänsyn till kabelspecifikationen?</label>
+                            <input type="text" class="form-control" id="question15" name="Finns det några andra specifika krav eller hänsyn till kabelspecifikationen?" >
                         </div>
                         <input type="hidden" name="_next" value="https://8000-renwarp-nordicautomatio-3444v1f71k9.ws-eu114.gitpod.io/thank_you.html">
                         <button type="submit" class="btn btn-primary">Submit</button>
@@ -121,24 +196,88 @@
         </div>
         <div class="row justify-content-center">
             <div class="col-12 col-md-10">
-                <div class="shop-first-form" onclick="toggleForm('form2')">Title 2</div>
+                <div class="shop-first-form" onclick="toggleForm('form2')">Elektriska motorer</div>
                 <div id="form2" class="form-container">
                     <form id="form2-inner" action="https://formsubmit.co/5626dce5f295e0317018275f67245482" method="POST">
                         <div class="form-group">
-                            <label for="name">Name</label>
+                            <label for="name">Företag*</label>
                             <input type="text" class="form-control" id="name" name="name" required>
                         </div>
+                       
                         <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" class="form-control" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="question1">Question 1</label>
+                            <label for="question1">Kontaktperson*</label>
                             <input type="text" class="form-control" id="question1" name="question1" required>
                         </div>
                         <div class="form-group">
-                            <label for="question2">Question 2</label>
+                            <label for="email">E-post*</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="question2">Organisationsnr*</label>
                             <input type="text" class="form-control" id="question2" name="question2" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="question2">Mobilnr*</label>
+                            <input type="text" class="form-control" id="question2" name="question2" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Motortyp som du behöver?</label>
+                            <input type="text" class="form-control" id="name" name="name">
+                        </div>
+                       
+                        <div class="form-group">
+                            <label for="question1">Nödvändig effekt för motorn?</label>
+                            <input type="text" class="form-control" id="question1" name="question1" >
+                        </div>
+                       
+                        <div class="form-group">
+                            <label for="question2">Önskad driftspänning för motorn?</label>
+                            <input type="text" class="form-control" id="question2" name="question2">
+                        </div>
+                        <div class="form-group">
+                            <label for="question2">Förväntat varvtalsområde för motorn?</label>
+                            <input type="text" class="form-control" id="question2" name="question2" >
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Förväntat vridmomentområde för motorn?</label>
+                            <input type="text" class="form-control" id="name" name="name" >
+                        </div>
+                       
+                        <div class="form-group">
+                            <label for="question1">Förväntat driftstemperaturområde för motorn?</label>
+                            <input type="text" class="form-control" id="question1" name="question1" >
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Förväntad arbetscykel för motorn?</label>
+                            <input type="email" class="form-control" id="email" name="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="question2">Belastningstyp som motorn ska driva?</label>
+                            <input type="text" class="form-control" id="question2" name="question2" >
+                        </div>
+                        <div class="form-group">
+                            <label for="question2">Krävs verkningsgrad för motorn?</label>
+                            <input type="text" class="form-control" id="question2" name="question2" >
+                        </div>
+                        <div class="form-group">
+                            <label for="question2">Förväntad ljudnivå för motorn?</label>
+                            <input type="text" class="form-control" id="question2" name="question2" >
+                        </div>
+                        <div class="form-group">
+                            <label for="question2">Förväntad livslängd för motorn?</label>
+                            <input type="text" class="form-control" id="question2" name="question2" >
+                        </div>
+                        <div class="form-group">
+                            <label for="question2">Maximal fysisk storlek på motorn?</label>
+                            <input type="text" class="form-control" id="question2" name="question2" >
+                        </div>
+                        <div class="form-group">
+                            <label for="question2">Typ av styrning kommer att användas för att driva motorn?</label>
+                            <input type="text" class="form-control" id="question2" name="question2" >
+                        </div>
+                        <div class="form-group">
+                            <label for="question2">Kommer motorn att användas i en farlig miljö?</label>
+                            <input type="text" class="form-control" id="question2" name="question2" >
                         </div>
                         <input type="hidden" name="_next" value="https://8000-renwarp-nordicautomatio-3444v1f71k9.ws-eu114.gitpod.io/thank_you.html">
                         <button type="submit" class="btn btn-primary">Submit</button>
@@ -178,6 +317,87 @@
                 <div class="shop-first-form" onclick="toggleForm('form4')">Title 4</div>
                 <div id="form4" class="form-container">
                     <form id="form4-inner" action="https://formsubmit.co/5626dce5f295e0317018275f67245482" method="POST">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="question1">Question 1</label>
+                            <input type="text" class="form-control" id="question1" name="question1" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="question2">Question 2</label>
+                            <input type="text" class="form-control" id="question2" name="question2" required>
+                        </div>
+                        <input type="hidden" name="_next" value="https://8000-renwarp-nordicautomatio-3444v1f71k9.ws-eu114.gitpod.io/thank_you.html">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-10">
+                <div class="shop-first-form" onclick="toggleForm('form5')">Title 5</div>
+                <div id="form5" class="form-container">
+                    <form id="form5-inner" action="https://formsubmit.co/5626dce5f295e0317018275f67245482" method="POST">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="question1">Question 1</label>
+                            <input type="text" class="form-control" id="question1" name="question1" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="question2">Question 2</label>
+                            <input type="text" class="form-control" id="question2" name="question2" required>
+                        </div>
+                        <input type="hidden" name="_next" value="https://8000-renwarp-nordicautomatio-3444v1f71k9.ws-eu114.gitpod.io/thank_you.html">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-10">
+                <div class="shop-first-form" onclick="toggleForm('form6')">Title 6</div>
+                <div id="form6" class="form-container">
+                    <form id="form6-inner" action="https://formsubmit.co/5626dce5f295e0317018275f67245482" method="POST">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="question1">Question 1</label>
+                            <input type="text" class="form-control" id="question1" name="question1" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="question2">Question 2</label>
+                            <input type="text" class="form-control" id="question2" name="question2" required>
+                        </div>
+                        <input type="hidden" name="_next" value="https://8000-renwarp-nordicautomatio-3444v1f71k9.ws-eu114.gitpod.io/thank_you.html">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-10">
+                <div class="shop-first-form" onclick="toggleForm('form7')">Title 7</div>
+                <div id="form7" class="form-container">
+                    <form id="form7-inner" action="https://formsubmit.co/5626dce5f295e0317018275f67245482" method="POST">
                         <div class="form-group">
                             <label for="name">Name</label>
                             <input type="text" class="form-control" id="name" name="name" required>
