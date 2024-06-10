@@ -388,6 +388,29 @@ background-blend-mode: overlay;
     /* Additional styling for your text */
 }
 
+.text-overlay-drones {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    right: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    text-align: left;
+    color: white;
+}
+
+.text-overlay-drones p {
+  
+    text-align: left;
+    color: white;
+    font-size: 1 rem;
+}
+
+.text-overlay-drones h1 {
+    font-size: 4rem;
+    /* Additional styling for your text */
+}
+
 /* Image background container styles */
 .text-overlay-ai_background {
     position: absolute;
