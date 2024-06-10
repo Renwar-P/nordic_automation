@@ -208,6 +208,63 @@ background-blend-mode: overlay;
 .footer_shop  i::before {
     margin-right: 10px;
 }
+.footer_kod {
+    background: 
+    linear-gradient(0deg, 
+        rgba(6, 11, 46, 1) 0%, 
+        rgba(21, 144, 68, 1) 50%, 
+        rgba(6, 11, 46, 1) 100%),
+    radial-gradient(circle at top, transparent, rgba(6, 11, 46, 0.5)), 
+    radial-gradient(circle at bottom, transparent, rgba(6, 11, 46, 0.5)),
+    radial-gradient(circle at left, transparent, rgba(6, 11, 46, 0.5)),
+    radial-gradient(circle at right, transparent, rgba(6, 11, 46, 0.5));
+background-blend-mode: overlay;
+    color: white;
+    padding: 40px 20px;
+    width: 100%;
+}
+
+.footer_kod  .container-fluid {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.footer_kod .left-div {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    color: white;
+    margin-bottom: 5px;
+    justify-content: space-between;
+    padding-left: 60px;
+}
+
+.footer_kod .middle-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 5px;
+}
+
+.footer_kod .right-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer_kod .right-div img {
+    max-width: 150px;
+    height: auto;
+}
+
+.footer_kod i, .footer_kod a {
+    color: white;
+}
+
+.footer_kod  i::before {
+    margin-right: 10px;
+}
 
 .bi-envelope::before {
     content: "\f32f";
