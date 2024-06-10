@@ -1,25 +1,32 @@
 from http.server import HTTPServer, SimpleHTTPRequestHandler
-from os import path
+import os
 
 class CustomHTTPRequestHandler(SimpleHTTPRequestHandler):
-    # Override the do_GET method to handle custom error pages
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, directory='.', **kwargs)
+
     def do_GET(self):
-        # Check if the requested file exists
-        if path.exists(self.translate_path(self.path)):
-            # Serve the file if it exists
-            return SimpleHTTPRequestHandler.do_GET(self)
+        if self.path == '/':
+            self.send_response(302)
+            self.send_header('Location', '/sv/index.html')
+            self.end_headers()
         else:
-            # Serve the custom 404 page if the file does not exist
+            super().do_GET()
+
+    def send_error(self, code, message=None):
+        if code == 404:
             self.send_response(404)
             self.send_header('Content-type', 'text/html')
             self.end_headers()
-            with open('/workspace/nordic_automation/404.html', 'rb') as f:
+            with open('404.html', 'rb') as f:
                 self.copyfile(f, self.wfile)
+        else:
+            super().send_error(code, message)
 
-# Create an HTTP server with custom request handler
-server_address = ('', 8000)  # Change port as needed
+# Skapa en HTTP-server med en anpassad förfrågningshanterare
+server_address = ('', 8000)  # Ändra porten vid behov
 httpd = HTTPServer(server_address, CustomHTTPRequestHandler)
 
-# Start the server
-print('Server running...')
+# Starta servern
+print('Server running on port 8000...')
 httpd.serve_forever()
