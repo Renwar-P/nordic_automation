@@ -51,6 +51,85 @@
             color: white;
         }
 
+        .large-button {
+            width: 80%;
+            height: 80px; /* Adjust height as needed */
+            font-size: 24px; /* Adjust font size as needed */
+            color: white; /* Text color */
+            background: 
+    linear-gradient(0deg, 
+        rgba(6, 11, 46, 1) 0%, 
+        rgba(5, 26, 134, 1) 50%, 
+        rgba(6, 11, 46, 1) 100%),
+    radial-gradient(circle at top, transparent, rgba(6, 11, 46, 0.5)), 
+    radial-gradient(circle at bottom, transparent, rgba(6, 11, 46, 0.5)),
+    radial-gradient(circle at left, transparent, rgba(6, 11, 46, 0.5)),
+    radial-gradient(circle at right, transparent, rgba(6, 11, 46, 0.5));
+            margin: 10px 0;
+            background-blend-mode: overlay;
+            border: 2px solid white; /* Add white border */
+        }
+        .large-button:hover, .large-button:focus, .large-button:active {
+            background: 
+    linear-gradient(0deg, 
+        rgba(6, 11, 46, 1) 0%, 
+        rgba(5, 26, 134, 1) 50%, 
+        rgba(6, 11, 46, 1) 100%),
+    radial-gradient(circle at top, transparent, rgba(6, 11, 46, 0.5)), 
+    radial-gradient(circle at bottom, transparent, rgba(6, 11, 46, 0.5)),
+    radial-gradient(circle at left, transparent, rgba(6, 11, 46, 0.5)),
+    radial-gradient(circle at right, transparent, rgba(6, 11, 46, 0.5));
+            margin: 10px 0;
+            background-blend-mode: overlay;
+            color: white; /* Ensure text color stays white */
+            border: 2px solid white; /* Add white border */
+        }
+        .left-half {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px;
+        }
+        @media (max-width: 768px) {
+            .left-half {
+                width: 100%;
+                justify-content: center;
+                margin: 10px;
+            }
+
+            .offcanvas.offcanvas-end {
+                width: 80% !important;
+                max-width: none; /* Override Bootstrap's max-width */
+            }
+        }
+        .offcanvas-body {
+            background: 
+    linear-gradient(0deg, 
+        rgba(6, 11, 46, 1) 0%, 
+        rgba(5, 26, 134, 1) 50%, 
+        rgba(6, 11, 46, 1) 100%),
+    radial-gradient(circle at top, transparent, rgba(6, 11, 46, 0.5)), 
+    radial-gradient(circle at bottom, transparent, rgba(6, 11, 46, 0.5)),
+    radial-gradient(circle at left, transparent, rgba(6, 11, 46, 0.5)),
+    radial-gradient(circle at right, transparent, rgba(6, 11, 46, 0.5));
+            margin: 10px 0;
+            background-blend-mode: overlay;
+            color: white; /* Text color for offcanvas body */
+        }
+        .offcanvas-header {
+            background: linear-gradient(0deg, 
+                rgba(6, 11, 46, 1) 0%, 
+                rgba(185, 101, 5, 1) 50%, 
+                rgba(6, 11, 46, 1) 100%),
+            radial-gradient(circle at top, transparent, rgba(6, 11, 46, 0.5)), 
+            radial-gradient(circle at bottom, transparent, rgba(6, 11, 46, 0.5)),
+            radial-gradient(circle at left, transparent, rgba(6, 11, 46, 0.5)),
+            radial-gradient(circle at right, transparent, rgba(6, 11, 46, 0.5));
+            background-blend-mode: overlay;
+            color: white; /* Text color for offcanvas header */
+        }
+
     </style>
 </head>
 <body>
@@ -83,6 +162,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="ai_sv.html">AI</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="drone_sv.html">Drönare</a>
                     </li>
                 </ul>
                 <div class="navbar-icons">
@@ -117,10 +199,19 @@
     </div>
     
     <div class="container-fluid" id="shop-forms">
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-10">
-                <div class="shop-first-form" onclick="toggleForm('form1')">Projektering</div>
-                <div id="form1" class="form-container">
+
+        <div class="container">
+            <div class="row justify-content-start">
+                <div class="col-6 left-half">
+                    <button class="btn btn-primary large-button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Projektering</button>
+                </div>
+            </div>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                <div class="offcanvas-header">
+                    <h5 id="offcanvasRightLabel">Projektering</h5>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
                     <form id="form1-inner" action="https://formsubmit.co/5626dce5f295e0317018275f67245482" method="POST">
                         <div class="form-group">
                             <label for="name">Företag*</label>
@@ -226,331 +317,381 @@
                 </div>
             </div>
         </div>
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-10">
-                <div class="shop-first-form" onclick="toggleForm('form2')">Inköp</div>
-                <div id="form2" class="form-container">
-                    <form id="form2-inner" action="https://formsubmit.co/5626dce5f295e0317018275f67245482" method="POST">
-                        <div class="form-group">
-                            <label for="name">Företag*</label>
-                            <input type="text" class="form-control" id="name" name="name" required>
-                        </div>
-                       
-                        <div class="form-group">
-                            <label for="question1">Kontaktperson*</label>
-                            <input type="text" class="form-control" id="question1" name="question1" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">E-post*</label>
-                            <input type="email" class="form-control" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="question2">Organisationsnr*</label>
-                            <input type="text" class="form-control" id="question2" name="Organisationsnr*" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="question3">Mobilnr*</label>
-                            <input type="text" class="form-control" id="question3" name="Mobilnr" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="question4">Har du en lista över alla komponenter?</label>
-                            <input type="text" class="form-control" id="question4" name="Är de relevanta processritningarna färdiga?" >
-                        </div>
-                        <div class="form-group">
-                            <label for="question5">Har ni en deadline för att leverera varje komponent eller för alla komponenter?</label>
-                            <input type="text" class="form-control" id="question5" name="Har ni en deadline för att leverera varje komponent eller för alla komponenter?" >
-                        </div>
-                        <div class="form-group">
-                            <label for="question6">Finns det krav på specifika märken för komponenterna?</label>
-                            <input type="text" class="form-control" id="question6" name="Finns det krav på specifika märken för komponenterna?" >
-                        </div>
-                        <div class="form-group">
-                            <label for="question7">Finns det specifika driftskrav för komponenterna?</label>
-                            <input type="text" class="form-control" id="question7" name="Finns det specifika driftskrav för komponenterna?" >
-                        </div>
-                        <div class="form-group">
-                            <label for="question8">Finns det specifika säkerhetskrav för komponenterna?</label>
-                            <input type="text" class="form-control" id="question8" name="Finns det specifika säkerhetskrav för komponenterna?">
-                        </div>
-                        <div class="form-group">
-                            <label for="question9">Finns det specifika miljökrav på komponenterna?</label>
-                            <input type="text" class="form-control" id="question9" name="Finns det specifika miljökrav på komponenterna?" >
-                        </div>
-                        <div class="form-group">
-                            <label for="question10">Finns det ett processdiagram som visar hur varje komponent ska fungera?</label>
-                            <input type="text" class="form-control" id="question10" name="Finns det ett processdiagram som visar hur varje komponent ska fungera?">
-                        </div>
-                        <div class="form-group">
-                            <label for="question11">Vill du ha datablad för varje komponent?</label>
-                            <input type="text" class="form-control" id="question11" name="Vill du ha datablad för varje komponent?" >
-                        </div>
-                        <div class="form-group">
-                            <label for="question12">Var är leveransplatsen för komponenterna?</label>
-                            <input type="text" class="form-control" id="question12" name="Var är leveransplatsen för komponenterna?" >
-                        </div>
-                        <div class="form-group">
-                            <label for="question13">Behöver du inkludera funktionstester för varje komponent?</label>
-                            <input type="text" class="form-control" id="question13" name="Behöver du inkludera funktionstester för varje komponent?" >
-                        </div>
-                        <div class="form-group">
-                            <label for="question14">Vill du ha ytterligare montering mellan utvalda komponenter?</label>
-                            <input type="text" class="form-control" id="question14" name="Vill du ha ytterligare montering mellan utvalda komponenter?" >
-                        </div>
-                        <div class="form-group">
-                            <label for="question15">Är upphandlingen tänkt att stämma överens med andra projektaktiviteter?</label>
-                            <input type="text" class="form-control" id="question15" name="Är upphandlingen tänkt att stämma överens med andra projektaktiviteter?" >
-                        </div>
-                        <div class="form-group">
-                            <label for="question16">Hur länge är upphandlingsprojektet tänkt för?</label>
-                            <input type="text" class="form-control" id="question16" name="Hur länge är upphandlingsprojektet tänkt för?" >
-                        </div>
-                        <div class="form-group">
-                            <label for="question17">Behöver vi undersöka funktionalitet för någon komponent?</label>
-                            <input type="text" class="form-control" id="question17" name="Behöver vi undersöka funktionalitet för någon komponent?" >
-                        </div>
-                        <div class="form-group">
-                            <label for="question18">Ska vi inkludera lämpliga ersättningar för dina valda komponenter?</label>
-                            <input type="text" class="form-control" id="question18" name="Ska vi inkludera lämpliga ersättningar för dina valda komponenter?" >
-                        </div>
-                        <div class="form-group">
-                            <label for="question19">Hur vill du avsluta betalningen för varje komponent?</label>
-                            <input type="text" class="form-control" id="question19" name="Hur vill du avsluta betalningen för varje komponent?" >
-                        </div>
-                        <div class="form-group">
-                            <label for="question20"> Vill du ha en specifik giltighetstid för erbjudandena från oss?</label>
-                            <input type="text" class="form-control" id="question20" name="Vill du ha en specifik giltighetstid för erbjudandena från oss?" >
-                        </div>
+
+        <div class="container">
+    
+            <div class="row justify-content-start">
+                <div class="col-6 left-half">
+                    <button class="btn btn-primary large-button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight2" aria-controls="offcanvasRight2">Inköp</button>
+                </div>
+            </div>
+    
+              
+              
+    
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight2" aria-labelledby="offcanvasRightLabel2">
+                    <div class="offcanvas-header">
+                        <h5 id="offcanvasRightLabel2">Inköp</h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <form id="form2-inner" action="https://formsubmit.co/5626dce5f295e0317018275f67245482" method="POST">
+                            <div class="form-group">
+                                <label for="name">Företag*</label>
+                                <input type="text" class="form-control" id="name" name="name" required>
+                            </div>
+                           
+                            <div class="form-group">
+                                <label for="question1">Kontaktperson*</label>
+                                <input type="text" class="form-control" id="question1" name="question1" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">E-post*</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="question2">Organisationsnr*</label>
+                                <input type="text" class="form-control" id="question2" name="Organisationsnr*" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="question3">Mobilnr*</label>
+                                <input type="text" class="form-control" id="question3" name="Mobilnr" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="question4">Har du en lista över alla komponenter?</label>
+                                <input type="text" class="form-control" id="question4" name="Är de relevanta processritningarna färdiga?" >
+                            </div>
+                            <div class="form-group">
+                                <label for="question5">Har ni en deadline för att leverera varje komponent eller för alla komponenter?</label>
+                                <input type="text" class="form-control" id="question5" name="Har ni en deadline för att leverera varje komponent eller för alla komponenter?" >
+                            </div>
+                            <div class="form-group">
+                                <label for="question6">Finns det krav på specifika märken för komponenterna?</label>
+                                <input type="text" class="form-control" id="question6" name="Finns det krav på specifika märken för komponenterna?" >
+                            </div>
+                            <div class="form-group">
+                                <label for="question7">Finns det specifika driftskrav för komponenterna?</label>
+                                <input type="text" class="form-control" id="question7" name="Finns det specifika driftskrav för komponenterna?" >
+                            </div>
+                            <div class="form-group">
+                                <label for="question8">Finns det specifika säkerhetskrav för komponenterna?</label>
+                                <input type="text" class="form-control" id="question8" name="Finns det specifika säkerhetskrav för komponenterna?">
+                            </div>
+                            <div class="form-group">
+                                <label for="question9">Finns det specifika miljökrav på komponenterna?</label>
+                                <input type="text" class="form-control" id="question9" name="Finns det specifika miljökrav på komponenterna?" >
+                            </div>
+                            <div class="form-group">
+                                <label for="question10">Finns det ett processdiagram som visar hur varje komponent ska fungera?</label>
+                                <input type="text" class="form-control" id="question10" name="Finns det ett processdiagram som visar hur varje komponent ska fungera?">
+                            </div>
+                            <div class="form-group">
+                                <label for="question11">Vill du ha datablad för varje komponent?</label>
+                                <input type="text" class="form-control" id="question11" name="Vill du ha datablad för varje komponent?" >
+                            </div>
+                            <div class="form-group">
+                                <label for="question12">Var är leveransplatsen för komponenterna?</label>
+                                <input type="text" class="form-control" id="question12" name="Var är leveransplatsen för komponenterna?" >
+                            </div>
+                            <div class="form-group">
+                                <label for="question13">Behöver du inkludera funktionstester för varje komponent?</label>
+                                <input type="text" class="form-control" id="question13" name="Behöver du inkludera funktionstester för varje komponent?" >
+                            </div>
+                            <div class="form-group">
+                                <label for="question14">Vill du ha ytterligare montering mellan utvalda komponenter?</label>
+                                <input type="text" class="form-control" id="question14" name="Vill du ha ytterligare montering mellan utvalda komponenter?" >
+                            </div>
+                            <div class="form-group">
+                                <label for="question15">Är upphandlingen tänkt att stämma överens med andra projektaktiviteter?</label>
+                                <input type="text" class="form-control" id="question15" name="Är upphandlingen tänkt att stämma överens med andra projektaktiviteter?" >
+                            </div>
+                            <div class="form-group">
+                                <label for="question16">Hur länge är upphandlingsprojektet tänkt för?</label>
+                                <input type="text" class="form-control" id="question16" name="Hur länge är upphandlingsprojektet tänkt för?" >
+                            </div>
+                            <div class="form-group">
+                                <label for="question17">Behöver vi undersöka funktionalitet för någon komponent?</label>
+                                <input type="text" class="form-control" id="question17" name="Behöver vi undersöka funktionalitet för någon komponent?" >
+                            </div>
+                            <div class="form-group">
+                                <label for="question18">Ska vi inkludera lämpliga ersättningar för dina valda komponenter?</label>
+                                <input type="text" class="form-control" id="question18" name="Ska vi inkludera lämpliga ersättningar för dina valda komponenter?" >
+                            </div>
+                            <div class="form-group">
+                                <label for="question19">Hur vill du avsluta betalningen för varje komponent?</label>
+                                <input type="text" class="form-control" id="question19" name="Hur vill du avsluta betalningen för varje komponent?" >
+                            </div>
+                            <div class="form-group">
+                                <label for="question20"> Vill du ha en specifik giltighetstid för erbjudandena från oss?</label>
+                                <input type="text" class="form-control" id="question20" name="Vill du ha en specifik giltighetstid för erbjudandena från oss?" >
+                            </div>
+                            <input type="hidden" name="_next" value="https://your-redirect-url.com/thank_you.html">
+                            <button type="submit" class="btn btn-success">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            
+      
+    </div>
+
+
+    <div class="container">
+        <div class="row justify-content-start">
+            <div class="col-6 left-half">
+                <button class="btn btn-primary large-button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight3" aria-controls="offcanvasRight3">Driftsättning</button>
+            </div>
+        </div>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight3" aria-labelledby="offcanvasRightLabel3">
+            <div class="offcanvas-header">
+                <h5 id="offcanvasRightLabel3">Driftsättning</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <form id="form3-inner" action="https://formsubmit.co/5626dce5f295e0317018275f67245482" method="POST">
+                    <!-- Add your form fields here -->
+                    <div class="form-group">
+                        <label for="name">Företag*</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                   
+                    <div class="form-group">
+                        <label for="question1">Kontaktperson*</label>
+                        <input type="text" class="form-control" id="question1" name="question1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-post*</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="question2">Organisationsnr*</label>
+                        <input type="text" class="form-control" id="question2" name="Organisationsnr*" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="question3">Mobilnr*</label>
+                        <input type="text" class="form-control" id="question3" name="Mobilnr" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="question4">Plats för projektet?</label>
+                        <input type="text" class="form-control" id="question4" name="Plats för projektet?" >
+                    </div>
+                    <div class="form-group">
+                        <label for="question5">Finns det specifika krav gällande kvalitet och säkerhet?</label>
+                        <input type="text" class="form-control" id="question5" name="Finns det specifika krav gällande kvalitet och säkerhet?" >
+                    </div>
+                    <div class="form-group">
+                        <label for="question6">Behöver vi upprätta beredskap för ytterligare projektering?</label>
+                        <input type="text" class="form-control" id="question6" name="Behöver vi upprätta beredskap för ytterligare projektering?" >
+                    </div>
+                    <div class="form-group">
+                        <label for="question7">Behöver vi göra någon teknisk utredning?</label>
+                        <input type="text" class="form-control" id="question7" name="Behöver vi göra någon teknisk utredning?" >
+                    </div>
+                    <div class="form-group">
+                        <label for="question8">Behöver vi göra en intern acceptans test?</label>
+                        <input type="text" class="form-control" id="question8" name="Behöver vi göra en intern acceptans test?">
+                    </div>
+                    <div class="form-group">
+                        <label for="question9">Behöver vi göra ett acceptans test hos någon tillverkare?</label>
+                        <input type="text" class="form-control" id="question9" name="Behöver vi göra ett acceptans test hos någon tillverkare?" >
+                    </div>
+                    <div class="form-group">
+                        <label for="question10">Behöver vi göra ett övertagandeprov?</label>
+                        <input type="text" class="form-control" id="question10" name="Behöver vi göra ett övertagandeprov?">
+                    </div>
+                    <div class="form-group">
+                        <label for="question11">Hur många HMI ingår?</label>
+                        <input type="text" class="form-control" id="question11" name="Hur många HMI ingår?" >
+                    </div>
+                    <div class="form-group">
+                        <label for="question12">Vill man ha speciella rapporter?</label>
+                        <input type="text" class="form-control" id="question12" name="Vill man ha speciella rapporter?" >
+                    </div>
+                    <div class="form-group">
+                        <label for="question13">Finns det ett eget protokoll för drifttagningen?</label>
+                        <input type="text" class="form-control" id="question13" name="Finns det ett eget protokoll för drifttagningen?" >
+                    </div>
+                    <div class="form-group">
+                        <label for="question14">Önskar man att vi utbildar er personal i drift av anläggningen?</label>
+                        <input type="text" class="form-control" id="question14" name="Önskar man att vi utbildar er personal i drift av anläggningen?" >
+                    </div>
+                    <div class="form-group">
+                        <label for="question15">Behöver vi inkludera en montageledning?</label>
+                        <input type="text" class="form-control" id="question15" name="Behöver vi inkludera en montageledning?" >
+                    </div>
+                    <div class="form-group">
+                        <label for="question16">Behöver vi tillsätta en projektledare?</label>
+                        <input type="text" class="form-control" id="question16" name="Behöver vi tillsätta en projektledare?" >
+                    </div>
+                    <div class="form-group">
+                        <label for="question17">Hur många tekniker uppskattar ni att vi behöver tillsätta?</label>
+                        <input type="text" class="form-control" id="question17" name="Hur många tekniker uppskattar ni att vi behöver tillsätta?" >
+                    </div>
+                    <div class="form-group">
+                        <label for="question18">Vilket kommunikationsprotokoll har anläggningen?</label>
+                        <input type="text" class="form-control" id="question18" name="Vilket kommunikationsprotokoll har anläggningen?" >
+                    </div>
+                    <div class="form-group">
+                        <label for="question19">Hur många timmars programmering uppskattas?</label>
+                        <input type="text" class="form-control" id="question19" name="Hur många timmars programmering uppskattas?" >
+                    </div>
+                    <div class="form-group">
+                        <label for="question20">Finns alla funktionsbeskrivningar?</label>
+                        <input type="text" class="form-control" id="question20" name="Finns alla funktionsbeskrivningar?" >
+                    </div>
+                    <div class="form-group">
+                        <label for="question21">Är alla licenser inköpta?</label>
+                        <input type="text" class="form-control" id="question21" name="Är alla licenser inköpta?" >
+                    </div>
+                    <div class="form-group">
+                        <label for="question22">Behöver vi uppgradera någon databas?</label>
+                        <input type="text" class="form-control" id="question22" name="Behöver vi uppgradera någon databas?" >
+                    </div>
+                    <div class="form-group">
+                        <label for="question23">Finns alla essentiella ritningar och scheman klara?</label>
+                        <input type="text" class="form-control" id="question23" name="Finns alla essentiella ritningar och scheman klara?" >
+                    </div>
+                  
+                    <div class="form-group">
+                        <label for="question24">Har man markerat styrda komponenter?</label>
+                        <input type="text" class="form-control" id="question24" name="Har man markerat styrda komponenter?" >
+                    </div>
+                  
+                    <div class="form-group">
+                        <label for="question25">Finns det andra underleverantörer som vi behöver samarbeta med?</label>
+                        <input type="text" class="form-control" id="question25" name="Finns det andra underleverantörer som vi behöver samarbeta med?" >
+                    </div>
+                  
+                    <div class="form-group">
+                        <label for="question26">Behöver vi bedriva några inköp?</label>
+                        <input type="text" class="form-control" id="question26" name="Behöver vi bedriva några inköp?" >
+                    </div>
+                  
+                    <input type="hidden" name="_next" value="https://8000-renwarp-nordicautomatio-3444v1f71k9.ws-eu114.gitpod.io/thank_you.html">
+                    <!-- Add more form fields as needed -->
+        
+                    <!-- Submit button -->
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-success">Submit</button>
+                    </div>
                     
-                      
-                        <input type="hidden" name="_next" value="https://8000-renwarp-nordicautomatio-3444v1f71k9.ws-eu114.gitpod.io/thank_you.html">
-                        <button type="submit" class="btn btn-success">Submit</button>
-                    </form>
-                </div>
+                    <!-- Add hidden input fields if needed -->
+                    <input type="hidden" name="_next" value="https://your-redirect-url.com/thank_you.html">
+                </form>
             </div>
         </div>
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-10">
-                <div class="shop-first-form" onclick="toggleForm('form3')">Driftsättning</div>
-                <div id="form3" class="form-container">
-                    <form id="form3-inner" action="https://formsubmit.co/5626dce5f295e0317018275f67245482" method="POST">
-                        <div class="form-group">
-                            <label for="name">Företag*</label>
-                            <input type="text" class="form-control" id="name" name="name" required>
-                        </div>
-                       
-                        <div class="form-group">
-                            <label for="question1">Kontaktperson*</label>
-                            <input type="text" class="form-control" id="question1" name="question1" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">E-post*</label>
-                            <input type="email" class="form-control" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="question2">Organisationsnr*</label>
-                            <input type="text" class="form-control" id="question2" name="Organisationsnr*" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="question3">Mobilnr*</label>
-                            <input type="text" class="form-control" id="question3" name="Mobilnr" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="question4">Plats för projektet?</label>
-                            <input type="text" class="form-control" id="question4" name="Plats för projektet?" >
-                        </div>
-                        <div class="form-group">
-                            <label for="question5">Finns det specifika krav gällande kvalitet och säkerhet?</label>
-                            <input type="text" class="form-control" id="question5" name="Finns det specifika krav gällande kvalitet och säkerhet?" >
-                        </div>
-                        <div class="form-group">
-                            <label for="question6">Behöver vi upprätta beredskap för ytterligare projektering?</label>
-                            <input type="text" class="form-control" id="question6" name="Behöver vi upprätta beredskap för ytterligare projektering?" >
-                        </div>
-                        <div class="form-group">
-                            <label for="question7">Behöver vi göra någon teknisk utredning?</label>
-                            <input type="text" class="form-control" id="question7" name="Behöver vi göra någon teknisk utredning?" >
-                        </div>
-                        <div class="form-group">
-                            <label for="question8">Behöver vi göra en intern acceptans test?</label>
-                            <input type="text" class="form-control" id="question8" name="Behöver vi göra en intern acceptans test?">
-                        </div>
-                        <div class="form-group">
-                            <label for="question9">Behöver vi göra ett acceptans test hos någon tillverkare?</label>
-                            <input type="text" class="form-control" id="question9" name="Behöver vi göra ett acceptans test hos någon tillverkare?" >
-                        </div>
-                        <div class="form-group">
-                            <label for="question10">Behöver vi göra ett övertagandeprov?</label>
-                            <input type="text" class="form-control" id="question10" name="Behöver vi göra ett övertagandeprov?">
-                        </div>
-                        <div class="form-group">
-                            <label for="question11">Hur många HMI ingår?</label>
-                            <input type="text" class="form-control" id="question11" name="Hur många HMI ingår?" >
-                        </div>
-                        <div class="form-group">
-                            <label for="question12">Vill man ha speciella rapporter?</label>
-                            <input type="text" class="form-control" id="question12" name="Vill man ha speciella rapporter?" >
-                        </div>
-                        <div class="form-group">
-                            <label for="question13">Finns det ett eget protokoll för drifttagningen?</label>
-                            <input type="text" class="form-control" id="question13" name="Finns det ett eget protokoll för drifttagningen?" >
-                        </div>
-                        <div class="form-group">
-                            <label for="question14">Önskar man att vi utbildar er personal i drift av anläggningen?</label>
-                            <input type="text" class="form-control" id="question14" name="Önskar man att vi utbildar er personal i drift av anläggningen?" >
-                        </div>
-                        <div class="form-group">
-                            <label for="question15">Behöver vi inkludera en montageledning?</label>
-                            <input type="text" class="form-control" id="question15" name="Behöver vi inkludera en montageledning?" >
-                        </div>
-                        <div class="form-group">
-                            <label for="question16">Behöver vi tillsätta en projektledare?</label>
-                            <input type="text" class="form-control" id="question16" name="Behöver vi tillsätta en projektledare?" >
-                        </div>
-                        <div class="form-group">
-                            <label for="question17">Hur många tekniker uppskattar ni att vi behöver tillsätta?</label>
-                            <input type="text" class="form-control" id="question17" name="Hur många tekniker uppskattar ni att vi behöver tillsätta?" >
-                        </div>
-                        <div class="form-group">
-                            <label for="question18">Vilket kommunikationsprotokoll har anläggningen?</label>
-                            <input type="text" class="form-control" id="question18" name="Vilket kommunikationsprotokoll har anläggningen?" >
-                        </div>
-                        <div class="form-group">
-                            <label for="question19">Hur många timmars programmering uppskattas?</label>
-                            <input type="text" class="form-control" id="question19" name="Hur många timmars programmering uppskattas?" >
-                        </div>
-                        <div class="form-group">
-                            <label for="question20">Finns alla funktionsbeskrivningar?</label>
-                            <input type="text" class="form-control" id="question20" name="Finns alla funktionsbeskrivningar?" >
-                        </div>
-                        <div class="form-group">
-                            <label for="question21">Är alla licenser inköpta?</label>
-                            <input type="text" class="form-control" id="question21" name="Är alla licenser inköpta?" >
-                        </div>
-                        <div class="form-group">
-                            <label for="question22">Behöver vi uppgradera någon databas?</label>
-                            <input type="text" class="form-control" id="question22" name="Behöver vi uppgradera någon databas?" >
-                        </div>
-                        <div class="form-group">
-                            <label for="question23">Finns alla essentiella ritningar och scheman klara?</label>
-                            <input type="text" class="form-control" id="question23" name="Finns alla essentiella ritningar och scheman klara?" >
-                        </div>
-                      
-                        <div class="form-group">
-                            <label for="question24">Har man markerat styrda komponenter?</label>
-                            <input type="text" class="form-control" id="question24" name="Har man markerat styrda komponenter?" >
-                        </div>
-                      
-                        <div class="form-group">
-                            <label for="question25">Finns det andra underleverantörer som vi behöver samarbeta med?</label>
-                            <input type="text" class="form-control" id="question25" name="Finns det andra underleverantörer som vi behöver samarbeta med?" >
-                        </div>
-                      
-                        <div class="form-group">
-                            <label for="question26">Behöver vi bedriva några inköp?</label>
-                            <input type="text" class="form-control" id="question26" name="Behöver vi bedriva några inköp?" >
-                        </div>
-                      
-                      
-                        <input type="hidden" name="_next" value="https://8000-renwarp-nordicautomatio-3444v1f71k9.ws-eu114.gitpod.io/thank_you.html">
-                        <button type="submit" class="btn btn-success">Submit</button>
-                    </form>
-                </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row justify-content-start">
+            <div class="col-6 left-half">
+                <button class="btn btn-primary large-button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight4" aria-controls="offcanvasRight4">Programmering</button>
             </div>
         </div>
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-10">
-                <div class="shop-first-form" onclick="toggleForm('form4')">Programmering</div>
-                <div id="form4" class="form-container">
-                    <form id="form4-inner" action="https://formsubmit.co/5626dce5f295e0317018275f67245482" method="POST">
-                        <div class="form-group">
-                            <label for="name">Företag*</label>
-                            <input type="text" class="form-control" id="name" name="name" required>
-                        </div>
-                       
-                        <div class="form-group">
-                            <label for="question1">Kontaktperson*</label>
-                            <input type="text" class="form-control" id="question1" name="question1" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">E-post*</label>
-                            <input type="email" class="form-control" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="question2">Organisationsnr*</label>
-                            <input type="text" class="form-control" id="question2" name="Organisationsnr*" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="question3">Mobilnr*</label>
-                            <input type="text" class="form-control" id="question3" name="Mobilnr" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="question4">Hur många PLC behöver programmeras?</label>
-                            <input type="text" class="form-control" id="question4" name="Hur många PLC behöver programmeras?" >
-                        </div>
-                        <div class="form-group">
-                            <label for="question5">Hur många HMI behöver programmeras?</label>
-                            <input type="text" class="form-control" id="question5" name="Hur många HMI behöver programmeras?" >
-                        </div>
-                        <div class="form-group">
-                            <label for="question6">Finns det komponenter där PLC och HMI är inbyggda?</label>
-                            <input type="text" class="form-control" id="question6" name="Finns det komponenter där PLC och HMI är inbyggda?" >
-                        </div>
-                        <div class="form-group">
-                            <label for="question7">Finns det en lista över alla komponenter som behöver kontrolleras?</label>
-                            <input type="text" class="form-control" id="question7" name="Finns det en lista över alla komponenter som behöver kontrolleras?" >
-                        </div>
-                        <div class="form-group">
-                            <label for="question8">Ska varje separat kod testas?</label>
-                            <input type="text" class="form-control" id="question8" name="Ska varje separat kod testas?">
-                        </div>
-                        <div class="form-group">
-                            <label for="question9">Finns det någon specifik kodstandard som måste beaktas?</label>
-                            <input type="text" class="form-control" id="question9" name="Finns det någon specifik kodstandard som måste beaktas?" >
-                        </div>
-                        <div class="form-group">
-                            <label for="question10">Finns det datablad för alla komponenter?</label>
-                            <input type="text" class="form-control" id="question10" name="Finns det datablad för alla komponenter?">
-                        </div>
-                        <div class="form-group">
-                            <label for="question11">Finns alla relevanta systemritningar tillgängliga?</label>
-                            <input type="text" class="form-control" id="question11" name="Finns alla relevanta systemritningar tillgängliga?" >
-                        </div>
-                        <div class="form-group">
-                            <label for="question12">Vilket kommunikationsprotokoll är valt för anläggningen?</label>
-                            <input type="text" class="form-control" id="question12" name="Vilket kommunikationsprotokoll är valt för anläggningen?" >
-                        </div>
-                        <div class="form-group">
-                            <label for="question13">Vilken är den önskade tiden för att projektet ska vara klart?</label>
-                            <input type="text" class="form-control" id="question13" name="Vilken är den önskade tiden för att projektet ska vara klart?" >
-                        </div>
-                        <div class="form-group">
-                            <label for="question14">Är programmeringsprojektet beroende av andra projektaktiviteter?</label>
-                            <input type="text" class="form-control" id="question14" name="Är programmeringsprojektet beroende av andra projektaktiviteter?" >
-                        </div>
-                        <div class="form-group">
-                            <label for="question15">Hur många programmerare uppskattas för projektet?</label>
-                            <input type="text" class="form-control" id="question15" name="Hur många programmerare uppskattas för projektet?" >
-                        </div>
-                        <div class="form-group">
-                            <label for="question16">Kan programmeringen göras på distans?</label>
-                            <input type="text" class="form-control" id="question16" name="Kan programmeringen göras på distans?" >
-                        </div>
-                        <div class="form-group">
-                            <label for="question17">Finns det några säkerhetskrav som måste beaktas?</label>
-                            <input type="text" class="form-control" id="question17" name="Finns det några säkerhetskrav som måste beaktas?" >
-                        </div>
-                        <input type="hidden" name="_next" value="https://8000-renwarp-nordicautomatio-3444v1f71k9.ws-eu114.gitpod.io/thank_you.html">
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight4" aria-labelledby="offcanvasRightLabel4">
+            <div class="offcanvas-header">
+                <h5 id="offcanvasRightLabel4">Programmering</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <form id="form3-inner" action="https://formsubmit.co/5626dce5f295e0317018275f67245482" method="POST">
+                    <!-- Add your form fields here -->
+                    <div class="form-group">
+                        <label for="name">Företag*</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                   
+                    <div class="form-group">
+                        <label for="question1">Kontaktperson*</label>
+                        <input type="text" class="form-control" id="question1" name="question1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-post*</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="question2">Organisationsnr*</label>
+                        <input type="text" class="form-control" id="question2" name="Organisationsnr*" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="question3">Mobilnr*</label>
+                        <input type="text" class="form-control" id="question3" name="Mobilnr" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="question4">Hur många PLC behöver programmeras?</label>
+                        <input type="text" class="form-control" id="question4" name="Hur många PLC behöver programmeras?" >
+                    </div>
+                    <div class="form-group">
+                        <label for="question5">Hur många HMI behöver programmeras?</label>
+                        <input type="text" class="form-control" id="question5" name="Hur många HMI behöver programmeras?" >
+                    </div>
+                    <div class="form-group">
+                        <label for="question6">Finns det komponenter där PLC och HMI är inbyggda?</label>
+                        <input type="text" class="form-control" id="question6" name="Finns det komponenter där PLC och HMI är inbyggda?" >
+                    </div>
+                    <div class="form-group">
+                        <label for="question7">Finns det en lista över alla komponenter som behöver kontrolleras?</label>
+                        <input type="text" class="form-control" id="question7" name="Finns det en lista över alla komponenter som behöver kontrolleras?" >
+                    </div>
+                    <div class="form-group">
+                        <label for="question8">Ska varje separat kod testas?</label>
+                        <input type="text" class="form-control" id="question8" name="Ska varje separat kod testas?">
+                    </div>
+                    <div class="form-group">
+                        <label for="question9">Finns det någon specifik kodstandard som måste beaktas?</label>
+                        <input type="text" class="form-control" id="question9" name="Finns det någon specifik kodstandard som måste beaktas?" >
+                    </div>
+                    <div class="form-group">
+                        <label for="question10">Finns det datablad för alla komponenter?</label>
+                        <input type="text" class="form-control" id="question10" name="Finns det datablad för alla komponenter?">
+                    </div>
+                    <div class="form-group">
+                        <label for="question11">Finns alla relevanta systemritningar tillgängliga?</label>
+                        <input type="text" class="form-control" id="question11" name="Finns alla relevanta systemritningar tillgängliga?" >
+                    </div>
+                    <div class="form-group">
+                        <label for="question12">Vilket kommunikationsprotokoll är valt för anläggningen?</label>
+                        <input type="text" class="form-control" id="question12" name="Vilket kommunikationsprotokoll är valt för anläggningen?" >
+                    </div>
+                    <div class="form-group">
+                        <label for="question13">Vilken är den önskade tiden för att projektet ska vara klart?</label>
+                        <input type="text" class="form-control" id="question13" name="Vilken är den önskade tiden för att projektet ska vara klart?" >
+                    </div>
+                    <div class="form-group">
+                        <label for="question14">Är programmeringsprojektet beroende av andra projektaktiviteter?</label>
+                        <input type="text" class="form-control" id="question14" name="Är programmeringsprojektet beroende av andra projektaktiviteter?" >
+                    </div>
+                    <div class="form-group">
+                        <label for="question15">Hur många programmerare uppskattas för projektet?</label>
+                        <input type="text" class="form-control" id="question15" name="Hur många programmerare uppskattas för projektet?" >
+                    </div>
+                    <div class="form-group">
+                        <label for="question16">Kan programmeringen göras på distans?</label>
+                        <input type="text" class="form-control" id="question16" name="Kan programmeringen göras på distans?" >
+                    </div>
+                    <div class="form-group">
+                        <label for="question17">Finns det några säkerhetskrav som måste beaktas?</label>
+                        <input type="text" class="form-control" id="question17" name="Finns det några säkerhetskrav som måste beaktas?" >
+                    </div>
+                    <input type="hidden" name="_next" value="https://8000-renwarp-nordicautomatio-3444v1f71k9.ws-eu114.gitpod.io/thank_you.html">
+                    <!-- Add more form fields as needed -->
+        
+                    <!-- Submit button -->
+                    <div class="form-group">
                         <button type="submit" class="btn btn-success">Submit</button>
-                    </form>
-                </div>
+                    </div>
+                    
+                    <!-- Add hidden input fields if needed -->
+                    <input type="hidden" name="_next" value="https://your-redirect-url.com/thank_you.html">
+                </form>
             </div>
         </div>
+    </div>
 
 
 
 
-
-
+   
 
 
 

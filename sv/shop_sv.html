@@ -8,6 +8,9 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+
     <link rel="stylesheet" href="../css/style.css">
     <style>
         .shop-first-form {
@@ -48,7 +51,79 @@
 
             color: white;
         }
+        .large-button {
+            width: 80%;
+            height: 80px; /* Adjust height as needed */
+            font-size: 24px; /* Adjust font size as needed */
+            color: white; /* Text color */
+            background: linear-gradient(0deg, 
+                rgba(6, 11, 46, 1) 0%, 
+                rgba(185, 101, 5, 1) 50%, 
+                rgba(6, 11, 46, 1) 100%),
+            radial-gradient(circle at top, transparent, rgba(6, 11, 46, 0.5)), 
+            radial-gradient(circle at bottom, transparent, rgba(6, 11, 46, 0.5)),
+            radial-gradient(circle at left, transparent, rgba(6, 11, 46, 0.5)),
+            radial-gradient(circle at right, transparent, rgba(6, 11, 46, 0.5));
+            background-blend-mode: overlay;
+            border: 2px solid white; /* Add white border */
+        }
+        .large-button:hover, .large-button:focus, .large-button:active {
+            background: linear-gradient(0deg, 
+                rgba(6, 11, 46, 1) 0%, 
+                rgba(185, 101, 5, 1) 50%, 
+                rgba(6, 11, 46, 1) 100%),
+            radial-gradient(circle at top, transparent, rgba(6, 11, 46, 0.5)), 
+            radial-gradient(circle at bottom, transparent, rgba(6, 11, 46, 0.5)),
+            radial-gradient(circle at left, transparent, rgba(6, 11, 46, 0.5)),
+            radial-gradient(circle at right, transparent, rgba(6, 11, 46, 0.5));
+            background-blend-mode: overlay;
+            color: white; /* Ensure text color stays white */
+            border: 2px solid white; /* Add white border */
+        }
+        .left-half {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px;
+        }
+        @media (max-width: 768px) {
+            .left-half {
+                width: 100%;
+                justify-content: center;
+                margin: 10px;
+            }
 
+            .offcanvas.offcanvas-end {
+                width: 80% !important;
+                max-width: none; /* Override Bootstrap's max-width */
+            }
+        }
+        .offcanvas-body {
+            background: linear-gradient(0deg, 
+                rgba(6, 11, 46, 1) 0%, 
+                rgba(185, 101, 5, 1) 50%, 
+                rgba(6, 11, 46, 1) 100%),
+            radial-gradient(circle at top, transparent, rgba(6, 11, 46, 0.5)), 
+            radial-gradient(circle at bottom, transparent, rgba(6, 11, 46, 0.5)),
+            radial-gradient(circle at left, transparent, rgba(6, 11, 46, 0.5)),
+            radial-gradient(circle at right, transparent, rgba(6, 11, 46, 0.5));
+            background-blend-mode: overlay;
+            color: white; /* Text color for offcanvas body */
+        }
+        .offcanvas-header {
+            background: linear-gradient(0deg, 
+                rgba(6, 11, 46, 1) 0%, 
+                rgba(185, 101, 5, 1) 50%, 
+                rgba(6, 11, 46, 1) 100%),
+            radial-gradient(circle at top, transparent, rgba(6, 11, 46, 0.5)), 
+            radial-gradient(circle at bottom, transparent, rgba(6, 11, 46, 0.5)),
+            radial-gradient(circle at left, transparent, rgba(6, 11, 46, 0.5)),
+            radial-gradient(circle at right, transparent, rgba(6, 11, 46, 0.5));
+            background-blend-mode: overlay;
+            color: white; /* Text color for offcanvas header */
+        }
+        
     </style>
 </head>
 <body>
@@ -118,16 +193,24 @@
     </div>
     
     <div class="container-fluid" id="shop-forms">
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-10">
-                <div class="shop-first-form" onclick="toggleForm('form1')">Kabel</div>
-                <div id="form1" class="form-container">
+
+        <div class="container">
+            <div class="row justify-content-start">
+                <div class="col-6 left-half">
+                    <button class="btn btn-primary large-button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Kabel</button>
+                </div>
+            </div>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                <div class="offcanvas-header">
+                    <h5 id="offcanvasRightLabel">Kabel</h5>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
                     <form id="form1-inner" action="https://formsubmit.co/5626dce5f295e0317018275f67245482" method="POST">
                         <div class="form-group">
                             <label for="name">Företag*</label>
                             <input type="text" class="form-control" id="name" name="name" required>
                         </div>
-                       
                         <div class="form-group">
                             <label for="question1">Kontaktperson*</label>
                             <input type="text" class="form-control" id="question1" name="question1" required>
@@ -198,16 +281,30 @@
                 </div>
             </div>
         </div>
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-10">
-                <div class="shop-first-form" onclick="toggleForm('form2')">Elektriska motorer</div>
-                <div id="form2" class="form-container">
+
+ 
+<div class="container">
+    
+        <div class="row justify-content-start">
+            <div class="col-6 left-half">
+                <button class="btn btn-primary large-button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight2" aria-controls="offcanvasRight2">Elektriska motorer</button>
+            </div>
+        </div>
+
+          
+          
+
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight2" aria-labelledby="offcanvasRightLabel2">
+                <div class="offcanvas-header">
+                    <h5 id="offcanvasRightLabel2">Elektriska motorer</h5>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
                     <form id="form2-inner" action="https://formsubmit.co/5626dce5f295e0317018275f67245482" method="POST">
                         <div class="form-group">
                             <label for="name">Företag*</label>
                             <input type="text" class="form-control" id="name" name="name" required>
                         </div>
-                       
                         <div class="form-group">
                             <label for="question1">Kontaktperson*</label>
                             <input type="text" class="form-control" id="question1" name="question1" required>
@@ -225,31 +322,28 @@
                             <input type="text" class="form-control" id="question3" name="Mobilnr" required>
                         </div>
                         <div class="form-group">
-                            <label for="name">Motortyp som du behöver?</label>
+                            <label for="question4">Motortyp som du behöver?</label>
                             <input type="text" class="form-control" id="question4" name="Motortyp som du behöver?">
                         </div>
-                       
                         <div class="form-group">
                             <label for="question5">Nödvändig effekt för motorn?</label>
-                            <input type="text" class="form-control" id="question5" name="Nödvändig effekt för motorn?" >
+                            <input type="text" class="form-control" id="question5" name="Nödvändig effekt för motorn?">
                         </div>
-                       
                         <div class="form-group">
                             <label for="question6">Önskad driftspänning för motorn?</label>
                             <input type="text" class="form-control" id="question6" name="Önskad driftspänning för motorn?">
                         </div>
                         <div class="form-group">
                             <label for="question7">Förväntat varvtalsområde för motorn?</label>
-                            <input type="text" class="form-control" id="question7" name="Förväntat varvtalsområde för motorn?" >
+                            <input type="text" class="form-control" id="question7" name="Förväntat varvtalsområde för motorn?">
                         </div>
                         <div class="form-group">
                             <label for="question8">Förväntat vridmomentområde för motorn?</label>
-                            <input type="text" class="form-control" id="question8" name="Förväntat vridmomentområde för motorn?" >
+                            <input type="text" class="form-control" id="question8" name="Förväntat vridmomentområde för motorn?">
                         </div>
-                       
                         <div class="form-group">
                             <label for="question9">Förväntat driftstemperaturområde för motorn?</label>
-                            <input type="text" class="form-control" id="question9" name="Förväntat driftstemperaturområde för motorn?" >
+                            <input type="text" class="form-control" id="question9" name="Förväntat driftstemperaturområde för motorn?">
                         </div>
                         <div class="form-group">
                             <label for="question10">Förväntad arbetscykel för motorn?</label>
@@ -257,458 +351,573 @@
                         </div>
                         <div class="form-group">
                             <label for="question11">Belastningstyp som motorn ska driva?</label>
-                            <input type="text" class="form-control" id="question11" name="Belastningstyp som motorn ska driva?" >
+                            <input type="text" class="form-control" id="question11" name="Belastningstyp som motorn ska driva?">
                         </div>
                         <div class="form-group">
                             <label for="question12">Krävs verkningsgrad för motorn?</label>
-                            <input type="text" class="form-control" id="question12" name="Krävs verkningsgrad för motorn?" >
+                            <input type="text" class="form-control" id="question12" name="Krävs verkningsgrad för motorn?">
                         </div>
                         <div class="form-group">
                             <label for="question13">Förväntad ljudnivå för motorn?</label>
-                            <input type="text" class="form-control" id="question13" name="Förväntad ljudnivå för motorn?" >
+                            <input type="text" class="form-control" id="question13" name="Förväntad ljudnivå för motorn?">
                         </div>
                         <div class="form-group">
                             <label for="question14">Förväntad livslängd för motorn?</label>
-                            <input type="text" class="form-control" id="question14" name="Förväntad livslängd för motorn?" >
+                            <input type="text" class="form-control" id="question14" name="Förväntad livslängd för motorn?">
                         </div>
                         <div class="form-group">
                             <label for="question15">Maximal fysisk storlek på motorn?</label>
-                            <input type="text" class="form-control" id="question15" name="Maximal fysisk storlek på motorn?" >
+                            <input type="text" class="form-control" id="question15" name="Maximal fysisk storlek på motorn?">
                         </div>
                         <div class="form-group">
                             <label for="question16">Typ av styrning kommer att användas för att driva motorn?</label>
-                            <input type="text" class="form-control" id="question16" name="Typ av styrning kommer att användas för att driva motorn?" >
+                            <input type="text" class="form-control" id="question16" name="Typ av styrning kommer att användas för att driva motorn?">
                         </div>
                         <div class="form-group">
                             <label for="question17">Kommer motorn att användas i en farlig miljö?</label>
-                            <input type="text" class="form-control" id="question17" name="Kommer motorn att användas i en farlig miljö?" >
+                            <input type="text" class="form-control" id="question17" name="Kommer motorn att användas i en farlig miljö?">
                         </div>
-                        <input type="hidden" name="_next" value="https://8000-renwarp-nordicautomatio-3444v1f71k9.ws-eu114.gitpod.io/thank_you.html">
+                        <input type="hidden" name="_next" value="https://your-redirect-url.com/thank_you.html">
                         <button type="submit" class="btn btn-success">Submit</button>
                     </form>
                 </div>
             </div>
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-10">
-                <div class="shop-first-form" onclick="toggleForm('form3')">PLC</div>
-                <div id="form3" class="form-container">
-                    <form id="form3-inner" action="https://formsubmit.co/5626dce5f295e0317018275f67245482" method="POST">
-                        <div class="form-group">
-                            <label for="name">Företag*</label>
-                            <input type="text" class="form-control" id="name" name="name" required>
-                        </div>
-                       
-                        <div class="form-group">
-                            <label for="question1">Kontaktperson*</label>
-                            <input type="text" class="form-control" id="question1" name="Kontaktperson" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">E-post*</label>
-                            <input type="email" class="form-control" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="question2">Organisationsnr*</label>
-                            <input type="text" class="form-control" id="question2" name="Organisationsnr" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="question3">Mobilnr*</label>
-                            <input type="text" class="form-control" id="question3" name="Mobilnr" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="name">Avsedd applikation för PLC?</label>
-                            <input type="text" class="form-control" id="question4" name="Avsedd applikation för PLC?">
-                        </div>
-                       
-                        <div class="form-group">
-                            <label for="question5">Önskat märke eller tillverkare av PLC:n?</label>
-                            <input type="text" class="form-control" id="question5" name="Önskat märke eller tillverkare av PLC:n?" >
-                        </div>
-                       
-                        <div class="form-group">
-                            <label for="question6">Typ av in- och utsignaler som PLC:n skall bearbeta?</label>
-                            <input type="text" class="form-control" id="question6" name="Typ av in- och utsignaler som PLC:n skall bearbeta?">
-                        </div>
-                        <div class="form-group">
-                            <label for="question7">Antal I/O för PLC:n?</label>
-                            <input type="text" class="form-control" id="question7" name="Antal I/O för PLC:n?" >
-                        </div>
-                        <div class="form-group">
-                            <label for="question8">Erforderlig minneskapacitet för PLC:n, såsom programminne eller dataminne?</label>
-                            <input type="text" class="form-control" id="question8" name="Erforderlig minneskapacitet för PLC:n, såsom programminne eller dataminne?" >
-                        </div>
-                       
-                        <div class="form-group">
-                            <label for="question9">Nödvändig bearbetningshastighet eller skanningstid för PLC:n?</label>
-                            <input type="text" class="form-control" id="question9" name="Nödvändig bearbetningshastighet eller skanningstid för PLC:n?" >
-                        </div>
-                        <div class="form-group">
-                            <label for="question10">Typ av miljöklassning eller skydd krävs för PLC?</label>
-                            <input type="text" class="form-control" id="question10" name="Typ av miljöklassning eller skydd krävs för PLC?">
-                        </div>
-                        <div class="form-group">
-                            <label for="question11">Finns det några andra specifika krav eller standarder som PLC:n måste uppfylla, såsom IEC-språk eller IP-standarder?</label>
-                            <input type="text" class="form-control" id="question11" name="Finns det några andra specifika krav eller standarder som PLC:n måste uppfylla, såsom IEC-språk eller IP-standarder?" >
-                        </div>
-                        
-                        <input type="hidden" name="_next" value="https://8000-renwarp-nordicautomatio-3444v1f71k9.ws-eu114.gitpod.io/thank_you.html">
-                        <button type="submit" class="btn btn-success">Submit</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-10">
-                <div class="shop-first-form" onclick="toggleForm('form4')">Cylinder</div>
-                <div id="form4" class="form-container">
-                    <form id="form4-inner" action="https://formsubmit.co/5626dce5f295e0317018275f67245482" method="POST">
-                        <div class="form-group">
-                            <label for="name">Företag*</label>
-                            <input type="text" class="form-control" id="name" name="name" required>
-                        </div>
-                       
-                        <div class="form-group">
-                            <label for="question1">Kontaktperson*</label>
-                            <input type="text" class="form-control" id="question1" name="Kontaktperson" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">E-post*</label>
-                            <input type="email" class="form-control" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="question2">Organisationsnr*</label>
-                            <input type="text" class="form-control" id="question2" name="Organisationsnr" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="question3">Mobilnr*</label>
-                            <input type="text" class="form-control" id="question3" name="Mobilnr" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="name">Användning för cylindern?</label>
-                            <input type="text" class="form-control" id="question4" name="Användning för cylindern?">
-                        </div>
-                       
-                        <div class="form-group">
-                            <label for="question5">Roterande, linjär eller stavlös cylinder?</label>
-                            <input type="text" class="form-control" id="question5" name="Roterande, linjär eller stavlös cylinder?" >
-                        </div>
-                       
-                        <div class="form-group">
-                            <label for="question6">Erforderlig kraft eller belastningskapacitet för cylindern?</label>
-                            <input type="text" class="form-control" id="question6" name="Erforderlig kraft eller belastningskapacitet för cylindern?">
-                        </div>
-                        <div class="form-group">
-                            <label for="question7">Erforderlig slaglängd eller sträcka för cylindern?</label>
-                            <input type="text" class="form-control" id="question7" name="Erforderlig slaglängd eller sträcka för cylindern?" >
-                        </div>
-                        <div class="form-group">
-                            <label for="question8">Erforderlig hastighet eller cykeltid för cylindern?</label>
-                            <input type="text" class="form-control" id="question8" name="Erforderlig hastighet eller cykeltid för cylindern?" >
-                        </div>
-                       
-                        <div class="form-group">
-                            <label for="question9">Erforderlig monteringstyp eller konfiguration av cylinder?</label>
-                            <input type="text" class="form-control" id="question9" name="Erforderlig monteringstyp eller konfiguration av cylinder?" >
-                        </div>
-                        <div class="form-group">
-                            <label for="question10">Erforderlig borrning eller kolvdiameter för cylindern?</label>
-                            <input type="text" class="form-control" id="question10" name="Erforderlig borrning eller kolvdiameter för cylindern?">
-                        </div>
-                        <div class="form-group">
-                            <label for="question11">Erforderlig stångdiameter eller kolvstångsstorlek på cylindern?</label>
-                            <input type="text" class="form-control" id="question11" name="Erforderlig stångdiameter eller kolvstångsstorlek på cylindern?" >
-                        </div>
-                        <div class="form-group">
-                            <label for="question12">Erforderligt arbetstryck eller arbetsområde för cylindern?</label>
-                            <input type="text" class="form-control" id="question12" name="Erforderligt arbetstryck eller arbetsområde för cylindern?" >
-                        </div>
-                        <div class="form-group">
-                            <label for="question13">Behövs vätska eller medium för cylindern, såsom luft, hydraulolja eller olja?</label>
-                            <input type="text" class="form-control" id="question13" name="Behövs vätska eller medium för cylindern, såsom luft, hydraulolja eller olja?" >
-                        </div>
-                        <div class="form-group">
-                            <label for="question14">Erforderligt temperaturområde eller driftsmiljö för cylindern?</label>
-                            <input type="text" class="form-control" id="question14" name="Erforderligt temperaturområde eller driftsmiljö för cylindern?" >
-                        </div>
-                        <div class="form-group">
-                            <label for="question15">Erforderlig nivå av precision eller noggrannhet för cylindern?</label>
-                            <input type="text" class="form-control" id="question15" name="Erforderlig nivå av precision eller noggrannhet för cylindern?" >
-                        </div>
-                        <div class="form-group">
-                            <label for="question16">Erforderlig ljud- eller vibrationsnivå för cylinder?</label>
-                            <input type="text" class="form-control" id="question16" name="Erforderlig ljud- eller vibrationsnivå för cylinder?" >
-                        </div>
-                        <div class="form-group">
-                            <label for="question17">Specifika krav eller hänsyn till cylinderspecifikation?</label>
-                            <input type="text" class="form-control" id="question17" name="Specifika krav eller hänsyn till cylinderspecifikation?" >
-                        </div>
-                        
-                        <input type="hidden" name="_next" value="https://8000-renwarp-nordicautomatio-3444v1f71k9.ws-eu114.gitpod.io/thank_you.html">
-                        <button type="submit" class="btn btn-success">Submit</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-10">
-                <div class="shop-first-form" onclick="toggleForm('form5')">Mätinstrument</div>
-                <div id="form5" class="form-container">
-                    <form id="form5-inner" action="https://formsubmit.co/5626dce5f295e0317018275f67245482" method="POST">
-                        <div class="form-group">
-                            <label for="name">Företag*</label>
-                            <input type="text" class="form-control" id="name" name="name" required>
-                        </div>
-                       
-                        <div class="form-group">
-                            <label for="question1">Kontaktperson*</label>
-                            <input type="text" class="form-control" id="question1" name="Kontaktperson" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">E-post*</label>
-                            <input type="email" class="form-control" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="question2">Organisationsnr*</label>
-                            <input type="text" class="form-control" id="question2" name="Organisationsnr" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="question3">Mobilnr*</label>
-                            <input type="text" class="form-control" id="question3" name="Mobilnr" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="name">Avsedd användning för mätinstrumentet?</label>
-                            <input type="text" class="form-control" id="question4" name="Avsedd användning för mätinstrumentet?">
-                        </div>
-                       
-                        <div class="form-group">
-                            <label for="question5">Typ av fysisk parameter eller variabel kommer instrumentet att mäta, såsom spänning, ström, motstånd, effekt, temperatur, tryck, flöde, nivå eller fuktighet?</label>
-                            <input type="text" class="form-control" id="question5" name="R	typ av fysisk parameter eller variabel kommer instrumentet att mäta, såsom spänning, ström, motstånd, effekt, temperatur, tryck, flöde, nivå eller fuktighet?" >
-                        </div>
-                       
-                        <div class="form-group">
-                            <label for="question6">Vilken mätupplösning eller känslighet krävs för instrumentet?</label>
-                            <input type="text" class="form-control" id="question6" name="Vilken mätupplösning eller känslighet krävs för instrumentet?">
-                        </div>
-                        <div class="form-group">
-                            <label for="question7">Krävs strömförsörjning eller strömkälla för instrumentet?</label>
-                            <input type="text" class="form-control" id="question7" name="Krävs strömförsörjning eller strömkälla för instrumentet?" >
-                        </div>
-                        <div class="form-group">
-                            <label for="question8">Typ av display eller indikator krävs för instrumentet, såsom LCD, LED eller analog ratt?</label>
-                            <input type="text" class="form-control" id="question8" name="Typ av display eller indikator krävs för instrumentet, såsom LCD, LED eller analog ratt?" >
-                        </div>
-                       
-                        <div class="form-group">
-                            <label for="question9">Typ av installation eller montering krävs för instrumentet, såsom panelmontering, väggmontering eller handhållen?</label>
-                            <input type="text" class="form-control" id="question9" name="Typ av installation eller montering krävs för instrumentet, såsom panelmontering, väggmontering eller handhållen?" >
-                        </div>
-                        <div class="form-group">
-                            <label for="question10">Erforderlig utsignal för instrumentet, såsom analog, digital eller trådlös?</label>
-                            <input type="text" class="form-control" id="question10" name="Erforderlig utsignal för instrumentet, såsom analog, digital eller trådlös?">
-                        </div>
-                        <div class="form-group">
-                            <label for="question11">Krävs miljöklassning eller skydd för instrumentet, såsom IP-klassning eller NEMA-klassning?</label>
-                            <input type="text" class="form-control" id="question11" name="Krävs miljöklassning eller skydd för instrumentet, såsom IP-klassning eller NEMA-klassning?" >
-                        </div>
-                        <div class="form-group">
-                            <label for="question12">Typ av sensor eller sond krävs för instrumentet, såsom termoelement, RTD eller tryckgivare?</label>
-                            <input type="text" class="form-control" id="question12" name="Typ av sensor eller sond krävs för instrumentet, såsom termoelement, RTD eller tryckgivare?" >
-                        </div>
-                        <div class="form-group">
-                            <label for="question13">Finns det några andra specifika krav eller standarder som instrumentet måste uppfylla?</label>
-                            <input type="text" class="form-control" id="question13" name="Finns det några andra specifika krav eller standarder som instrumentet måste uppfylla?" >
-                        </div>
-                    
-                        <input type="hidden" name="_next" value="https://8000-renwarp-nordicautomatio-3444v1f71k9.ws-eu114.gitpod.io/thank_you.html">
-                        <button type="submit" class="btn btn-success">Submit</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-10">
-                <div class="shop-first-form" onclick="toggleForm('form6')">Frekvensomriktaren</div>
-                <div id="form6" class="form-container">
-                    <form id="form6-inner" action="https://formsubmit.co/5626dce5f295e0317018275f67245482" method="POST">
-                        <div class="form-group">
-                            <label for="name">Företag*</label>
-                            <input type="text" class="form-control" id="name" name="name" required>
-                        </div>
-                       
-                        <div class="form-group">
-                            <label for="question1">Kontaktperson*</label>
-                            <input type="text" class="form-control" id="question1" name="Kontaktperson" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">E-post*</label>
-                            <input type="email" class="form-control" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="question2">Organisationsnr*</label>
-                            <input type="text" class="form-control" id="question2" name="Organisationsnr" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="question3">Mobilnr*</label>
-                            <input type="text" class="form-control" id="question3" name="Mobilnr" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="name">Vilken är den märkeffekt eller uteffekt för motorn som kommer att styras av frekvensomriktaren?</label>
-                            <input type="text" class="form-control" id="question4" name="Vilken är den märkeffekt eller uteffekt för motorn som kommer att styras av frekvensomriktaren?">
-                        </div>
-                       
-                        <div class="form-group">
-                            <label for="question5">Vilket märke eller tillverkare krävs för frekvensomriktaren?</label>
-                            <input type="text" class="form-control" id="question5" name="Vilket märke eller tillverkare krävs för frekvensomriktaren?" >
-                        </div>
-                       
-                        <div class="form-group">
-                            <label for="question6">Vilken är märkspänningen och frekvensen för strömförsörjningen som kommer att användas med frekvensomriktaren?</label>
-                            <input type="text" class="form-control" id="question6" name="Vilken är märkspänningen och frekvensen för strömförsörjningen som kommer att användas med frekvensomriktaren?">
-                        </div>
-                        <div class="form-group">
-                            <label for="question7">Vilken nivå av kontroll och precision krävs för frekvensomriktaren, såsom hastighetsregleringsnoggrannhet eller vridmomentkontroll?</label>
-                            <input type="text" class="form-control" id="question7" name="Vilken nivå av kontroll och precision krävs för frekvensomriktaren, såsom hastighetsregleringsnoggrannhet eller vridmomentkontroll?" >
-                        </div>
-                        <div class="form-group">
-                            <label for="question8">Vilken nivå av kommunikation och anslutningsmöjligheter krävs för frekvensomriktaren, såsom digitala in- och utgångar eller fältbussprotokoll?</label>
-                            <input type="text" class="form-control" id="question8" name="Vilken nivå av kommunikation och anslutningsmöjligheter krävs för frekvensomriktaren, såsom digitala in- och utgångar eller fältbussprotokoll?" >
-                        </div>
-                       
-                        <div class="form-group">
-                            <label for="question9">Vilket frekvensområde krävs för frekvensomriktaren och måste den vara justerbar eller fixerad?</label>
-                            <input type="text" class="form-control" id="question9" name="Vilket frekvensområde krävs för frekvensomriktaren och måste den vara justerbar eller fixerad?" >
-                        </div>
-                        <div class="form-group">
-                            <label for="question10">Vilken är den nödvändiga skyddsnivån och säkerhetsfunktionerna för frekvensomriktaren, såsom överströmsskydd eller feldetektering?</label>
-                            <input type="text" class="form-control" id="question10" name="Vilken är den nödvändiga skyddsnivån och säkerhetsfunktionerna för frekvensomriktaren, såsom överströmsskydd eller feldetektering?">
-                        </div>
-                        <div class="form-group">
-                            <label for="question11">Vilken nivå av miljöskydd och hållbarhet krävs för frekvensomriktaren, som motstånd mot fukt eller extrema temperaturer?</label>
-                            <input type="text" class="form-control" id="question11" name="Vilken nivå av miljöskydd och hållbarhet krävs för frekvensomriktaren, som motstånd mot fukt eller extrema temperaturer?" >
-                        </div>
-                        <div class="form-group">
-                            <label for="question12">Vilken nivå av brus och elektromagnetisk störning (EMI) krävs för frekvensomriktaren, och måste den uppfylla några specifika standarder eller föreskrifter?</label>
-                            <input type="text" class="form-control" id="question12" name="Vilken nivå av brus och elektromagnetisk störning (EMI) krävs för frekvensomriktaren, och måste den uppfylla några specifika standarder eller föreskrifter?" >
-                        </div>
-                        <div class="form-group">
-                            <label for="question13">Finns det några andra specifika krav eller hänsyn till frekvensomriktarspecifikationen?</label>
-                            <input type="text" class="form-control" id="question13" name="Finns det några andra specifika krav eller hänsyn till frekvensomriktarspecifikationen?" >
-                        </div>
-                    
-                        <input type="hidden" name="_next" value="https://8000-renwarp-nordicautomatio-3444v1f71k9.ws-eu114.gitpod.io/thank_you.html">
-                        <button type="submit" class="btn btn-success">Submit</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-10">
-                <div class="shop-first-form" onclick="toggleForm('form7')">Industrirobotar</div>
-                <div id="form7" class="form-container">
-                    <form id="form7-inner" action="https://formsubmit.co/5626dce5f295e0317018275f67245482" method="POST">
-                        <div class="form-group">
-                            <label for="name">Företag*</label>
-                            <input type="text" class="form-control" id="name" name="name" required>
-                        </div>
-                       
-                        <div class="form-group">
-                            <label for="question1">Kontaktperson*</label>
-                            <input type="text" class="form-control" id="question1" name="Kontaktperson" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">E-post*</label>
-                            <input type="email" class="form-control" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="question2">Organisationsnr*</label>
-                            <input type="text" class="form-control" id="question2" name="Organisationsnr" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="question3">Mobilnr*</label>
-                            <input type="text" class="form-control" id="question3" name="Mobilnr" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="name">Avsedd användning för roboten?</label>
-                            <input type="text" class="form-control" id="question4" name="Avsedd användning för roboten?">
-                        </div>
-                       
-                        <div class="form-group">
-                            <label for="question5">Önskad nyttolastkapacitet för roboten?</label>
-                            <input type="text" class="form-control" id="question5" name="Önskad nyttolastkapacitet för roboten?" >
-                        </div>
-                       
-                        <div class="form-group">
-                            <label for="question6">Nödvändig räckvidd eller arbetsområde för roboten?</label>
-                            <input type="text" class="form-control" id="question6" name="Nödvändig räckvidd eller arbetsområde för roboten?">
-                        </div>
-                        <div class="form-group">
-                            <label for="question7">Krävs noggrannhet eller repeterbarhet för roboten?</label>
-                            <input type="text" class="form-control" id="question7" name="Krävs noggrannhet eller repeterbarhet för roboten?" >
-                        </div>
-                        <div class="form-group">
-                            <label for="question8">Maximal hastighet som krävs för roboten?</label>
-                            <input type="text" class="form-control" id="question8" name="Maximal hastighet som krävs för roboten?" >
-                        </div>
-                       
-                        <div class="form-group">
-                            <label for="question9">Typ av sluteffektor eller gripare kommer att användas med roboten?</label>
-                            <input type="text" class="form-control" id="question9" name="Typ av sluteffektor eller gripare kommer att användas med roboten?" >
-                        </div>
-                        <div class="form-group">
-                            <label for="question10">Krävs styrsystem för roboten?</label>
-                            <input type="text" class="form-control" id="question10" name="Krävs styrsystem för roboten?">
-                        </div>
-                        <div class="form-group">
-                            <label for="question11">Förväntad strömkälla för roboten?</label>
-                            <input type="text" class="form-control" id="question11" name="Förväntad strömkälla för roboten?" >
-                        </div>
-                        <div class="form-group">
-                            <label for="question12">Förväntat kommunikationsprotokoll för roboten?</label>
-                            <input type="text" class="form-control" id="question12" name="Förväntat kommunikationsprotokoll för roboten?" >
-                        </div>
-                        <div class="form-group">
-                            <label for="question13">Förväntat driftstemperaturområde för roboten?</label>
-                            <input type="text" class="form-control" id="question13" name="Förväntat driftstemperaturområde för roboten?" >
-                        </div>
-                        <div class="form-group">
-                            <label for="question14">Förväntad arbetscykel för roboten?</label>
-                            <input type="text" class="form-control" id="question14" name="Förväntad arbetscykel för roboten?" >
-                        </div>
-                    
-                        <div class="form-group">
-                            <label for="question15">Typ av sensorer kommer att användas med roboten?</label>
-                            <input type="text" class="form-control" id="question15" name="Typ av sensorer kommer att användas med roboten?" >
-                        </div>
-                        <div class="form-group">
-                            <label for="question16">Kommer roboten att användas för farliga eller säkerhetskritiska tillämpningar?</label>
-                            <input type="text" class="form-control" id="question16" name="Kommer roboten att användas för farliga eller säkerhetskritiska tillämpningar?" >
-                        </div>
-                    
-                        <div class="form-group">
-                            <label for="question17">Förväntad livslängd eller underhållskrav för roboten?</label>
-                            <input type="text" class="form-control" id="question17" name="Förväntad livslängd eller underhållskrav för roboten?" >
-                        </div>
-                    
-                        <div class="form-group">
-                            <label for="question18">Förväntad driftsmiljö för roboten?</label>
-                            <input type="text" class="form-control" id="question18" name="Förväntad driftsmiljö för roboten?" >
-                        </div>
-                    
-                    
-                    
-                        <input type="hidden" name="_next" value="https://8000-renwarp-nordicautomatio-3444v1f71k9.ws-eu114.gitpod.io/thank_you.html">
-                        <button type="submit" class="btn btn-success">Submit</button>
-                    </form>
-                </div>
-            </div>
-        </div>
+        
+  
+</div>
 
-
-
-
-
-
+<div class="container">
+    <div class="row justify-content-start">
+        <div class="col-6 left-half">
+            <button class="btn btn-primary large-button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight3" aria-controls="offcanvasRight3">PLC</button>
+        </div>
     </div>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight3" aria-labelledby="offcanvasRightLabel3">
+        <div class="offcanvas-header">
+            <h5 id="offcanvasRightLabel3">PLC</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <form id="form3-inner" action="https://formsubmit.co/5626dce5f295e0317018275f67245482" method="POST">
+                <!-- Add your form fields here -->
+                <div class="form-group">
+                    <label for="name">Företag*</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+               
+                <div class="form-group">
+                    <label for="question1">Kontaktperson*</label>
+                    <input type="text" class="form-control" id="question1" name="Kontaktperson" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-post*</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="question2">Organisationsnr*</label>
+                    <input type="text" class="form-control" id="question2" name="Organisationsnr" required>
+                </div>
+                <div class="form-group">
+                    <label for="question3">Mobilnr*</label>
+                    <input type="text" class="form-control" id="question3" name="Mobilnr" required>
+                </div>
+                <div class="form-group">
+                    <label for="name">Avsedd applikation för PLC?</label>
+                    <input type="text" class="form-control" id="question4" name="Avsedd applikation för PLC?">
+                </div>
+               
+                <div class="form-group">
+                    <label for="question5">Önskat märke eller tillverkare av PLC:n?</label>
+                    <input type="text" class="form-control" id="question5" name="Önskat märke eller tillverkare av PLC:n?" >
+                </div>
+               
+                <div class="form-group">
+                    <label for="question6">Typ av in- och utsignaler som PLC:n skall bearbeta?</label>
+                    <input type="text" class="form-control" id="question6" name="Typ av in- och utsignaler som PLC:n skall bearbeta?">
+                </div>
+                <div class="form-group">
+                    <label for="question7">Antal I/O för PLC:n?</label>
+                    <input type="text" class="form-control" id="question7" name="Antal I/O för PLC:n?" >
+                </div>
+                <div class="form-group">
+                    <label for="question8">Erforderlig minneskapacitet för PLC:n, såsom programminne eller dataminne?</label>
+                    <input type="text" class="form-control" id="question8" name="Erforderlig minneskapacitet för PLC:n, såsom programminne eller dataminne?" >
+                </div>
+               
+                <div class="form-group">
+                    <label for="question9">Nödvändig bearbetningshastighet eller skanningstid för PLC:n?</label>
+                    <input type="text" class="form-control" id="question9" name="Nödvändig bearbetningshastighet eller skanningstid för PLC:n?" >
+                </div>
+                <div class="form-group">
+                    <label for="question10">Typ av miljöklassning eller skydd krävs för PLC?</label>
+                    <input type="text" class="form-control" id="question10" name="Typ av miljöklassning eller skydd krävs för PLC?">
+                </div>
+                <div class="form-group">
+                    <label for="question11">Finns det några andra specifika krav eller standarder som PLC:n måste uppfylla, såsom IEC-språk eller IP-standarder?</label>
+                    <input type="text" class="form-control" id="question11" name="Finns det några andra specifika krav eller standarder som PLC:n måste uppfylla, såsom IEC-språk eller IP-standarder?" >
+                </div>
+                <input type="hidden" name="_next" value="https://8000-renwarp-nordicautomatio-3444v1f71k9.ws-eu114.gitpod.io/thank_you.html">
+                <!-- Add more form fields as needed -->
+    
+                <!-- Submit button -->
+                <div class="form-group">
+                    <button type="submit" class="btn btn-success">Submit</button>
+                </div>
+                
+                <!-- Add hidden input fields if needed -->
+                <input type="hidden" name="_next" value="https://your-redirect-url.com/thank_you.html">
+            </form>
+        </div>
+    </div>
+</div>
+   
+<div class="container">
+    <div class="row justify-content-start">
+        <div class="col-6 left-half">
+            <button class="btn btn-primary large-button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight4" aria-controls="offcanvasRight4">Cylinder</button>
+        </div>
+    </div>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight4" aria-labelledby="offcanvasRightLabel4">
+        <div class="offcanvas-header">
+            <h5 id="offcanvasRightLabel4">Cylinder</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <form id="form3-inner" action="https://formsubmit.co/5626dce5f295e0317018275f67245482" method="POST">
+                <!-- Add your form fields here -->
+                <div class="form-group">
+                    <label for="name">Företag*</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+               
+                <div class="form-group">
+                    <label for="question1">Kontaktperson*</label>
+                    <input type="text" class="form-control" id="question1" name="Kontaktperson" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-post*</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="question2">Organisationsnr*</label>
+                    <input type="text" class="form-control" id="question2" name="Organisationsnr" required>
+                </div>
+                <div class="form-group">
+                    <label for="question3">Mobilnr*</label>
+                    <input type="text" class="form-control" id="question3" name="Mobilnr" required>
+                </div>
+                <div class="form-group">
+                    <label for="name">Användning för cylindern?</label>
+                    <input type="text" class="form-control" id="question4" name="Användning för cylindern?">
+                </div>
+               
+                <div class="form-group">
+                    <label for="question5">Roterande, linjär eller stavlös cylinder?</label>
+                    <input type="text" class="form-control" id="question5" name="Roterande, linjär eller stavlös cylinder?" >
+                </div>
+               
+                <div class="form-group">
+                    <label for="question6">Erforderlig kraft eller belastningskapacitet för cylindern?</label>
+                    <input type="text" class="form-control" id="question6" name="Erforderlig kraft eller belastningskapacitet för cylindern?">
+                </div>
+                <div class="form-group">
+                    <label for="question7">Erforderlig slaglängd eller sträcka för cylindern?</label>
+                    <input type="text" class="form-control" id="question7" name="Erforderlig slaglängd eller sträcka för cylindern?" >
+                </div>
+                <div class="form-group">
+                    <label for="question8">Erforderlig hastighet eller cykeltid för cylindern?</label>
+                    <input type="text" class="form-control" id="question8" name="Erforderlig hastighet eller cykeltid för cylindern?" >
+                </div>
+               
+                <div class="form-group">
+                    <label for="question9">Erforderlig monteringstyp eller konfiguration av cylinder?</label>
+                    <input type="text" class="form-control" id="question9" name="Erforderlig monteringstyp eller konfiguration av cylinder?" >
+                </div>
+                <div class="form-group">
+                    <label for="question10">Erforderlig borrning eller kolvdiameter för cylindern?</label>
+                    <input type="text" class="form-control" id="question10" name="Erforderlig borrning eller kolvdiameter för cylindern?">
+                </div>
+                <div class="form-group">
+                    <label for="question11">Erforderlig stångdiameter eller kolvstångsstorlek på cylindern?</label>
+                    <input type="text" class="form-control" id="question11" name="Erforderlig stångdiameter eller kolvstångsstorlek på cylindern?" >
+                </div>
+                <div class="form-group">
+                    <label for="question12">Erforderligt arbetstryck eller arbetsområde för cylindern?</label>
+                    <input type="text" class="form-control" id="question12" name="Erforderligt arbetstryck eller arbetsområde för cylindern?" >
+                </div>
+                <div class="form-group">
+                    <label for="question13">Behövs vätska eller medium för cylindern, såsom luft, hydraulolja eller olja?</label>
+                    <input type="text" class="form-control" id="question13" name="Behövs vätska eller medium för cylindern, såsom luft, hydraulolja eller olja?" >
+                </div>
+                <div class="form-group">
+                    <label for="question14">Erforderligt temperaturområde eller driftsmiljö för cylindern?</label>
+                    <input type="text" class="form-control" id="question14" name="Erforderligt temperaturområde eller driftsmiljö för cylindern?" >
+                </div>
+                <div class="form-group">
+                    <label for="question15">Erforderlig nivå av precision eller noggrannhet för cylindern?</label>
+                    <input type="text" class="form-control" id="question15" name="Erforderlig nivå av precision eller noggrannhet för cylindern?" >
+                </div>
+                <div class="form-group">
+                    <label for="question16">Erforderlig ljud- eller vibrationsnivå för cylinder?</label>
+                    <input type="text" class="form-control" id="question16" name="Erforderlig ljud- eller vibrationsnivå för cylinder?" >
+                </div>
+                <div class="form-group">
+                    <label for="question17">Specifika krav eller hänsyn till cylinderspecifikation?</label>
+                    <input type="text" class="form-control" id="question17" name="Specifika krav eller hänsyn till cylinderspecifikation?" >
+                </div>
+                <input type="hidden" name="_next" value="https://8000-renwarp-nordicautomatio-3444v1f71k9.ws-eu114.gitpod.io/thank_you.html">
+                <!-- Add more form fields as needed -->
+    
+                <!-- Submit button -->
+                <div class="form-group">
+                    <button type="submit" class="btn btn-success">Submit</button>
+                </div>
+                
+                <!-- Add hidden input fields if needed -->
+                <input type="hidden" name="_next" value="https://your-redirect-url.com/thank_you.html">
+            </form>
+        </div>
+    </div>
+</div>
+        
+<div class="container">
+    <div class="row justify-content-start">
+        <div class="col-6 left-half">
+            <button class="btn btn-primary large-button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight5" aria-controls="offcanvasRight5">Mätinstrument</button>
+        </div>
+    </div>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight5" aria-labelledby="offcanvasRightLabel4">
+        <div class="offcanvas-header">
+            <h5 id="offcanvasRightLabel5">Mätinstrument</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <form id="form3-inner" action="https://formsubmit.co/5626dce5f295e0317018275f67245482" method="POST">
+                <!-- Add your form fields here -->
+                <div class="form-group">
+                    <label for="name">Företag*</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+               
+                <div class="form-group">
+                    <label for="question1">Kontaktperson*</label>
+                    <input type="text" class="form-control" id="question1" name="Kontaktperson" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-post*</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="question2">Organisationsnr*</label>
+                    <input type="text" class="form-control" id="question2" name="Organisationsnr" required>
+                </div>
+                <div class="form-group">
+                    <label for="question3">Mobilnr*</label>
+                    <input type="text" class="form-control" id="question3" name="Mobilnr" required>
+                </div>
+                <div class="form-group">
+                    <label for="name">Avsedd användning för mätinstrumentet?</label>
+                    <input type="text" class="form-control" id="question4" name="Avsedd användning för mätinstrumentet?">
+                </div>
+               
+                <div class="form-group">
+                    <label for="question5">Typ av fysisk parameter eller variabel kommer instrumentet att mäta, såsom spänning, ström, motstånd, effekt, temperatur, tryck, flöde, nivå eller fuktighet?</label>
+                    <input type="text" class="form-control" id="question5" name="R	typ av fysisk parameter eller variabel kommer instrumentet att mäta, såsom spänning, ström, motstånd, effekt, temperatur, tryck, flöde, nivå eller fuktighet?" >
+                </div>
+               
+                <div class="form-group">
+                    <label for="question6">Vilken mätupplösning eller känslighet krävs för instrumentet?</label>
+                    <input type="text" class="form-control" id="question6" name="Vilken mätupplösning eller känslighet krävs för instrumentet?">
+                </div>
+                <div class="form-group">
+                    <label for="question7">Krävs strömförsörjning eller strömkälla för instrumentet?</label>
+                    <input type="text" class="form-control" id="question7" name="Krävs strömförsörjning eller strömkälla för instrumentet?" >
+                </div>
+                <div class="form-group">
+                    <label for="question8">Typ av display eller indikator krävs för instrumentet, såsom LCD, LED eller analog ratt?</label>
+                    <input type="text" class="form-control" id="question8" name="Typ av display eller indikator krävs för instrumentet, såsom LCD, LED eller analog ratt?" >
+                </div>
+               
+                <div class="form-group">
+                    <label for="question9">Typ av installation eller montering krävs för instrumentet, såsom panelmontering, väggmontering eller handhållen?</label>
+                    <input type="text" class="form-control" id="question9" name="Typ av installation eller montering krävs för instrumentet, såsom panelmontering, väggmontering eller handhållen?" >
+                </div>
+                <div class="form-group">
+                    <label for="question10">Erforderlig utsignal för instrumentet, såsom analog, digital eller trådlös?</label>
+                    <input type="text" class="form-control" id="question10" name="Erforderlig utsignal för instrumentet, såsom analog, digital eller trådlös?">
+                </div>
+                <div class="form-group">
+                    <label for="question11">Krävs miljöklassning eller skydd för instrumentet, såsom IP-klassning eller NEMA-klassning?</label>
+                    <input type="text" class="form-control" id="question11" name="Krävs miljöklassning eller skydd för instrumentet, såsom IP-klassning eller NEMA-klassning?" >
+                </div>
+                <div class="form-group">
+                    <label for="question12">Typ av sensor eller sond krävs för instrumentet, såsom termoelement, RTD eller tryckgivare?</label>
+                    <input type="text" class="form-control" id="question12" name="Typ av sensor eller sond krävs för instrumentet, såsom termoelement, RTD eller tryckgivare?" >
+                </div>
+                <div class="form-group">
+                    <label for="question13">Finns det några andra specifika krav eller standarder som instrumentet måste uppfylla?</label>
+                    <input type="text" class="form-control" id="question13" name="Finns det några andra specifika krav eller standarder som instrumentet måste uppfylla?" >
+                </div>
+                <input type="hidden" name="_next" value="https://8000-renwarp-nordicautomatio-3444v1f71k9.ws-eu114.gitpod.io/thank_you.html">
+                <!-- Add more form fields as needed -->
+    
+                <!-- Submit button -->
+                <div class="form-group">
+                    <button type="submit" class="btn btn-success">Submit</button>
+                </div>
+                
+                <!-- Add hidden input fields if needed -->
+                <input type="hidden" name="_next" value="https://your-redirect-url.com/thank_you.html">
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row justify-content-start">
+        <div class="col-6 left-half">
+            <button class="btn btn-primary large-button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight6" aria-controls="offcanvasRight6">Frekvensomriktaren</button>
+        </div>
+    </div>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight6" aria-labelledby="offcanvasRightLabel6">
+        <div class="offcanvas-header">
+            <h5 id="offcanvasRightLabel6">Frekvensomriktaren</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <form id="form3-inner" action="https://formsubmit.co/5626dce5f295e0317018275f67245482" method="POST">
+                <!-- Add your form fields here -->
+                <div class="form-group">
+                    <label for="name">Företag*</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+               
+                <div class="form-group">
+                    <label for="question1">Kontaktperson*</label>
+                    <input type="text" class="form-control" id="question1" name="Kontaktperson" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-post*</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="question2">Organisationsnr*</label>
+                    <input type="text" class="form-control" id="question2" name="Organisationsnr" required>
+                </div>
+                <div class="form-group">
+                    <label for="question3">Mobilnr*</label>
+                    <input type="text" class="form-control" id="question3" name="Mobilnr" required>
+                </div>
+                <div class="form-group">
+                    <label for="name">Vilken är den märkeffekt eller uteffekt för motorn som kommer att styras av frekvensomriktaren?</label>
+                    <input type="text" class="form-control" id="question4" name="Vilken är den märkeffekt eller uteffekt för motorn som kommer att styras av frekvensomriktaren?">
+                </div>
+               
+                <div class="form-group">
+                    <label for="question5">Vilket märke eller tillverkare krävs för frekvensomriktaren?</label>
+                    <input type="text" class="form-control" id="question5" name="Vilket märke eller tillverkare krävs för frekvensomriktaren?" >
+                </div>
+               
+                <div class="form-group">
+                    <label for="question6">Vilken är märkspänningen och frekvensen för strömförsörjningen som kommer att användas med frekvensomriktaren?</label>
+                    <input type="text" class="form-control" id="question6" name="Vilken är märkspänningen och frekvensen för strömförsörjningen som kommer att användas med frekvensomriktaren?">
+                </div>
+                <div class="form-group">
+                    <label for="question7">Vilken nivå av kontroll och precision krävs för frekvensomriktaren, såsom hastighetsregleringsnoggrannhet eller vridmomentkontroll?</label>
+                    <input type="text" class="form-control" id="question7" name="Vilken nivå av kontroll och precision krävs för frekvensomriktaren, såsom hastighetsregleringsnoggrannhet eller vridmomentkontroll?" >
+                </div>
+                <div class="form-group">
+                    <label for="question8">Vilken nivå av kommunikation och anslutningsmöjligheter krävs för frekvensomriktaren, såsom digitala in- och utgångar eller fältbussprotokoll?</label>
+                    <input type="text" class="form-control" id="question8" name="Vilken nivå av kommunikation och anslutningsmöjligheter krävs för frekvensomriktaren, såsom digitala in- och utgångar eller fältbussprotokoll?" >
+                </div>
+               
+                <div class="form-group">
+                    <label for="question9">Vilket frekvensområde krävs för frekvensomriktaren och måste den vara justerbar eller fixerad?</label>
+                    <input type="text" class="form-control" id="question9" name="Vilket frekvensområde krävs för frekvensomriktaren och måste den vara justerbar eller fixerad?" >
+                </div>
+                <div class="form-group">
+                    <label for="question10">Vilken är den nödvändiga skyddsnivån och säkerhetsfunktionerna för frekvensomriktaren, såsom överströmsskydd eller feldetektering?</label>
+                    <input type="text" class="form-control" id="question10" name="Vilken är den nödvändiga skyddsnivån och säkerhetsfunktionerna för frekvensomriktaren, såsom överströmsskydd eller feldetektering?">
+                </div>
+                <div class="form-group">
+                    <label for="question11">Vilken nivå av miljöskydd och hållbarhet krävs för frekvensomriktaren, som motstånd mot fukt eller extrema temperaturer?</label>
+                    <input type="text" class="form-control" id="question11" name="Vilken nivå av miljöskydd och hållbarhet krävs för frekvensomriktaren, som motstånd mot fukt eller extrema temperaturer?" >
+                </div>
+                <div class="form-group">
+                    <label for="question12">Vilken nivå av brus och elektromagnetisk störning (EMI) krävs för frekvensomriktaren, och måste den uppfylla några specifika standarder eller föreskrifter?</label>
+                    <input type="text" class="form-control" id="question12" name="Vilken nivå av brus och elektromagnetisk störning (EMI) krävs för frekvensomriktaren, och måste den uppfylla några specifika standarder eller föreskrifter?" >
+                </div>
+                <div class="form-group">
+                    <label for="question13">Finns det några andra specifika krav eller hänsyn till frekvensomriktarspecifikationen?</label>
+                    <input type="text" class="form-control" id="question13" name="Finns det några andra specifika krav eller hänsyn till frekvensomriktarspecifikationen?" >
+                </div>
+                <input type="hidden" name="_next" value="https://8000-renwarp-nordicautomatio-3444v1f71k9.ws-eu114.gitpod.io/thank_you.html">
+                <!-- Add more form fields as needed -->
+    
+                <!-- Submit button -->
+                <div class="form-group">
+                    <button type="submit" class="btn btn-success">Submit</button>
+                </div>
+                
+                <!-- Add hidden input fields if needed -->
+                <input type="hidden" name="_next" value="https://your-redirect-url.com/thank_you.html">
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row justify-content-start">
+        <div class="col-6 left-half">
+            <button class="btn btn-primary large-button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight7" aria-controls="offcanvasRight7">Industrirobotar</button>
+        </div>
+    </div>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight7" aria-labelledby="offcanvasRightLabel7">
+        <div class="offcanvas-header">
+            <h5 id="offcanvasRightLabel7">Industrirobotar</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <form id="form3-inner" action="https://formsubmit.co/5626dce5f295e0317018275f67245482" method="POST">
+                <!-- Add your form fields here -->
+                <div class="form-group">
+                    <label for="name">Företag*</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+               
+                <div class="form-group">
+                    <label for="question1">Kontaktperson*</label>
+                    <input type="text" class="form-control" id="question1" name="Kontaktperson" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-post*</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="question2">Organisationsnr*</label>
+                    <input type="text" class="form-control" id="question2" name="Organisationsnr" required>
+                </div>
+                <div class="form-group">
+                    <label for="question3">Mobilnr*</label>
+                    <input type="text" class="form-control" id="question3" name="Mobilnr" required>
+                </div>
+                <div class="form-group">
+                    <label for="name">Avsedd användning för roboten?</label>
+                    <input type="text" class="form-control" id="question4" name="Avsedd användning för roboten?">
+                </div>
+               
+                <div class="form-group">
+                    <label for="question5">Önskad nyttolastkapacitet för roboten?</label>
+                    <input type="text" class="form-control" id="question5" name="Önskad nyttolastkapacitet för roboten?" >
+                </div>
+               
+                <div class="form-group">
+                    <label for="question6">Nödvändig räckvidd eller arbetsområde för roboten?</label>
+                    <input type="text" class="form-control" id="question6" name="Nödvändig räckvidd eller arbetsområde för roboten?">
+                </div>
+                <div class="form-group">
+                    <label for="question7">Krävs noggrannhet eller repeterbarhet för roboten?</label>
+                    <input type="text" class="form-control" id="question7" name="Krävs noggrannhet eller repeterbarhet för roboten?" >
+                </div>
+                <div class="form-group">
+                    <label for="question8">Maximal hastighet som krävs för roboten?</label>
+                    <input type="text" class="form-control" id="question8" name="Maximal hastighet som krävs för roboten?" >
+                </div>
+               
+                <div class="form-group">
+                    <label for="question9">Typ av sluteffektor eller gripare kommer att användas med roboten?</label>
+                    <input type="text" class="form-control" id="question9" name="Typ av sluteffektor eller gripare kommer att användas med roboten?" >
+                </div>
+                <div class="form-group">
+                    <label for="question10">Krävs styrsystem för roboten?</label>
+                    <input type="text" class="form-control" id="question10" name="Krävs styrsystem för roboten?">
+                </div>
+                <div class="form-group">
+                    <label for="question11">Förväntad strömkälla för roboten?</label>
+                    <input type="text" class="form-control" id="question11" name="Förväntad strömkälla för roboten?" >
+                </div>
+                <div class="form-group">
+                    <label for="question12">Förväntat kommunikationsprotokoll för roboten?</label>
+                    <input type="text" class="form-control" id="question12" name="Förväntat kommunikationsprotokoll för roboten?" >
+                </div>
+                <div class="form-group">
+                    <label for="question13">Förväntat driftstemperaturområde för roboten?</label>
+                    <input type="text" class="form-control" id="question13" name="Förväntat driftstemperaturområde för roboten?" >
+                </div>
+                <div class="form-group">
+                    <label for="question14">Förväntad arbetscykel för roboten?</label>
+                    <input type="text" class="form-control" id="question14" name="Förväntad arbetscykel för roboten?" >
+                </div>
+            
+                <div class="form-group">
+                    <label for="question15">Typ av sensorer kommer att användas med roboten?</label>
+                    <input type="text" class="form-control" id="question15" name="Typ av sensorer kommer att användas med roboten?" >
+                </div>
+                <div class="form-group">
+                    <label for="question16">Kommer roboten att användas för farliga eller säkerhetskritiska tillämpningar?</label>
+                    <input type="text" class="form-control" id="question16" name="Kommer roboten att användas för farliga eller säkerhetskritiska tillämpningar?" >
+                </div>
+            
+                <div class="form-group">
+                    <label for="question17">Förväntad livslängd eller underhållskrav för roboten?</label>
+                    <input type="text" class="form-control" id="question17" name="Förväntad livslängd eller underhållskrav för roboten?" >
+                </div>
+            
+                <div class="form-group">
+                    <label for="question18">Förväntad driftsmiljö för roboten?</label>
+                    <input type="text" class="form-control" id="question18" name="Förväntad driftsmiljö för roboten?" >
+                </div>
+            
+                <input type="hidden" name="_next" value="https://8000-renwarp-nordicautomatio-3444v1f71k9.ws-eu114.gitpod.io/thank_you.html">
+                <!-- Add more form fields as needed -->
+    
+                <!-- Submit button -->
+                <div class="form-group">
+                    <button type="submit" class="btn btn-success">Submit</button>
+                </div>
+                
+                <!-- Add hidden input fields if needed -->
+                <input type="hidden" name="_next" value="https://your-redirect-url.com/thank_you.html">
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <footer class="footer_shop">
         <div class="container-fluid">
             <div class="row">
