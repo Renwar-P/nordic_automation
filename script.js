@@ -69,3 +69,20 @@ document.addEventListener('DOMContentLoaded', (event) => {
     sendEmail('form3-content');
     sendEmail('form4-content');
 });
+
+function toggleForm(formId) {
+    var form = document.getElementById(formId);
+    if (form.style.display === "none" || form.style.display === "") {
+        form.style.display = "block";
+    } else {
+        form.style.display = "none";
+    }
+}
+window.addEventListener('scroll', function() {
+    var navbar = document.getElementById('navbar');
+    if (window.scrollY > 50) { // Justera scrollvärdet vid behov
+        navbar.classList.add('navbar-scrolled');
+    } else {
+        navbar.classList.remove('navbar-scrolled');
+    }
+});
