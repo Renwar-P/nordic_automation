@@ -107,7 +107,7 @@ background-blend-mode: overlay;
     color: white;
     padding: 40px 20px;
     width: 100%;
-    margin-top: 25px;
+    margin-top: 15px;
 }
 
 .footer .container-fluid {
@@ -330,6 +330,7 @@ background-blend-mode: overlay;
     position: relative;
     width: 100%;
     height: 100vh; /* or any height you need */
+    margin-bottom: 15px;
 }
 /* Background media styles */
 .background-media {
@@ -492,8 +493,8 @@ background-blend-mode: overlay;
 
 #shop-forms {
 
-margin-top: 25px;
-background-image: url('../images/Nordic Automation Website - Shop.png');
+margin-top: 15px;
+margin-bottom: 15px;
       
 }
 
@@ -617,7 +618,11 @@ background-blend-mode: overlay;
 
 
 #ai_section {
-
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
+#drone_section {
+
+    margin-top: 15px;
+}
+
