@@ -306,6 +306,7 @@ background-blend-mode: overlay;
 
     .navbar-nav .nav-link {
         color: white !important;
+        font-size: 20px;
     }
 
     @media (max-width: 767.98px) {/* Justera gränsen vid behov */
@@ -434,10 +435,10 @@ font-size: 100px !important;
     }
 
 /* Responsive typography for AI background section */
-.text-overlay-robots h1 {
+.text-overlay-robots h1, .text-overlay-drones h1 {
     font-size: 80px !important;/* Responsive font size */
 }
-.text-overlay-robots p {
+.text-overlay-robots p, .text-overlay-drones p {
 
     font-size: 20px !important;
 }
