@@ -152,7 +152,7 @@ background-blend-mode: overlay;
     margin-right: 10px;
 }
 .footer_shop {
-    background: 
+    /*background: 
     linear-gradient(0deg, 
         rgba(6, 11, 46, 1) 0%, 
         rgba(185, 101, 5, 1) 50%, 
@@ -160,7 +160,8 @@ background-blend-mode: overlay;
     radial-gradient(circle at top, transparent, rgba(6, 11, 46, 0.5)), 
     radial-gradient(circle at bottom, transparent, rgba(6, 11, 46, 0.5)),
     radial-gradient(circle at left, transparent, rgba(6, 11, 46, 0.5)),
-    radial-gradient(circle at right, transparent, rgba(6, 11, 46, 0.5));
+    radial-gradient(circle at right, transparent, rgba(6, 11, 46, 0.5));*/
+    background-color: rgb(185, 101, 5);
 background-size: cover;
 background-blend-mode: overlay;
     color: white;
@@ -362,23 +363,7 @@ background-blend-mode: overlay;
 }
 
 /* Specific text overlay styles for robots section */
-.text-overlay-robots h1,
-.text-overlay-robots p {
-    
-    z-index: 1;
-    text-align: center;
-    color: white;
-    width: 200px;
-}
 
-.text-overlay-robots h1 {
-    font-size: 3rem;
-    margin-top: 100px;
-}
-
-.text-overlay-robots p {
-    font-size: 1rem;
-}
 
 /* Specific text overlay styles for about us section */
 .text-overlay-about-us {
@@ -396,11 +381,12 @@ background-blend-mode: overlay;
   
     text-align: left;
     color: white;
-    font-size: 1 rem;
+    font-size: 20px;
+    
 }
 
 .text-overlay-about-us h1 {
-    font-size: 4rem;
+    font-size: 100px;
     /* Additional styling for your text */
 }
 
@@ -438,30 +424,64 @@ background-blend-mode: overlay;
     padding: 20px;
 
 }
+.text-overlay-ai_background h1 {
+font-size: 100px !important;
+
+}
+.text-overlay-ai_background p {
+    font-size: 20px !important;
+    
+    }
 
 /* Responsive typography for AI background section */
-.text-overlay-ai_background h1 {
-    font-size: 5vw; /* Responsive font size */
+.text-overlay-robots h1 {
+    font-size: 80px !important;/* Responsive font size */
+}
+.text-overlay-robots p {
+
+    font-size: 20px !important;
+}
+.text-overlay-robots {
+    position: absolute;
+    top: 50%;
+    left: 75%; /* Position on the right */
+    transform: translate(-50%, -50%);
+    text-align: right;
+    color: white; /* Adjust as needed */
+    padding: 20px;
+
 }
 
-.text-overlay-ai_background p {
-    font-size: 2vw; /* Responsive font size */
+/* Responsive typography for AI background section */
+.text-overlay-robots h1 {
+    font-size: 3.5rem; /* Responsive font size */
 }
+
+
 
 /* Media query to center the text on smaller screens */
 @media (max-width: 768px) {
     .text-overlay-ai_background {
-        left: 70%; /* Center horizontally */
-        
+       
+        left: 30%;
+        transform: translateY(-50%);
+        z-index: 1;
+       
+        color: white;
+        margin-top: 20px;
     }
     .text-overlay-ai_background p {
+        font-size: 16px !important;
+        
+        }
 
-        font-size: 7vw;
-    }
-
-    .text-overlay-ai_background h1 {
-        font-size: 10vw; /* Responsive font size */
-    }
+        .text-overlay-ai_background h1  {
+            font-size: 50px !important;
+            
+            }
+     
+        
+    
 
     .text-overlay-about-us {
        
@@ -472,6 +492,14 @@ background-blend-mode: overlay;
         color: white;
         margin-top: 20px;
     }
+    .text-overlay-about-us h1 {
+       
+      font-size: 50px;
+    }
+    .text-overlay-about-us p {
+       
+        font-size: 16px;
+      }
 }
 
 .carousel {
