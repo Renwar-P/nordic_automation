@@ -9,7 +9,7 @@ class CustomHTTPRequestHandler(SimpleHTTPRequestHandler):
         # Redirect root path to /sv/index.html
         if self.path == '/':
             self.send_response(302)
-            self.send_header('Location', '/sv/index.html')
+            self.send_header('Location', 'index.html')
             self.end_headers()
         elif self.path.endswith('/'):
             # Handle paths ending with a slash (e.g., /somepath/)
