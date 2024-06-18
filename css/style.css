@@ -967,6 +967,43 @@ radial-gradient(circle at right, transparent, rgba(6, 11, 46, 0.5));
             background-blend-mode: overlay;
             border: 2px solid white; /* Add white border */
         }
+
+        #shop_button {
+            width: 80%;
+            height: 80px; /* Adjust height as needed */
+            font-size: 24px; /* Adjust font size as needed */
+            color: white; /* Text color */
+            background: linear-gradient(0deg, 
+        rgba(6, 11, 46, 1) 0%, 
+        rgba(185, 101, 5, 1) 50%, 
+        rgba(6, 11, 46, 1) 100%),
+    radial-gradient(circle at top, transparent, rgba(6, 11, 46, 0.5)), 
+    radial-gradient(circle at bottom, transparent, rgba(6, 11, 46, 0.5)),
+    radial-gradient(circle at left, transparent, rgba(6, 11, 46, 0.5)),
+    radial-gradient(circle at right, transparent, rgba(6, 11, 46, 0.5));
+   
+            background-blend-mode: overlay;
+            border: 2px solid white; /* Add white border */
+        }
+
+        #project_button {
+            width: 80%;
+            height: 80px; /* Adjust height as needed */
+            font-size: 24px; /* Adjust font size as needed */
+            color: white; /* Text color */
+            background: 
+linear-gradient(0deg, 
+rgba(6, 11, 46, 1) 0%, 
+rgba(5, 26, 134, 1) 50%, 
+rgba(6, 11, 46, 1) 100%),
+radial-gradient(circle at top, transparent, rgba(6, 11, 46, 0.5)), 
+radial-gradient(circle at bottom, transparent, rgba(6, 11, 46, 0.5)),
+radial-gradient(circle at left, transparent, rgba(6, 11, 46, 0.5)),
+radial-gradient(circle at right, transparent, rgba(6, 11, 46, 0.5));
+   
+            background-blend-mode: overlay;
+            border: 2px solid white; /* Add white border */
+        }
         .large-button:hover, .large-button:focus, .large-button:active {
             background: 
     linear-gradient(0deg, 
@@ -1013,6 +1050,36 @@ radial-gradient(circle at right, transparent, rgba(6, 11, 46, 0.5));
             background-blend-mode: overlay;
             color: white; /* Text color for offcanvas body */
         }
+
+        #shop_offcanvas, #shop_offcanvas_header {
+            background: linear-gradient(0deg, 
+            rgba(6, 11, 46, 1) 0%, 
+            rgba(185, 101, 5, 1) 50%, 
+            rgba(6, 11, 46, 1) 100%),
+        radial-gradient(circle at top, transparent, rgba(6, 11, 46, 0.5)), 
+        radial-gradient(circle at bottom, transparent, rgba(6, 11, 46, 0.5)),
+        radial-gradient(circle at left, transparent, rgba(6, 11, 46, 0.5)),
+        radial-gradient(circle at right, transparent, rgba(6, 11, 46, 0.5));
+
+
+        }
+
+        #project_offcanvas, #project_offcanvas_header {
+            background: 
+linear-gradient(0deg, 
+rgba(6, 11, 46, 1) 0%, 
+rgba(5, 26, 134, 1) 50%, 
+rgba(6, 11, 46, 1) 100%),
+radial-gradient(circle at top, transparent, rgba(6, 11, 46, 0.5)), 
+radial-gradient(circle at bottom, transparent, rgba(6, 11, 46, 0.5)),
+radial-gradient(circle at left, transparent, rgba(6, 11, 46, 0.5)),
+radial-gradient(circle at right, transparent, rgba(6, 11, 46, 0.5));
+
+
+        }
+
+
+      
         .offcanvas-header {
             background: 
     linear-gradient(0deg, 
