@@ -58,15 +58,6 @@ body {
 carousel
 */
 
-@media only screen and (max-width: 400px) {
-    
-
-    .logo.img-fluid
-    {
-
-        margin-right: 50px;
-    }
-}
 
 
 
@@ -152,7 +143,7 @@ background-blend-mode: overlay;
     margin-right: 10px;
 }
 .footer_shop {
-    /*background: 
+    background: 
     linear-gradient(0deg, 
         rgba(6, 11, 46, 1) 0%, 
         rgba(185, 101, 5, 1) 50%, 
@@ -160,8 +151,8 @@ background-blend-mode: overlay;
     radial-gradient(circle at top, transparent, rgba(6, 11, 46, 0.5)), 
     radial-gradient(circle at bottom, transparent, rgba(6, 11, 46, 0.5)),
     radial-gradient(circle at left, transparent, rgba(6, 11, 46, 0.5)),
-    radial-gradient(circle at right, transparent, rgba(6, 11, 46, 0.5));*/
-    background-color: rgb(185, 101, 5);
+    radial-gradient(circle at right, transparent, rgba(6, 11, 46, 0.5));
+  
 background-size: cover;
 background-blend-mode: overlay;
     color: white;
@@ -310,9 +301,7 @@ background-blend-mode: overlay;
     }
 
     @media (max-width: 767.98px) {/* Justera gränsen vid behov */
-        .navbar {
-            background-color: rgba(0, 0, 0, 0.8) !important; /* Samma färg som navbar-scrolled */
-        }
+     
     }
 
 .navbar-icons img {
@@ -438,7 +427,16 @@ font-size: 100px !important;
 .text-overlay-robots h1, .text-overlay-drones h1 {
     font-size: 80px !important;/* Responsive font size */
 }
-.text-overlay-robots p, .text-overlay-drones p {
+
+.text-overlay-robots h1 {
+    font-size: 60px !important;/* Responsive font size */
+}
+.text-overlay-robots p {
+
+    font-size: 20px !important;
+}
+
+.text-overlay-drones p{
 
     font-size: 20px !important;
 }
@@ -460,48 +458,8 @@ font-size: 100px !important;
 
 
 
-/* Media query to center the text on smaller screens */
-@media (max-width: 768px) {
-    .text-overlay-ai_background {
-       
-        left: 30%;
-        transform: translateY(-50%);
-        z-index: 1;
-       
-        color: white;
-        margin-top: 20px;
-    }
-    .text-overlay-ai_background p {
-        font-size: 16px !important;
-        
-        }
 
-        .text-overlay-ai_background h1  {
-            font-size: 50px !important;
-            
-            }
-     
-        
-    
 
-    .text-overlay-about-us {
-       
-        right: 30%;
-        transform: translateY(-50%);
-        z-index: 1;
-        text-align: left;
-        color: white;
-        margin-top: 20px;
-    }
-    .text-overlay-about-us h1 {
-       
-      font-size: 50px;
-    }
-    .text-overlay-about-us p {
-       
-        font-size: 16px;
-      }
-}
 
 .carousel {
    
@@ -568,20 +526,7 @@ border-color: #fff;
     height: 100%; /* Make text content take full height */
   
 }
-@media (max-width: 767.98px) {
-    .text-content {
-        display: none;
 
-      
-    }
-
-    .unique-carousel {
-        max-width: 100%;
-        margin: 0;
-        margin-top: 10px;
-    }
-
-}
 
 
 
@@ -655,3 +600,429 @@ background-blend-mode: overlay;
     margin-top: 15px;
 }
 
+
+
+
+/* Media query to center the text on smaller screens */
+@media (max-width: 767.98px) {
+
+    .navbar {
+        background-color: rgba(0, 0, 0, 0.8) !important; /* Samma färg som navbar-scrolled */
+    }
+    .text-content {
+        display: none;
+
+      
+    }
+
+    .unique-carousel {
+        max-width: 100%;
+        margin: 0;
+        margin-top: 10px;
+    }
+
+    .text-overlay-ai_background {
+       
+        left: 30%;
+        transform: translateY(-50%);
+        z-index: 1;
+       
+        color: white;
+        margin-top: 20px;
+    }
+    .text-overlay-ai_background p {
+        font-size: 17px !important;
+        
+        }
+
+        .text-overlay-ai_background h1, .text-overlay-drones h1, .text-overlay-about-us h1  {
+            font-size: 65px !important;
+            
+            }
+     
+        
+            .text-overlay-drones p {
+                font-size: 15px !important;
+                width: 220px;
+            }
+
+    .text-overlay-about-us {
+       
+        right: 30%;
+        transform: translateY(-50%);
+        z-index: 1;
+        text-align: left;
+        color: white;
+        margin-top: 20px;
+    }
+   
+    .text-overlay-about-us p {
+       
+        font-size: 16px;
+      }
+
+}
+
+@media only screen and (max-width: 500px) {
+    
+
+    .logo.img-fluid
+    {
+
+        margin-right: 50px;
+    }
+
+    .footer {
+
+        justify-content: center;
+    }
+
+    .justify-content-end {
+        justify-content: center !important;
+    }
+}
+
+
+
+
+/* Shop Section */ 
+
+.shop-first-form {
+    cursor: pointer;
+    padding: 20px;
+    text-align: center;
+    background: 
+linear-gradient(0deg, 
+rgba(6, 11, 46, 1) 0%, 
+rgba(185, 101, 5, 1) 50%, 
+rgba(6, 11, 46, 1) 100%),
+radial-gradient(circle at top, transparent, rgba(6, 11, 46, 0.5)), 
+radial-gradient(circle at bottom, transparent, rgba(6, 11, 46, 0.5)),
+radial-gradient(circle at left, transparent, rgba(6, 11, 46, 0.5)),
+radial-gradient(circle at right, transparent, rgba(6, 11, 46, 0.5));
+    border: 1px solid #dee2e6;
+    margin: 10px 0;
+    color: white;
+}
+
+.form-container {
+    display: none;
+    padding: 20px;
+    border: 1px solid #dee2e6;
+    background: 
+linear-gradient(0deg, 
+rgba(6, 11, 46, 1) 0%, 
+rgba(185, 101, 5, 1) 50%, 
+rgba(6, 11, 46, 1) 100%),
+radial-gradient(circle at top, transparent, rgba(6, 11, 46, 0.5)), 
+radial-gradient(circle at bottom, transparent, rgba(6, 11, 46, 0.5)),
+radial-gradient(circle at left, transparent, rgba(6, 11, 46, 0.5)),
+radial-gradient(circle at right, transparent, rgba(6, 11, 46, 0.5));
+    margin: 10px 0;
+}
+
+label {
+
+    color: white;
+}
+.large-button {
+    width: 80%;
+    height: 80px; /* Adjust height as needed */
+    font-size: 24px; /* Adjust font size as needed */
+    color: white; /* Text color */
+    background: linear-gradient(0deg, 
+        rgba(6, 11, 46, 1) 0%, 
+        rgba(185, 101, 5, 1) 50%, 
+        rgba(6, 11, 46, 1) 100%),
+    radial-gradient(circle at top, transparent, rgba(6, 11, 46, 0.5)), 
+    radial-gradient(circle at bottom, transparent, rgba(6, 11, 46, 0.5)),
+    radial-gradient(circle at left, transparent, rgba(6, 11, 46, 0.5)),
+    radial-gradient(circle at right, transparent, rgba(6, 11, 46, 0.5));
+    
+    background-blend-mode: overlay;
+    border: 2px solid white; /* Add white border */
+}
+.large-button:hover, .large-button:focus, .large-button:active {
+    background: linear-gradient(0deg, 
+        rgba(6, 11, 46, 1) 0%, 
+        rgba(185, 101, 5, 1) 50%, 
+        rgba(6, 11, 46, 1) 100%),
+    radial-gradient(circle at top, transparent, rgba(6, 11, 46, 0.5)), 
+    radial-gradient(circle at bottom, transparent, rgba(6, 11, 46, 0.5)),
+    radial-gradient(circle at left, transparent, rgba(6, 11, 46, 0.5)),
+    radial-gradient(circle at right, transparent, rgba(6, 11, 46, 0.5));
+   
+    background-blend-mode: overlay;
+    color: white; /* Ensure text color stays white */
+    border: 2px solid white; /* Add white border */
+}
+.left-half {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+@media (max-width: 768px) {
+    .left-half {
+        width: 100%;
+        justify-content: center;
+        margin: 10px;
+    }
+
+    .offcanvas.offcanvas-end {
+        width: 80% !important;
+        max-width: none; /* Override Bootstrap's max-width */
+    }
+}
+.offcanvas-body {
+      background: linear-gradient(0deg, 
+        rgba(6, 11, 46, 1) 0%, 
+        rgba(185, 101, 5, 1) 50%, 
+        rgba(6, 11, 46, 1) 100%),
+    radial-gradient(circle at top, transparent, rgba(6, 11, 46, 0.5)), 
+    radial-gradient(circle at bottom, transparent, rgba(6, 11, 46, 0.5)),
+    radial-gradient(circle at left, transparent, rgba(6, 11, 46, 0.5)),
+    radial-gradient(circle at right, transparent, rgba(6, 11, 46, 0.5));
+   
+    background-blend-mode: overlay;
+    color: white; /* Text color for offcanvas body */
+}
+.offcanvas-header {
+      background: linear-gradient(0deg, 
+        rgba(6, 11, 46, 1) 0%, 
+        rgba(185, 101, 5, 1) 50%, 
+        rgba(6, 11, 46, 1) 100%),
+    radial-gradient(circle at top, transparent, rgba(6, 11, 46, 0.5)), 
+    radial-gradient(circle at bottom, transparent, rgba(6, 11, 46, 0.5)),
+    radial-gradient(circle at left, transparent, rgba(6, 11, 46, 0.5)),
+    radial-gradient(circle at right, transparent, rgba(6, 11, 46, 0.5));
+   
+    background-blend-mode: overlay;
+    color: white; /* Text color for offcanvas header */
+}
+
+
+
+
+
+/* Project Section */ 
+
+
+
+.form-container {
+    display: none;
+    padding: 20px;
+    border: 1px solid #dee2e6;
+    background: 
+linear-gradient(0deg, 
+rgba(6, 11, 46, 1) 0%, 
+rgba(5, 26, 134, 1) 50%, 
+rgba(6, 11, 46, 1) 100%),
+radial-gradient(circle at top, transparent, rgba(6, 11, 46, 0.5)), 
+radial-gradient(circle at bottom, transparent, rgba(6, 11, 46, 0.5)),
+radial-gradient(circle at left, transparent, rgba(6, 11, 46, 0.5)),
+radial-gradient(circle at right, transparent, rgba(6, 11, 46, 0.5));
+    margin: 10px 0;
+}
+
+label {
+
+    color: white;
+}
+
+.large-button {
+    width: 80%;
+    height: 80px; /* Adjust height as needed */
+    font-size: 24px; /* Adjust font size as needed */
+    color: white; /* Text color */
+    background: 
+linear-gradient(0deg, 
+rgba(6, 11, 46, 1) 0%, 
+rgba(5, 26, 134, 1) 50%, 
+rgba(6, 11, 46, 1) 100%),
+radial-gradient(circle at top, transparent, rgba(6, 11, 46, 0.5)), 
+radial-gradient(circle at bottom, transparent, rgba(6, 11, 46, 0.5)),
+radial-gradient(circle at left, transparent, rgba(6, 11, 46, 0.5)),
+radial-gradient(circle at right, transparent, rgba(6, 11, 46, 0.5));
+  
+    background-blend-mode: overlay;
+    border: 2px solid white; /* Add white border */
+}
+.large-button:hover, .large-button:focus, .large-button:active {
+    background: 
+linear-gradient(0deg, 
+rgba(6, 11, 46, 1) 0%, 
+rgba(5, 26, 134, 1) 50%, 
+rgba(6, 11, 46, 1) 100%),
+radial-gradient(circle at top, transparent, rgba(6, 11, 46, 0.5)), 
+radial-gradient(circle at bottom, transparent, rgba(6, 11, 46, 0.5)),
+radial-gradient(circle at left, transparent, rgba(6, 11, 46, 0.5)),
+radial-gradient(circle at right, transparent, rgba(6, 11, 46, 0.5));
+  
+    background-blend-mode: overlay;
+    color: white; /* Ensure text color stays white */
+    border: 2px solid white; /* Add white border */
+}
+.left-half {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+@media (max-width: 768px) {
+    .left-half {
+        width: 100%;
+        justify-content: center;
+        margin: 10px;
+    }
+
+    .offcanvas.offcanvas-end {
+        width: 80% !important;
+        max-width: none; /* Override Bootstrap's max-width */
+    }
+}
+.offcanvas-body {
+    background: 
+   
+linear-gradient(0deg, 
+rgba(6, 11, 46, 1) 0%, 
+rgba(5, 26, 134, 1) 50%, 
+rgba(6, 11, 46, 1) 100%),
+radial-gradient(circle at top, transparent, rgba(6, 11, 46, 0.5)), 
+radial-gradient(circle at bottom, transparent, rgba(6, 11, 46, 0.5)),
+radial-gradient(circle at left, transparent, rgba(6, 11, 46, 0.5)),
+radial-gradient(circle at right, transparent, rgba(6, 11, 46, 0.5));
+  
+    
+    background-blend-mode: overlay;
+    color: white; /* Text color for offcanvas body */
+}
+.offcanvas-header {
+    background: 
+linear-gradient(0deg, 
+rgba(6, 11, 46, 1) 0%, 
+rgba(5, 26, 134, 1) 50%, 
+rgba(6, 11, 46, 1) 100%),
+radial-gradient(circle at top, transparent, rgba(6, 11, 46, 0.5)), 
+radial-gradient(circle at bottom, transparent, rgba(6, 11, 46, 0.5)),
+radial-gradient(circle at left, transparent, rgba(6, 11, 46, 0.5)),
+radial-gradient(circle at right, transparent, rgba(6, 11, 46, 0.5));
+  
+    background-blend-mode: overlay;
+    color: white; /* Text color for offcanvas header */
+}
+
+#project-forms {
+
+    margin-top: 15px;
+}
+
+
+
+
+
+/* Code Section */
+
+
+#code-forms {
+
+    margin-top: 15px;
+   }
+        .form-container {
+            display: none;
+            padding: 20px;
+            border: 1px solid #dee2e6;
+            background: 
+    linear-gradient(0deg, 
+        rgba(6, 11, 46, 1) 0%, 
+        rgba(21, 144, 68, 1) 50%, 
+        rgba(6, 11, 46, 1) 100%),
+    radial-gradient(circle at top, transparent, rgba(6, 11, 46, 0.5)), 
+    radial-gradient(circle at bottom, transparent, rgba(6, 11, 46, 0.5)),
+    radial-gradient(circle at left, transparent, rgba(6, 11, 46, 0.5)),
+    radial-gradient(circle at right, transparent, rgba(6, 11, 46, 0.5));
+            margin: 10px 0;
+        }
+
+        label {
+
+            color: white;
+        }
+        .large-button {
+            width: 80%;
+            height: 80px; /* Adjust height as needed */
+            font-size: 24px; /* Adjust font size as needed */
+            color: white; /* Text color */
+            background: 
+    linear-gradient(0deg, 
+        rgba(6, 11, 46, 1) 0%, 
+        rgba(21, 144, 68, 1) 50%, 
+        rgba(6, 11, 46, 1) 100%),
+    radial-gradient(circle at top, transparent, rgba(6, 11, 46, 0.5)), 
+    radial-gradient(circle at bottom, transparent, rgba(6, 11, 46, 0.5)),
+    radial-gradient(circle at left, transparent, rgba(6, 11, 46, 0.5)),
+    radial-gradient(circle at right, transparent, rgba(6, 11, 46, 0.5));
+            background-blend-mode: overlay;
+            border: 2px solid white; /* Add white border */
+        }
+        .large-button:hover, .large-button:focus, .large-button:active {
+            background: 
+    linear-gradient(0deg, 
+        rgba(6, 11, 46, 1) 0%, 
+        rgba(21, 144, 68, 1) 50%, 
+        rgba(6, 11, 46, 1) 100%),
+    radial-gradient(circle at top, transparent, rgba(6, 11, 46, 0.5)), 
+    radial-gradient(circle at bottom, transparent, rgba(6, 11, 46, 0.5)),
+    radial-gradient(circle at left, transparent, rgba(6, 11, 46, 0.5)),
+    radial-gradient(circle at right, transparent, rgba(6, 11, 46, 0.5));
+            background-blend-mode: overlay;
+            color: white; /* Ensure text color stays white */
+            border: 2px solid white; /* Add white border */
+        }
+        .left-half {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px;
+        }
+        @media (max-width: 768px) {
+            .left-half {
+                width: 100%;
+                justify-content: center;
+                margin: 10px;
+            }
+
+            .offcanvas.offcanvas-end {
+                width: 80% !important;
+                max-width: none; /* Override Bootstrap's max-width */
+            }
+        }
+        .offcanvas-body {
+            background: 
+    linear-gradient(0deg, 
+        rgba(6, 11, 46, 1) 0%, 
+        rgba(21, 144, 68, 1) 50%, 
+        rgba(6, 11, 46, 1) 100%),
+    radial-gradient(circle at top, transparent, rgba(6, 11, 46, 0.5)), 
+    radial-gradient(circle at bottom, transparent, rgba(6, 11, 46, 0.5)),
+    radial-gradient(circle at left, transparent, rgba(6, 11, 46, 0.5)),
+    radial-gradient(circle at right, transparent, rgba(6, 11, 46, 0.5));
+            background-blend-mode: overlay;
+            color: white; /* Text color for offcanvas body */
+        }
+        .offcanvas-header {
+            background: 
+    linear-gradient(0deg, 
+        rgba(6, 11, 46, 1) 0%, 
+        rgba(21, 144, 68, 1) 50%, 
+        rgba(6, 11, 46, 1) 100%),
+    radial-gradient(circle at top, transparent, rgba(6, 11, 46, 0.5)), 
+    radial-gradient(circle at bottom, transparent, rgba(6, 11, 46, 0.5)),
+    radial-gradient(circle at left, transparent, rgba(6, 11, 46, 0.5)),
+    radial-gradient(circle at right, transparent, rgba(6, 11, 46, 0.5));
+            background-blend-mode: overlay;
+            color: white; /* Text color for offcanvas header */
+        }
