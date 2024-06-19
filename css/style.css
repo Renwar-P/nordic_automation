@@ -423,6 +423,15 @@ font-size: 100px !important;
     
     }
 
+    #ai_header_text  {
+
+        font-size: 25px;
+    }
+
+    #drone_header_text {
+
+        font-size: 25px;
+    }
 /* Responsive typography for AI background section */
 .text-overlay-robots h1, .text-overlay-drones h1 {
     font-size: 80px !important;/* Responsive font size */
@@ -882,7 +891,24 @@ radial-gradient(circle at right, transparent, rgba(6, 11, 46, 0.5));
         width: 80% !important;
         max-width: none; /* Override Bootstrap's max-width */
     }
+
+    #ai_header_text {
+
+        font-size: 17px;
+        width: 300px;
+    }
+
+    #drone_header_text {
+
+        font-size: 17px;
+        width: 300px;
+    }
+  
 }
+
+
+
+
 .offcanvas-body {
     background: 
    
