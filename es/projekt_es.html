@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projekt</title>
+    <link rel="icon" href="../images/logga_nordic.png" type="image/x-icon">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <link rel="stylesheet" href="../css/style.css">
+        
+   
+</head>
+<body>
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-transparent fixed-top">
+        <div class="container">
+            <!-- Links in the logo (on the left) -->
+            <a class="navbar-brand" href="#">
+                <img src="../images/nordicautomationlogotyptm_logga.png" alt="Nordic Automation Logo">
+            </a>
+    
+            <!-- Toggle button for smaller screens -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <!-- Navigation links and flags (in the middle) -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index_es.html">Hogar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="shop_es.html">Comercio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="projekt_es.html">Proyecto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="kod_es.html">Código</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ai_es.html">AI</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="drone_es.html">UAV</a>
+                    </li>
+                </ul>
+                <div class="navbar-icons">
+                    <a class="navbar-brand" href="../index.html">
+                        <img src="../images/sweden_flag.png" alt="Sweden Flag">
+                    </a>
+                    <a class="navbar-brand" href="../de/index_de.html">
+                        <img src="../images/german_flag.png" alt="German Flag">
+                    </a>
+                    <a class="navbar-brand" href="index_es.html">
+                        <img src="../images/spain_flag.png" alt="Spain Flag">
+                    </a>
+                    <a class="navbar-brand" href="../en/index_en.html">
+                        <img src="../images/british_flag.png" alt="British Flag">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="video-background">
+            <video id="video" autoplay loop muted playsinline class="background-media">
+                <source src="../images/project_video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="text-overlay">
+                <h1>Välj bland vanliga automationsprojekt och fyll i så många fält som möjligt för att våra representanter ska kunna kontakta dig och diskutera projektets omfattning.</h1>
+            </div>
+        </div>
+   
+    </div>
+    
+    <div class="container-fluid" id="project-forms" style="background-image: url('../images/Nordic Automation Website - Project.png');">
+        <div class="container">
+            <div class="row justify-content-start">
+                <div class="col-6 left-half">
+                    <button class="btn btn-primary large-button" id="project_button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight3" aria-controls="offcanvasRight3">Puesta en servicio</button>
+                </div>
+            </div>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight3" aria-labelledby="offcanvasRightLabel3">
+                <div class="offcanvas-header" id="project_offcanvas_header">
+                    <h5 id="offcanvasRightLabel3">Puesta en servicio</h5>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body" id="project_offcanvas">
+                    <form id="form1-inner" action="https://formsubmit.co/inquiry@nordicautomation.se" method="POST">
+                        <!-- Add your form fields here -->
+                        <div class="form-group">
+                            <label for="name">Empresa*</label>
+                            <input type="text" class="form-control" id="name" name="Empresa" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="question1">Persona de contacto*</label>
+                            <input type="text" class="form-control" id="question1" name="Persona de contacto" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Correo electrónico*</label>
+                            <input type="email" class="form-control" id="email" name="Correo electrónico" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="question2">Número de organización*</label>
+                            <input type="text" class="form-control" id="question2" name="Número de organización*" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="question3">Número de móvil*</label>
+                            <input type="text" class="form-control" id="question3" name="Número de móvil" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="question4">Ubicación del proyecto?</label>
+                            <input type="text" class="form-control" id="question4" name="Ubicación del proyecto?" >
+                        </div>
+                        <div class="form-group">
+                            <label for="question5">¿Existen requisitos específicos respecto a la calidad y seguridad?</label>
+                            <input type="text" class="form-control" id="question5" name="¿Existen requisitos específicos respecto a la calidad y seguridad?" >
+                        </div>
+                        <div class="form-group">
+                            <label for="question6">¿Necesitamos prepararnos para una planificación adicional del proyecto?</label>
+                            <input type="text" class="form-control" id="question6" name="¿Necesitamos prepararnos para una planificación adicional del proyecto?" >
+                        </div>
+                        <div class="form-group">
+                            <label for="question7">¿Necesitamos realizar alguna investigación técnica?</label>
+                            <input type="text" class="form-control" id="question7" name="¿Necesitamos realizar alguna investigación técnica?" >
+                        </div>
+                        <div class="form-group">
+                            <label for="question8">¿Necesitamos realizar una prueba de aceptación interna?</label>
+                            <input type="text" class="form-control" id="question8" name="¿Necesitamos realizar una prueba de aceptación interna?" >
+                        </div>
+                        <div class="form-group">
+                            <label for="question9">¿Necesitamos realizar una prueba de aceptación en algún fabricante?</label>
+                            <input type="text" class="form-control" id="question9" name="¿Necesitamos realizar una prueba de aceptación en algún fabricante?" >
+                        </div>
+                        <div class="form-group">
+                            <label for="question10">¿Necesitamos realizar una prueba de recepción?</label>
+                            <input type="text" class="form-control" id="question10" name="¿Necesitamos realizar una prueba de recepción?" >
+                        </div>
+                        <div class="form-group">
+                            <label for="question11">¿Cuántos HMI están incluidos?</label>
+                            <input type="text" class="form-control" id="question11" name="¿Cuántos HMI están incluidos?" >
+                        </div>
+                        <div class="form-group">
+                            <label for="question12">¿Desea informes específicos?</label>
+                            <input type="text" class="form-control" id="question12" name="¿Desea informes específicos?" >
+                        </div>
+                        <div class="form-group">
+                            <label for="question13">¿Existe un protocolo específico de puesta en marcha?</label>
+                            <input type="text" class="form-control" id="question13" name="¿Existe un protocolo específico de puesta en marcha?" >
+                        </div>
+                        <div class="form-group">
+                            <label for="question14">¿Desea que entrenemos a su personal en la operación de las instalaciones?</label>
+                            <input type="text" class="form-control" id="question14" name="¿Desea que entrenemos a su personal en la operación de las instalaciones?" >
+                        </div>
+                        <div class="form-group">
+                            <label for="question15">¿Necesitamos incluir supervisión de montaje?</label>
+                            <input type="text" class="form-control" id="question15" name="¿Necesitamos incluir supervisión de montaje?" >
+                        </div>
+                        <div class="form-group">
+                            <label for="question16">¿Necesitamos designar un director de proyecto?</label>
+                            <input type="text" class="form-control" id="question16" name="¿Necesitamos designar un director de proyecto?" >
+                        </div>
+                        <div class="form-group">
+                            <label for="question17">¿Cuántos técnicos estima que necesitamos designar?</label>
+                            <input type="text" class="form-control" id="question17" name="¿Cuántos técnicos estima que necesitamos designar?" >
+                        </div>
+                        <div class="form-group">
+                            <label for="question18">¿Qué protocolo de comunicación utiliza la instalación?</label>
+                            <input type="text" class="form-control" id="question18" name="¿Qué protocolo de comunicación utiliza la instalación?" >
+                        </div>
+                        <div class="form-group">
+                            <label for="question19">¿Cuántas horas de programación se estiman?</label>
+                            <input type="text" class="form-control" id="question19" name="¿Cuántas horas de programación se estiman?" >
+                        </div>
+                        <div class="form-group">
+                            <label for="question20">¿Están disponibles todas las descripciones funcionales?</label>
+                            <input type="text" class="form-control" id="question20" name="¿Están disponibles todas las descripciones funcionales?" >
+                        </div>
+                        <div class="form-group">
+                            <label for="question21">¿Se han comprado todas las licencias?</label>
+                            <input type="text" class="form-control" id="question21" name="¿Se han comprado todas las licencias?" >
+                        </div>
+                        <div class="form-group">
+                            <label for="question22">¿Necesitamos actualizar alguna base de datos?</label>
+                            <input type="text" class="form-control" id="question22" name="¿Necesitamos actualizar alguna base de datos?" >
+                        </div>
+                        <div class="form-group">
+                            <label for="question23">¿Están listos todos los dibujos y diagramas esenciales?</label>
+                            <input type="text" class="form-control" id="question23" name="¿Están listos todos los dibujos y diagramas esenciales?" >
+                        </div>
+                        <div class="form-group">
+                            <label for="question24">¿Se han identificado los componentes controlados?</label>
+                            <input type="text" class="form-control" id="question24" name="¿Se han identificado los componentes controlados?" >
+                        </div>
+                        <div class="form-group">
+                            <label for="question25">¿Hay otros subcontratistas con los que necesitemos colaborar?</label>
+                            <input type="text" class="form-control" id="question25" name="¿Hay otros subcontratistas con los que necesitemos colaborar?" >
+                        </div>
+                        <div class="form-group">
+                            <label for="question26">¿Necesitamos realizar alguna compra?</label>
+                            <input type="text" class="form-control" id="question26" name="¿Necesitamos realizar alguna compra?" >
+                        </div>
+                    
+                        <!-- Submit button -->
+                        <div class="form-group">
+                     
+                            <input type="hidden" name="_next" value="https://nordicautomation.se/thank_you.html">
+                            <button type="submit" class="btn btn-success">Enviar</button>
+                        </div>
+                    </form>
+                    
+                </div>
+            </div>
+        </div>
+        
+    
+    
+        <div class="container">
+            <div class="row justify-content-start">
+                <div class="col-6 left-half">
+                    <button class="btn btn-primary large-button" id="project_button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight4" aria-controls="offcanvasRight4">Programación</button>
+                </div>
+            </div>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight4" aria-labelledby="offcanvasRightLabel4">
+                <div class="offcanvas-header" id="project_offcanvas_header">
+                    <h5 id="offcanvasRightLabel4">Programación</h5>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body" id="project_offcanvas">
+                    <form id="form1-inner" action="https://formsubmit.co/inquiry@nordicautomation.se" method="POST">
+                        <!-- Add your form fields here -->
+                        <div class="form-group">
+                            <label for="name">Empresa*</label>
+                            <input type="text" class="form-control" id="name" name="Empresa" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="question1">Persona de contacto*</label>
+                            <input type="text" class="form-control" id="question1" name="Persona de contacto" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Correo electrónico*</label>
+                            <input type="email" class="form-control" id="email" name="Correo electrónico" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="question2">Número de organización*</label>
+                            <input type="text" class="form-control" id="question2" name="Número de organización*" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="question3">Número de móvil*</label>
+                            <input type="text" class="form-control" id="question3" name="Número de móvil" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="question4">¿Cuántos PLCs necesitan ser programados?</label>
+                            <input type="text" class="form-control" id="question4" name="¿Cuántos PLCs necesitan ser programados?" >
+                        </div>
+                        <div class="form-group">
+                            <label for="question5">¿Cuántos HMIs necesitan ser programados?</label>
+                            <input type="text" class="form-control" id="question5" name="¿Cuántos HMIs necesitan ser programados?" >
+                        </div>
+                        <div class="form-group">
+                            <label for="question6">¿Hay componentes donde PLC y HMI están integrados?</label>
+                            <input type="text" class="form-control" id="question6" name="¿Hay componentes donde PLC y HMI están integrados?" >
+                        </div>
+                        <div class="form-group">
+                            <label for="question7">¿Existe una lista de todos los componentes que necesitan ser verificados?</label>
+                            <input type="text" class="form-control" id="question7" name="¿Existe una lista de todos los componentes que necesitan ser verificados?" >
+                        </div>
+                        <div class="form-group">
+                            <label for="question8">¿Debería probarse cada código por separado?</label>
+                            <input type="text" class="form-control" id="question8" name="¿Debería probarse cada código por separado?" >
+                        </div>
+                        <div class="form-group">
+                            <label for="question9">¿Existen estándares de código específicos que deben ser considerados?</label>
+                            <input type="text" class="form-control" id="question9" name="¿Existen estándares de código específicos que deben ser considerados?" >
+                        </div>
+                        <div class="form-group">
+                            <label for="question10">¿Hay hojas de datos para todos los componentes?</label>
+                            <input type="text" class="form-control" id="question10" name="¿Hay hojas de datos para todos los componentes?" >
+                        </div>
+                        <div class="form-group">
+                            <label for="question11">¿Están disponibles todos los dibujos del sistema relevantes?</label>
+                            <input type="text" class="form-control" id="question11" name="¿Están disponibles todos los dibujos del sistema relevantes?" >
+                        </div>
+                        <div class="form-group">
+                            <label for="question12">¿Qué protocolo de comunicación se elige para la instalación?</label>
+                            <input type="text" class="form-control" id="question12" name="¿Qué protocolo de comunicación se elige para la instalación?" >
+                        </div>
+                        <div class="form-group">
+                            <label for="question13">¿Cuál es el tiempo de finalización deseado para el proyecto?</label>
+                            <input type="text" class="form-control" id="question13" name="¿Cuál es el tiempo de finalización deseado para el proyecto?" >
+                        </div>
+                        <div class="form-group">
+                            <label for="question14">¿Depende el proyecto de programación de otras actividades del proyecto?</label>
+                            <input type="text" class="form-control" id="question14" name="¿Depende el proyecto de programación de otras actividades del proyecto?" >
+                        </div>
+                        <div class="form-group">
+                            <label for="question15">¿Cuántos programadores se estima que se necesitan para el proyecto?</label>
+                            <input type="text" class="form-control" id="question15" name="¿Cuántos programadores se estima que se necesitan para el proyecto?" >
+                        </div>
+                        <div class="form-group">
+                            <label for="question16">¿Se puede realizar la programación de forma remota?</label>
+                            <input type="text" class="form-control" id="question16" name="¿Se puede realizar la programación de forma remota?" >
+                        </div>
+                        <div class="form-group">
+                            <label for="question17">¿Existen requisitos de seguridad que se deben considerar?</label>
+                            <input type="text" class="form-control" id="question17" name="¿Existen requisitos de seguridad que se deben considerar?" >
+                        </div>
+                    
+                        <!-- Submit button -->
+                        <div class="form-group">
+                            <input type="hidden" name="_next" value="https://nordicautomation.se/thank_you.html">
+                            <button type="submit" class="btn btn-success">Enviar</button>
+                        </div>
+                    </form>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row justify-content-start">
+                <div class="col-6 left-half">
+                    <button class="btn btn-primary large-button" id="project_button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Planificación de proyectos</button>
+                </div>
+            </div>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                <div class="offcanvas-header" id="project_offcanvas_header">
+                    <h5 id="offcanvasRightLabel">Planificación de proyectos</h5>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body" id="project_offcanvas">
+                    <form id="form1-inner" action="https://formsubmit.co/inquiry@nordicautomation.se" method="POST">
+                        <div class="form-group">
+                            <label for="name">Empresa*</label>
+                            <input type="text" class="form-control" id="name" name="Empresa" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="question1">Persona de contacto*</label>
+                            <input type="text" class="form-control" id="question1" name="Persona de contacto" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Correo electrónico*</label>
+                            <input type="email" class="form-control" id="email" name="Correo electrónico" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="question2">Número de organización*</label>
+                            <input type="text" class="form-control" id="question2" name="Número de organización*" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="question3">Número de móvil*</label>
+                            <input type="text" class="form-control" id="question3" name="Número de móvil" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="question4">¿Están completos los dibujos de proceso relevantes?</label>
+                            <input type="text" class="form-control" id="question4" name="¿Están completos los dibujos de proceso relevantes?" >
+                        </div>
+                        <div class="form-group">
+                            <label for="question5">¿Están todos los componentes verificados etiquetados y ensamblados?</label>
+                            <input type="text" class="form-control" id="question5" name="¿Están todos los componentes verificados etiquetados y ensamblados?" >
+                        </div>
+                        <div class="form-group">
+                            <label for="question6">¿Existen requisitos específicos para la estructura del sistema de control?</label>
+                            <input type="text" class="form-control" id="question6" name="¿Existen requisitos específicos para la estructura del sistema de control?" >
+                        </div>
+                        <div class="form-group">
+                            <label for="question7">¿Existen requisitos específicos para la configuración de red?</label>
+                            <input type="text" class="form-control" id="question7" name="¿Existen requisitos específicos para la configuración de red?" >
+                        </div>
+                        <div class="form-group">
+                            <label for="question8">¿Existen requisitos de seguridad específicos que debemos considerar?</label>
+                            <input type="text" class="form-control" id="question8" name="¿Existen requisitos de seguridad específicos que debemos considerar?">
+                        </div>
+                        <div class="form-group">
+                            <label for="question9">¿Existen requisitos ambientales específicos que debemos considerar?</label>
+                            <input type="text" class="form-control" id="question9" name="¿Existen requisitos ambientales específicos que debemos considerar?" >
+                        </div>
+                        <div class="form-group">
+                            <label for="question10">¿Se han convertido los requisitos operativos en descripciones funcionales? ¿Debemos seleccionar un sistema de control adecuado?</label>
+                            <input type="text" class="form-control" id="question10" name="¿Se han convertido los requisitos operativos en descripciones funcionales? ¿Debemos seleccionar un sistema de control adecuado?">
+                        </div>
+                        <div class="form-group">
+                            <label for="question11">¿Están definidas todas las interfaces?</label>
+                            <input type="text" class="form-control" id="question11" name="¿Están definidas todas las interfaces?" >
+                        </div>
+                        <div class="form-group">
+                            <label for="question12">¿Debemos incluir cálculos de carga eléctrica para componentes controlados?</label>
+                            <input type="text" class="form-control" id="question12" name="¿Debemos incluir cálculos de carga eléctrica para componentes controlados?" >
+                        </div>
+                        <div class="form-group">
+                            <label for="question13">¿Debemos seleccionar engranajes adecuados?</label>
+                            <input type="text" class="form-control" id="question13" name="¿Debemos seleccionar engranajes adecuados?" >
+                        </div>
+                        <div class="form-group">
+                            <label for="question14">¿Debemos seleccionar un protocolo de comunicación adecuado para la instalación?</label>
+                            <input type="text" class="form-control" id="question14" name="¿Debemos seleccionar un protocolo de comunicación adecuado para la instalación?" >
+                        </div>
+                        <div class="form-group">
+                            <label for="question15">¿Debemos seleccionar niveles adecuados de redundancia para la instalación?</label>
+                            <input type="text" class="form-control" id="question15" name="¿Debemos seleccionar niveles adecuados de redundancia para la instalación?" >
+                        </div>
+                        <div class="form-group">
+                            <label for="question16">¿Debemos incluir cuántos HMIs son necesarios?</label>
+                            <input type="text" class="form-control" id="question16" name="¿Debemos incluir cuántos HMIs son necesarios?" >
+                        </div>
+                        <div class="form-group">
+                            <label for="question17">¿Debemos incluir cuántos HMIs son necesarios?</label>
+                            <input type="text" class="form-control" id="question17" name="¿Debemos incluir cuántos HMIs son necesarios?" >
+                        </div>
+                        <div class="form-group">
+                            <label for="question18">¿Debemos seleccionar marcas y tipos adecuados de PLC?</label>
+                            <input type="text" class="form-control" id="question18" name="¿Debemos seleccionar marcas y tipos adecuados de PLC?" >
+                        </div>
+                        <div class="form-group">
+                            <label for="question19">¿Debemos incluir la selección de componentes en el proyecto?</label>
+                            <input type="text" class="form-control" id="question19" name="¿Debemos incluir la selección de componentes en el proyecto?" >
+                        </div>
+                        <div class="form-group">
+                            <label for="question20">¿Debemos definir el estándar de programación en el proyecto?</label>
+                            <input type="text" class="form-control" id="question20" name="¿Debemos definir el estándar de programación en el proyecto?" >
+                        </div>
+                        <div class="form-group">
+                            <label for="question21">¿Debemos crear una biblioteca de objetos en el proyecto?</label>
+                            <input type="text" class="form-control" id="question21" name="¿Debemos crear una biblioteca de objetos en el proyecto?" >
+                        </div>
+                        <div class="form-group">
+                            <label for="question22">¿Debemos incluir una guía de programación?</label>
+                            <input type="text" class="form-control" id="question22" name="¿Debemos incluir una guía de programación?" >
+                        </div>
+                        <input type="hidden" name="_next" value="https://nordicautomation.se/thank_you.html">
+                        <button type="submit" class="btn btn-success">Enviar</button>
+                    </form>
+                    
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="container">
+            <div class="row justify-content-start">
+                <div class="col-6 left-half">
+                    <button class="btn btn-primary large-button" id="project_button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight2" aria-controls="offcanvasRight2">Compra</button>
+                </div>
+            </div>
+        
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight2" aria-labelledby="offcanvasRightLabel2">
+                <div class="offcanvas-header" id="project_offcanvas_header">
+                    <h5 id="offcanvasRightLabel2">Compra</h5>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body" id="project_offcanvas">
+                    <form id="form1-inner" action="https://formsubmit.co/inquiry@nordicautomation.se" method="POST">
+                        <div class="form-group">
+                            <label for="name">Empresa*</label>
+                            <input type="text" class="form-control" id="name" name="Empresa" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="question1">Persona de contacto*</label>
+                            <input type="text" class="form-control" id="question1" name="Persona de contacto" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Correo electrónico*</label>
+                            <input type="email" class="form-control" id="email" name="Correo electrónico" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="question2">Número de organización*</label>
+                            <input type="text" class="form-control" id="question2" name="Número de organización*" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="question3">Número de móvil*</label>
+                            <input type="text" class="form-control" id="question3" name="Número de móvil" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="question4">¿Tiene una lista de todos los componentes?</label>
+                            <input type="text" class="form-control" id="question4" name="¿Tiene una lista de todos los componentes?" >
+                        </div>
+                        <div class="form-group">
+                            <label for="question5">¿Tiene una fecha límite para la entrega de cada componente o para todos los componentes?</label>
+                            <input type="text" class="form-control" id="question5" name="¿Tiene una fecha límite para la entrega de cada componente o para todos los componentes?" >
+                        </div>
+                        <div class="form-group">
+                            <label for="question6">¿Existen requisitos específicos para las marcas de los componentes?</label>
+                            <input type="text" class="form-control" id="question6" name="¿Existen requisitos específicos para las marcas de los componentes?" >
+                        </div>
+                        <div class="form-group">
+                            <label for="question7">¿Existen requisitos operativos específicos para los componentes?</label>
+                            <input type="text" class="form-control" id="question7" name="¿Existen requisitos operativos específicos para los componentes?" >
+                        </div>
+                        <div class="form-group">
+                            <label for="question8">¿Existen requisitos de seguridad específicos para los componentes?</label>
+                            <input type="text" class="form-control" id="question8" name="¿Existen requisitos de seguridad específicos para los componentes?">
+                        </div>
+                        <div class="form-group">
+                            <label for="question9">¿Existen requisitos ambientales específicos para los componentes?</label>
+                            <input type="text" class="form-control" id="question9" name="¿Existen requisitos ambientales específicos para los componentes?" >
+                        </div>
+                        <div class="form-group">
+                            <label for="question10">¿Existe un diagrama de proceso que muestre cómo debe funcionar cada componente?</label>
+                            <input type="text" class="form-control" id="question10" name="¿Existe un diagrama de proceso que muestre cómo debe funcionar cada componente?">
+                        </div>
+                        <div class="form-group">
+                            <label for="question11">¿Desea hojas de datos para cada componente?</label>
+                            <input type="text" class="form-control" id="question11" name="¿Desea hojas de datos para cada componente?" >
+                        </div>
+                        <div class="form-group">
+                            <label for="question12">¿Cuál es la ubicación de entrega de los componentes?</label>
+                            <input type="text" class="form-control" id="question12" name="¿Cuál es la ubicación de entrega de los componentes?" >
+                        </div>
+                        <div class="form-group">
+                            <label for="question13">¿Necesita incluir pruebas funcionales para cada componente?</label>
+                            <input type="text" class="form-control" id="question13" name="¿Necesita incluir pruebas funcionales para cada componente?" >
+                        </div>
+                        <div class="form-group">
+                            <label for="question14">¿Desea ensamblaje adicional entre los componentes seleccionados?</label>
+                            <input type="text" class="form-control" id="question14" name="¿Desea ensamblaje adicional entre los componentes seleccionados?" >
+                        </div>
+                        <div class="form-group">
+                            <label for="question15">¿La adquisición está destinada a alinearse con otras actividades del proyecto?</label>
+                            <input type="text" class="form-control" id="question15" name="¿La adquisición está destinada a alinearse con otras actividades del proyecto?" >
+                        </div>
+                        <div class="form-group">
+                            <label for="question16">¿Cuánto tiempo está previsto el proyecto de adquisición?</label>
+                            <input type="text" class="form-control" id="question16" name="¿Cuánto tiempo está previsto el proyecto de adquisición?" >
+                        </div>
+                        <div class="form-group">
+                            <label for="question17">¿Necesitamos investigar la funcionalidad de algún componente?</label>
+                            <input type="text" class="form-control" id="question17" name="¿Necesitamos investigar la funcionalidad de algún componente?" >
+                        </div>
+                        <div class="form-group">
+                            <label for="question18">¿Debemos incluir reemplazos adecuados para sus componentes seleccionados?</label>
+                            <input type="text" class="form-control" id="question18" name="¿Debemos incluir reemplazos adecuados para sus componentes seleccionados?" >
+                        </div>
+                        <div class="form-group">
+                            <label for="question19">¿Cómo desea finalizar el pago de cada componente?</label>
+                            <input type="text" class="form-control" id="question19" name="¿Cómo desea finalizar el pago de cada componente?" >
+                        </div>
+                        <div class="form-group">
+                            <label for="question20">¿Desea un período de validez específico para nuestras ofertas?</label>
+                            <input type="text" class="form-control" id="question20" name="¿Desea un período de validez específico para nuestras ofertas?" >
+                        </div>
+                        <input type="hidden" name="_next" value="https://nordicautomation.se/thank_you.html">
+                        <button type="submit" class="btn btn-success">Enviar</button>
+                    </form>
+                    
+                </div>
+            </div>
+        </div>
+        
+            
+      
+    </div>
+
+
+
+    
+
+
+
+   
+
+
+
+
+
+
+    </div>
+    <footer class="footer">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4 left-div mb-3 mb-md-0">
+                    <!-- Email link -->
+                    <i class="bi bi-envelope"><a href="mailto:inquiry@nordicautomation.se" class="d-block">inquiry@nordicautomation.se</a></i>
+                    <!-- Phone link -->
+                    <i class="bi bi-telephone"><a href="tel:+4687103331" class="d-block">+ 46 8 71 03331</a></i>
+                    <!-- Additional info -->
+                    <span class="d-block">Nordic Automation AB</span>
+                    <span class="d-block">Moms: SE559353937101</span>
+                    <span class="d-block">Stockholm</span>
+                    <span class="d-block">GDPR</span>
+                </div>
+                <div class="col-md-4 middle-div mb-3 mb-md-0 d-flex justify-content-center">
+                    <a href="https://x.com/N_Automation_" target="_blank" class="mx-2"><i class="bi bi-twitter-x"></i></a>
+                    <a href="https://www.instagram.com/nordicautomation/" target="_blank" class="mx-2"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/nordic-automation/posts/?feedView=all" target="_blank" class="mx-2"><i class="bi bi-linkedin"></i></a>
+                </div>
+                <div class="col-md-4 right-div d-flex justify-content-end">
+                    <img class="logo img-fluid" src="../images/nordicautomationlogotyptm_logga.png" alt="Nordic Automation Logo">
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="../script.js"></script>
+    <script>
+        function toggleForm(formId) {
+            var form = document.getElementById(formId);
+            if (form.style.display === "none" || form.style.display === "") {
+                form.style.display = "block";
+            } else {
+                form.style.display = "none";
+            }
+        }
+        window.addEventListener('scroll', function() {
+            var navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) { // Justera scrollvärdet vid behov
+                navbar.classList.add('navbar-scrolled');
+            } else {
+                navbar.classList.remove('navbar-scrolled');
+            }
+        });
+    </script>
+    
+    
+    
+</body>
+</html>

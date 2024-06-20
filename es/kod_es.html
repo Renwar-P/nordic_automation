@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Código</title>
+    <link rel="icon" href="../images/logga_nordic.png" type="image/x-icon">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+   
+</head>
+<body>
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-transparent fixed-top">
+        <div class="container">
+            <!-- Links in the logo (on the left) -->
+            <a class="navbar-brand" href="#">
+                <img src="../images/nordicautomationlogotyptm_logga.png" alt="Nordic Automation Logo">
+            </a>
+    
+            <!-- Toggle button for smaller screens -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <!-- Navigation links and flags (in the middle) -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index_es.html">Hogar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="shop_es.html">Comercio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="projekt_es.html">Proyecto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="kod_es.html">Código</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ai_es.html">AI</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="drone_es.html">UAV</a>
+                    </li>
+                </ul>
+                <div class="navbar-icons">
+                    <a class="navbar-brand" href="../index.html">
+                        <img src="../images/sweden_flag.png" alt="Sweden Flag">
+                    </a>
+                    <a class="navbar-brand" href="../de/index_de.html">
+                        <img src="../images/german_flag.png" alt="German Flag">
+                    </a>
+                    <a class="navbar-brand" href="index_es.html">
+                        <img src="../images/spain_flag.png" alt="Spain Flag">
+                    </a>
+                    <a class="navbar-brand" href="../en/index_en.html">
+                        <img src="../images/british_flag.png" alt="British Flag">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="video-background">
+            <video id="video" autoplay loop muted playsinline class="background-media">
+                <source src="../images/code_video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="text-overlay">
+                <h1></h1>
+            </div>
+        </div>
+   
+    </div>
+    
+
+    <div class="container-fluid" id="code-forms" style="background-image: url('../images/Nordic Automation Website - Code.png');">
+        
+            <div class="text-overlay-robots text-content">
+                <h1>Código</h1>
+                <p>Elija entre servicios de códigos comunes y complete tantos campos como sea posible para que nuestros representantes puedan comunicarse con usted y analizar el alcance del proyecto.</p>
+            </div>
+        
+        <div class="container">
+            <div class="row justify-content-start">
+                <div class="col-6 left-half">
+                    <button class="btn btn-primary large-button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Código</button>
+                </div>
+            </div>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                <div class="offcanvas-header">
+                    <h5 id="offcanvasRightLabel">Código</h5>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <form id="form1-inner" action="https://formsubmit.co/inquiry@nordicautomation.se" method="POST">
+                        <div class="form-group">
+                            <label for="name">Empresa*</label>
+                            <input type="text" class="form-control" id="name" name="Empresa" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="question1">Persona de contacto*</label>
+                            <input type="text" class="form-control" id="question1" name="PersonaDeContacto" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Correo electrónico*</label>
+                            <input type="email" class="form-control" id="email" name="CorreoElectrónico" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="question2">Número de organización*</label>
+                            <input type="text" class="form-control" id="question2" name="NúmeroDeOrganización" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="question3">Número de móvil*</label>
+                            <input type="text" class="form-control" id="question3" name="NúmeroDeMóvil" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="question4">¿Qué componente necesita ser programado?</label>
+                            <input type="text" class="form-control" id="question4" name="ComponenteAProgramar">
+                        </div>
+                        <div class="form-group">
+                            <label for="question5">¿Hay muchos componentes que necesitan ser programados en un proceso?</label>
+                            <input type="text" class="form-control" id="question5" name="VariosComponentesAProgramar">
+                        </div>
+                        <div class="form-group">
+                            <label for="question6">¿Tiene hojas de datos para el componente o componentes que necesitan ser programados?</label>
+                            <input type="text" class="form-control" id="question6" name="HojasDeDatosParaComponentes">
+                        </div>
+                        <div class="form-group">
+                            <label for="question7">¿Deberíamos crear una biblioteca de objetos?</label>
+                            <input type="text" class="form-control" id="question7" name="CrearBibliotecaDeObjetos">
+                        </div>
+                        <div class="form-group">
+                            <label for="question8">¿Existen estándares específicos de la IEC que debamos considerar?</label>
+                            <input type="text" class="form-control" id="question8" name="EstándaresIECEspecíficos">
+                        </div>
+                        <div class="form-group">
+                            <label for="question9">¿Hay un software de sistema de control preferido que debamos utilizar?</label>
+                            <input type="text" class="form-control" id="question9" name="SoftwareDeSistemaDeControlPreferido">
+                        </div>
+                        <div class="form-group">
+                            <label for="question10">¿Deberíamos incluir el costo de la licencia?</label>
+                            <input type="text" class="form-control" id="question10" name="IncluirCostoDeLicencia">
+                        </div>
+                        <div class="form-group">
+                            <label for="question11">¿Estamos programando un proceso único o integrándolo en un sistema de control supervisorio?</label>
+                            <input type="text" class="form-control" id="question11" name="ProcesoÚnicoOIntegración">
+                        </div>
+                        <div class="form-group">
+                            <label for="question12">¿Tiene todos los dibujos de proceso relevantes para el componente?</label>
+                            <input type="text" class="form-control" id="question12" name="DibujosDeProcesoParaComponente">
+                        </div>
+                        <div class="form-group">
+                            <label for="question13">¿Tiene una descripción funcional para el componente o componentes que programaremos?</label>
+                            <input type="text" class="form-control" id="question13" name="DescripciónFuncionalParaComponentes">
+                        </div>
+                        <div class="form-group">
+                            <label for="question14">¿Tiene una descripción funcional para el componente o componentes que programaremos?</label>
+                            <input type="text" class="form-control" id="question14" name="DescripciónFuncionalParaComponentesRepetida">
+                        </div>
+                        <div class="form-group">
+                            <label for="question15">¿Deberíamos realizar pruebas específicas en el código producido o se aceptan pruebas de funciones estándar?</label>
+                            <input type="text" class="form-control" id="question15" name="PruebasEspecíficasOEstándar">
+                        </div>
+                        <div class="form-group">
+                            <label for="question16">¿Cómo desea recibir el código?</label>
+                            <input type="text" class="form-control" id="question16" name="RecibirCódigo">
+                        </div>
+                        <input type="hidden" name="_cc" value="icenter@nordicautomation.se">
+                        <input type="hidden" name="_next" value="https://nordicautomation.se/thank_you.html">
+                        <!-- Add more form fields as needed -->
+                        <button type="submit" class="btn btn-success">Enviar</button>
+                    </form>
+                    
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+    
+            <div class="row justify-content-start">
+                <div class="col-6 left-half">
+                    <button class="btn btn-primary large-button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight2" aria-controls="offcanvasRight2">Transcodificación</button>
+                </div>
+            </div>
+    
+              
+              
+    
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight2" aria-labelledby="offcanvasRightLabel2">
+                    <div class="offcanvas-header">
+                        <h5 id="offcanvasRightLabel2">Transcodificación</h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <form id="form1-inner" action="https://formsubmit.co/inquiry@nordicautomation.se" method="POST">
+                            <div class="form-group">
+                                <label for="name">Empresa*</label>
+                                <input type="text" class="form-control" id="name" name="Empresa" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="question1">Persona de contacto*</label>
+                                <input type="text" class="form-control" id="question1" name="PersonaDeContacto" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Correo electrónico*</label>
+                                <input type="email" class="form-control" id="email" name="CorreoElectrónico" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="question2">Número de organización*</label>
+                                <input type="text" class="form-control" id="question2" name="NúmeroDeOrganización" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="question3">Número de móvil*</label>
+                                <input type="text" class="form-control" id="question3" name="NúmeroDeMóvil" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="question4">¿Tiene una descripción funcional para el código actual?</label>
+                                <input type="text" class="form-control" id="question4" name="DescripciónFuncionalParaCódigo">
+                            </div>
+                            <div class="form-group">
+                                <label for="question5">¿Deberíamos actualizar la descripción funcional actual?</label>
+                                <input type="text" class="form-control" id="question5" name="ActualizarDescripciónFuncional">
+                            </div>
+                            <div class="form-group">
+                                <label for="question6">¿Tiene problemas con un protocolo de resolución de problemas para la aplicación?</label>
+                                <input type="text" class="form-control" id="question6" name="ProblemasConProtocoloDeResolución">
+                            </div>
+                            <div class="form-group">
+                                <label for="question7">¿Cuánto tiempo ha estado ejecutando su aplicación con el código?</label>
+                                <input type="text" class="form-control" id="question7" name="DuraciónDeEjecuciónDeLaAplicación">
+                            </div>
+                            <div class="form-group">
+                                <label for="question8">¿Qué PLC utiliza para el código?</label>
+                                <input type="text" class="form-control" id="question8" name="TiposDePLCUtilizados">
+                            </div>
+                            <div class="form-group">
+                                <label for="question9">¿Deberíamos rehacer su código actual o crear uno nuevo?</label>
+                                <input type="text" class="form-control" id="question9" name="RehacerOCrearNuevoCódigo">
+                            </div>
+                            <div class="form-group">
+                                <label for="question10">¿Cuánto tiempo está disponible antes de que se deba implementar el nuevo código?</label>
+                                <input type="text" class="form-control" id="question10" name="TiempoDisponibleAntesDeImplementación">
+                            </div>
+                            <div class="form-group">
+                                <label for="question11">¿Cómo desea recibir el nuevo código?</label>
+                                <input type="text" class="form-control" id="question11" name="MétodoPreferidoDeEntregaDelCódigo">
+                            </div>
+                            <div class="form-group">
+                                <label for="question12">¿Deberíamos incluir los costos de licencia en nuestros cálculos?</label>
+                                <input type="text" class="form-control" id="question12" name="IncluirCostosDeLicencia">
+                            </div>
+                            <div class="form-group">
+                                <label for="question13">¿Hay nuevas actualizaciones o reemplazos de componentes?</label>
+                                <input type="text" class="form-control" id="question13" name="ActualizacionesOReemplazosDeComponentes">
+                            </div>
+                            <div class="form-group">
+                                <label for="question14">¿Deberíamos actualizar o crear una biblioteca de objetos?</label>
+                                <input type="text" class="form-control" id="question14" name="ActualizarOCrearBibliotecaDeObjetos">
+                            </div>
+                            <div class="form-group">
+                                <label for="question15">¿Deberíamos integrar y aplicar el código en la aplicación o aplicaciones actuales?</label>
+                                <input type="text" class="form-control" id="question15" name="IntegrarCódigoEnAplicaciones">
+                            </div>
+                            <div class="form-group">
+                                <label for="question16">¿Hay sistemas auxiliares que debemos considerar?</label>
+                                <input type="text" class="form-control" id="question16" name="ConsiderarSistemasAuxiliares">
+                            </div>
+                            <div class="form-group">
+                                <label for="question17">¿Tiene todos los dibujos de proceso para su aplicación?</label>
+                                <input type="text" class="form-control" id="question17" name="DibujosDeProceso">
+                            </div>
+                            <div class="form-group">
+                                <label for="question18">¿Cómo desea enviarnos el código actual?</label>
+                                <input type="text" class="form-control" id="question18" name="EnviarCódigoANosotros">
+                            </div>
+                            <input type="hidden" name="_cc" value="icenter@nordicautomation.se">
+                            <input type="hidden" name="_next" value="https://nordicautomation.se/thank_you.html">
+                            <button type="submit" class="btn btn-success">Enviar</button>
+                        </form>
+                        
+                        
+                    </div>
+                </div>
+            
+      
+    </div>
+
+
+    <div class="container">
+        <div class="row justify-content-start">
+            <div class="col-6 left-half">
+                <button class="btn btn-primary large-button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight3" aria-controls="offcanvasRight3">Seguro de código</button>
+            </div>
+        </div>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight3" aria-labelledby="offcanvasRightLabel3">
+            <div class="offcanvas-header">
+                <h5 id="offcanvasRightLabel3">Seguro de código</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <form id="form1-inner" action="https://formsubmit.co/inquiry@nordicautomation.se" method="POST">
+                    <!-- Add your form fields here -->
+                    <div class="form-group">
+                        <label for="name">Empresa*</label>
+                        <input type="text" class="form-control" id="name" name="Empresa" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="question1">Persona de contacto*</label>
+                        <input type="text" class="form-control" id="question1" name="PersonaDeContacto" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Correo electrónico*</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="question2">Número de organización*</label>
+                        <input type="text" class="form-control" id="question2" name="NúmeroDeOrganización" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="question3">Número de móvil*</label>
+                        <input type="text" class="form-control" id="question3" name="NúmeroDeMóvil" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="question4">¿Qué máquina o proceso desea asegurar?</label>
+                        <input type="text" class="form-control" id="question4" name="MáquinaOProcesoParaAsegurar">
+                    </div>
+                    <div class="form-group">
+                        <label for="question5">¿Cuánto tiempo desea que esté activo el seguro?</label>
+                        <input type="text" class="form-control" id="question5" name="DuraciónDelSeguro">
+                    </div>
+                    <div class="form-group">
+                        <label for="question6">¿Desea asegurar solo una máquina o un proceso completo?</label>
+                        <input type="text" class="form-control" id="question6" name="MáquinaÚnicaOProcesoCompleto">
+                    </div>
+                    <div class="form-group">
+                        <label for="question7">¿Tiene algún parámetro de tiempo de espera para informes de fallas y desviaciones?</label>
+                        <input type="text" class="form-control" id="question7" name="ParámetrosDeTiempoDeEsperaParaInformesDeFallas">
+                    </div>
+                    <div class="form-group">
+                        <label for="question8">¿Cuál es su costo de desviación cuando la máquina o el proceso no está en funcionamiento?</label>
+                        <input type="text" class="form-control" id="question8" name="CostoDeDesviaciónCuandoEstáFueraDeFuncionamiento">
+                    </div>
+                    <div class="form-group">
+                        <label for="question9">¿Tiene una descripción funcional para la aplicación?</label>
+                        <input type="text" class="form-control" id="question9" name="DescripciónFuncionalParaAplicación">
+                    </div>
+                    <div class="form-group">
+                        <label for="question10">¿Deberíamos incluir componentes en el seguro?</label>
+                        <input type="text" class="form-control" id="question10" name="IncluirComponentesEnSeguro">
+                    </div>
+                    <div class="form-group">
+                        <label for="question11">¿Deberíamos incluir pruebas y puesta en marcha en el seguro?</label>
+                        <input type="text" class="form-control" id="question11" name="IncluirPruebasYPuestaEnMarcha">
+                    </div>
+                    <div class="form-group">
+                        <label for="question12">¿Qué otro seguro tiene actualmente para sus componentes?</label>
+                        <input type="text" class="form-control" id="question12" name="SeguroActualParaComponentes">
+                    </div>
+                    <div class="form-group">
+                        <label for="question13">¿Hay nuevas actualizaciones o reemplazos de componentes?</label>
+                        <input type="text" class="form-control" id="question13" name="NuevasActualizacionesOReemplazosDeComponentes">
+                    </div>
+                    
+                    <!-- Submit button -->
+                    <div class="form-group">
+                        <input type="hidden" name="_cc" value="icenter@nordicautomation.se">
+                        <input type="hidden" name="_next" value="https://nordicautomation.se/thank_you.html">
+                        <button type="submit" class="btn btn-success">Enviar</button>
+                    </div>
+                </form>
+                
+                
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row justify-content-start">
+            <div class="col-6 left-half">
+                <button class="btn btn-primary large-button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight4" aria-controls="offcanvasRight4">Banco de códigos</button>
+            </div>
+        </div>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight4" aria-labelledby="offcanvasRightLabel4">
+            <div class="offcanvas-header">
+                <h5 id="offcanvasRightLabel4">Banco de códigos</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <form id="form1-inner" action="https://formsubmit.co/inquiry@nordicautomation.se" method="POST">
+                    <!-- Add your form fields here -->
+                    <div class="form-group">
+                        <label for="name">Empresa*</label>
+                        <input type="text" class="form-control" id="name" name="Empresa" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="question1">Persona de contacto*</label>
+                        <input type="text" class="form-control" id="question1" name="PersonaDeContacto" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Correo electrónico*</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="question2">Número de organización*</label>
+                        <input type="text" class="form-control" id="question2" name="NúmeroDeOrganización" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="question3">Número de móvil*</label>
+                        <input type="text" class="form-control" id="question3" name="NúmeroDeMóvil" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="question4">¿Sabe cuántos datos genera su máquina o proceso?</label>
+                        <input type="text" class="form-control" id="question4" name="DatosGeneradosPorMáquinaOProceso">
+                    </div>
+                    <div class="form-group">
+                        <label for="question5">¿Deberíamos incluir un análisis estimado del total de datos generados?</label>
+                        <input type="text" class="form-control" id="question5" name="IncluirAnálisisEstimadoDeDatos">
+                    </div>
+                    <div class="form-group">
+                        <label for="question6">¿Tiene una estrategia específica de almacenamiento de datos?</label>
+                        <input type="text" class="form-control" id="question6" name="EstrategiaDeAlmacenamientoDeDatos">
+                    </div>
+                    <div class="form-group">
+                        <label for="question7">¿Quiere recopilar datos de una aplicación o de un proceso completo?</label>
+                        <input type="text" class="form-control" id="question7" name="RecopilarDatosDeAplicaciónOProceso">
+                    </div>
+                    <div class="form-group">
+                        <label for="question8">¿Cuál es el protocolo de comunicación para su componente o proceso?</label>
+                        <input type="text" class="form-control" id="question8" name="ProtocoloDeComunicación">
+                    </div>
+                    <div class="form-group">
+                        <label for="question9">¿Tiene intervalos específicos para la recopilación de datos o debe ser continua?</label>
+                        <input type="text" class="form-control" id="question9" name="IntervalosDeRecopilaciónDeDatos">
+                    </div>
+                    <div class="form-group">
+                        <label for="question10">¿Los datos son generados por diferentes software o por el mismo?</label>
+                        <input type="text" class="form-control" id="question10" name="DatosGeneradosPorDiferenteSoftware">
+                    </div>
+                    <div class="form-group">
+                        <label for="question11">¿Tiene todos los esquemas de comunicación para su instalación?</label>
+                        <input type="text" class="form-control" id="question11" name="EsquemasDeComunicaciónParaInstalación">
+                    </div>
+                    <div class="form-group">
+                        <label for="question12">¿Deberían todos los datos almacenarse en el mismo lugar?</label>
+                        <input type="text" class="form-control" id="question12" name="AlmacenarDatosEnMismoLugar">
+                    </div>
+                    <div class="form-group">
+                        <label for="question13">¿Quiere que se generen tipos específicos de informes a partir de los datos almacenados?</label>
+                        <input type="text" class="form-control" id="question13" name="GenerarInformesDesdeDatos">
+                    </div>
+                    <div class="form-group">
+                        <label for="question14">¿Deberíamos incluir notificaciones sobre la posibilidad de aumentar o disminuir la capacidad de almacenamiento?</label>
+                        <input type="text" class="form-control" id="question14" name="NotificacionesDeCapacidadDeAlmacenamiento">
+                    </div>
+                    <div class="form-group">
+                        <label for="question15">¿Cuándo desea comenzar la recopilación de datos?</label>
+                        <input type="text" class="form-control" id="question15" name="ComenzarRecopilaciónDeDatos">
+                    </div>
+                    <div class="form-group">
+                        <label for="question16">¿Tiene requisitos específicos de seguridad para la recopilación y almacenamiento de datos de su instalación?</label>
+                        <input type="text" class="form-control" id="question16" name="RequisitosDeSeguridadParaRecopilaciónDeDatos">
+                    </div>
+                    <div class="form-group">
+                        <label for="question17">¿Hay individuos u organizaciones específicas que necesiten acceso a los datos almacenados?</label>
+                        <input type="text" class="form-control" id="question17" name="RequisitosDeAccesoAData">
+                    </div>
+                    
+                    <!-- Submit button -->
+                    <div class="form-group">
+                        <input type="hidden" name="_cc" value="icenter@nordicautomation.se">
+                        <input type="hidden" name="_next" value="https://nordicautomation.se/thank_you.html">
+                        <button type="submit" class="btn btn-success">Enviar</button>
+                    </div>
+                </form>
+                
+                
+            </div>
+        </div>
+    </div>
+
+
+</div>  
+
+   
+
+
+
+
+
+
+   
+
+
+
+
+   
+
+
+
+
+
+    <footer class="footer_kod">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4 left-div mb-3 mb-md-0">
+                    <!-- Email link -->
+                    <i class="bi bi-envelope"><a href="mailto:inquiry@nordicautomation.se" class="d-block">inquiry@nordicautomation.se</a></i>
+                    <!-- Phone link -->
+                    <i class="bi bi-telephone"><a href="tel:+4687103331" class="d-block">+ 46 8 71 03331</a></i>
+                    <!-- Additional info -->
+                    <span class="d-block">Nordic Automation AB</span>
+                    <span class="d-block">Moms: SE559353937101</span>
+                    <span class="d-block">Stockholm</span>
+                    <span class="d-block">GDPR</span>
+                </div>
+                <div class="col-md-4 middle-div mb-3 mb-md-0 d-flex justify-content-center">
+                    <a href="https://x.com/N_Automation_" target="_blank" class="mx-2"><i class="bi bi-twitter-x"></i></a>
+                    <a href="https://www.instagram.com/nordicautomation/" target="_blank" class="mx-2"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/nordic-automation/posts/?feedView=all" target="_blank" class="mx-2"><i class="bi bi-linkedin"></i></a>
+                </div>
+                <div class="col-md-4 right-div d-flex justify-content-end">
+                    <img class="logo img-fluid" src="../images/nordicautomationlogotyptm_logga.png" alt="Nordic Automation Logo">
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="../script.js"></script>
+    <script>
+        function toggleForm(formId) {
+            var form = document.getElementById(formId);
+            if (form.style.display === "none" || form.style.display === "") {
+                form.style.display = "block";
+            } else {
+                form.style.display = "none";
+            }
+        }
+        window.addEventListener('scroll', function() {
+            var navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) { // Justera scrollvärdet vid behov
+                navbar.classList.add('navbar-scrolled');
+            } else {
+                navbar.classList.remove('navbar-scrolled');
+            }
+        });
+    </script>
+    
+    
+    
+</body>
+</html>
