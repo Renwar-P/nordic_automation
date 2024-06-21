@@ -1039,8 +1039,23 @@ radial-gradient(circle at right, transparent, rgba(6, 11, 46, 0.5));
 
 
 
+.uav-title {
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+   
+}
 
 
+.uav-title h1 {
+
+   
+    font-size: 60px;
+}
         
 
 
@@ -1083,7 +1098,7 @@ radial-gradient(circle at right, transparent, rgba(6, 11, 46, 0.5));
      
         
             .text-overlay-drones p {
-                font-size: 15px !important;
+                font-size: 19px !important;
                 width: 220px;
             }
 
@@ -1178,5 +1193,11 @@ radial-gradient(circle at right, transparent, rgba(6, 11, 46, 0.5));
     .offcanvas.offcanvas-end {
         width: 80% !important;
         max-width: none; /* Override Bootstrap's max-width */
+    }
+
+    .uav-title h1 {
+
+   
+        font-size: 50px;
     }
 }
