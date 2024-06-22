@@ -74,7 +74,7 @@ carousel
 
 
 
-.footer {
+.footer-project {
     background: 
     linear-gradient(0deg, 
         rgba(6, 11, 46, 1) 0%, 
@@ -92,13 +92,27 @@ background-blend-mode: overlay;
     margin-top: 15px;
 }
 
-.footer .container-fluid {
+
+
+.footer {
+    background: black;
+ 
+background-size: cover;
+background-blend-mode: overlay;
+    color: white;
+    padding: 40px 20px;
+    width: 100%;
+    margin-top: 15px;
+}
+.footer .container-fluid, .footer-project .container-fluid {
     width: 100%;
     padding-left: 0;
     padding-right: 0;
 }
 
-.footer .left-div {
+
+
+.footer .left-div, .footer-project .left-div{
     display: flex;
     flex-direction: column;
     text-align: left;
@@ -108,31 +122,39 @@ background-blend-mode: overlay;
     padding-left: 60px;
 }
 
-.footer .middle-div {
+
+
+.footer .middle-div, .footer-project .middle-div {
     display: flex;
     flex-direction: row;
     justify-content: center;
     padding: 5px;
 }
 
-.footer .right-div {
+
+
+.footer .right-div, .footer-project .right-div  {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.footer .right-div img {
+
+.footer .right-div img, .footer-project .right-div img {
     max-width: 150px;
     height: auto;
 }
 
-.footer i, .footer a {
+
+
+.footer i, .footer a, .footer-project i, .footer-project a  {
     color: white;
 }
 
-.footer i::before {
+.footer i::before, .footer-project i::before {
     margin-right: 10px;
 }
+
 .footer_shop {
     background: 
     linear-gradient(0deg, 
@@ -411,15 +433,7 @@ font-size: 85px !important;
     
     }
 
-    #ai_header_text  {
-
-        font-size: 25px;
-    }
-
-    #drone_header_text {
-
-        font-size: 25px;
-    }
+  
 /* Responsive typography for AI background section */
 .text-overlay-drones h1 {
     font-size: 85px !important;/* Responsive font size */
@@ -1039,7 +1053,7 @@ radial-gradient(circle at right, transparent, rgba(6, 11, 46, 0.5));
 
 
 
-.uav-title {
+.uav-title, .project-title, .code-title, .shop-title, .ai-title, .home-title {
 
     position: absolute;
     top: 50%;
@@ -1047,16 +1061,17 @@ radial-gradient(circle at right, transparent, rgba(6, 11, 46, 0.5));
     transform: translate(-50%, -50%);
     color: white;
     text-align: center;
+    margin-top: 200px;
    
 }
 
 
-.uav-title h1 {
+.uav-title h1, .project-title h1, .code-title h1, .shop-title h1, .ai-title h1, .home-title h1 {
 
    
     font-size: 60px;
 }
-        
+    
 
 
 /* Media query to center the text on smaller screens */
@@ -1087,18 +1102,15 @@ radial-gradient(circle at right, transparent, rgba(6, 11, 46, 0.5));
         margin-top: 20px;
     }
     .text-overlay-ai_background p {
-        font-size: 17px !important;
+        font-size: 18px !important;
         
         }
 
-        .text-overlay-ai_background h1, .text-overlay-drones h1, .text-overlay-about-us h1  {
-            font-size: 65px !important;
-            
-            }
+  
      
         
             .text-overlay-drones p {
-                font-size: 19px !important;
+                font-size: 18px !important;
                 width: 220px;
             }
 
@@ -1114,7 +1126,7 @@ radial-gradient(circle at right, transparent, rgba(6, 11, 46, 0.5));
    
     .text-overlay-about-us p {
        
-        font-size: 16px;
+        font-size: 18px;
       }
 
       .text-overlay-robots {
@@ -1157,18 +1169,9 @@ radial-gradient(circle at right, transparent, rgba(6, 11, 46, 0.5));
         max-width: none; /* Override Bootstrap's max-width */
     }
 
-    #ai_header_text {
 
-        font-size: 17px;
-        width: 300px;
-    }
 
-    #drone_header_text {
-
-        font-size: 17px;
-        width: 300px;
-    }
-  
+ 
 }
 @media (max-width: 768px) {
     .left-half {
@@ -1195,9 +1198,11 @@ radial-gradient(circle at right, transparent, rgba(6, 11, 46, 0.5));
         max-width: none; /* Override Bootstrap's max-width */
     }
 
-    .uav-title h1 {
+    .uav-title h1, .project-title h1, .code-title h1, .shop-title h1, .ai-title h1, .home-title h1 {
 
    
-        font-size: 50px;
+        font-size: 35px;
     }
+
+  
 }
