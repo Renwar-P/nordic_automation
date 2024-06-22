@@ -1221,7 +1221,7 @@ radial-gradient(circle at right, transparent, rgba(6, 11, 46, 0.5));
         margin-left: 10px;
     }
 
-    #navbar-correct {
+    .custom-navbar {
 
         right: 12px;
         left: 12px;
