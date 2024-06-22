@@ -1069,7 +1069,7 @@ radial-gradient(circle at right, transparent, rgba(6, 11, 46, 0.5));
 .uav-title h1, .project-title h1, .code-title h1, .shop-title h1, .ai-title h1, .home-title h1 {
 
    
-    font-size: 60px;
+    font-size: 50px;
 }
     
 
@@ -1102,7 +1102,7 @@ radial-gradient(circle at right, transparent, rgba(6, 11, 46, 0.5));
         margin-top: 20px;
     }
     .text-overlay-ai_background p {
-        font-size: 18px !important;
+        font-size: 15px !important;
         
         }
 
@@ -1110,7 +1110,7 @@ radial-gradient(circle at right, transparent, rgba(6, 11, 46, 0.5));
      
         
             .text-overlay-drones p {
-                font-size: 18px !important;
+                font-size: 15px !important;
                 width: 220px;
             }
 
@@ -1126,7 +1126,7 @@ radial-gradient(circle at right, transparent, rgba(6, 11, 46, 0.5));
    
     .text-overlay-about-us p {
        
-        font-size: 18px;
+        font-size: 15px;
       }
 
       .text-overlay-robots {
@@ -1198,10 +1198,16 @@ radial-gradient(circle at right, transparent, rgba(6, 11, 46, 0.5));
         max-width: none; /* Override Bootstrap's max-width */
     }
 
-    .uav-title h1, .project-title h1, .code-title h1, .shop-title h1, .ai-title h1, .home-title h1 {
+    .uav-title h1, .project-title h1, .code-title h1, .shop-title h1, .ai-title h1{
 
    
-        font-size: 30px;
+        font-size: 25px;
+    }
+
+
+    .home-title h1 {
+
+        font-size: 40px;
     }
 
   
