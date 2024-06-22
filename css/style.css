@@ -557,6 +557,12 @@ margin-bottom: 15px;
 color: rgba(0, 0, 0, .5);
 border-color: #fff;
 }
+
+
+#flags {
+
+    margin-right: 20px;
+}
 .unique-carousel .carousel-caption h5 {
     display: block !important;
     background-color: rgba(0, 0, 0, 0.5);
@@ -1210,5 +1216,14 @@ radial-gradient(circle at right, transparent, rgba(6, 11, 46, 0.5));
         font-size: 40px;
     }
 
-  
+    #flags {
+
+        margin-left: 10px;
+    }
+
+    #navbar-correct {
+
+        right: 12px;
+        left: 12px;
+    }
 }
