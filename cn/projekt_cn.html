@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>项目</title>
+    <link rel="icon" href="../images/logga_nordic.png" type="image/x-icon">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <link rel="stylesheet" href="../css/style.css">
+        
+   
+</head>
+<body>
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-transparent fixed-top custom-navbar">
+        <div class="container">
+            <!-- Links in the logo (on the left) -->
+            <a class="navbar-brand">
+                <img src="../images/nordicautomationlogotyptm_logga.png" alt="Nordic Automation Logo">
+            </a>
+    
+            <!-- Toggle button for smaller screens -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <!-- Navigation links and flags (in the middle) -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index_cn.html">家</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="shop_cn.html">商店</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="projekt_cn.html">项目</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="kod_cn.html">代码</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ai_cn.html">人工智能</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="drone_cn.html">无人机 </a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+
+        <div class="navbar-icons d-flex" id="flags">
+            <a class="navbar-brand" href="../sv/projekt_sv.html">
+                <img src="../images/sweden_flag.png" alt="Sweden Flag">
+            </a>
+            <a class="navbar-brand" href="../de/projekt_de.html">
+                <img src="../images/german_flag.png" alt="German Flag">
+            </a>
+            <a class="navbar-brand" href="../es/projekt_es.html">
+                <img src="../images/spain_flag.png" alt="Spain Flag">
+            </a>
+            <a class="navbar-brand" href="../en/projekt_en.html">
+                <img src="../images/british_flag.png" alt="British Flag">
+            </a>
+            <a class="navbar-brand" href="projekt_cn.html">
+                <img src="../images/chinese_flag.png" alt="Chinese Flag">
+            </a>
+            
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="video-background">
+            <video id="video" autoplay loop muted playsinline class="background-media">
+                <source src="../images/project_video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="project-title">
+                <h1>告诉我们您的项目 – 请填写以下表格之一，我们会与您联系。</h1>
+
+            </div>
+        </div>
+   
+    </div>
+    
+    <div class="container-fluid" id="project-forms" style="background-image: url('../images/Nordic Automation Website - Project.png');">
+        <div class="text-overlay-project text-content">
+            <h1>项目</h1>
+            <p>在这里，您可以选择最常见的自动化项目类型。请尽可能多地填写空白字段，以便我们的代表可以联系您进行进一步讨论。如果您对项目的某些细节不确定，请填写初步信息，以便我们启动开放讨论并确定项目范围。</p>
+
+        </div>
+        
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-6 right-half">
+                    <button class="btn btn-primary large-button" id="project_button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight4" aria-controls="offcanvasRight3">工业机器人</button>
+                </div>
+            </div>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight3" aria-labelledby="offcanvasRightLabel4">
+                <div class="offcanvas-header" id="projekt_offcanvas_header">
+                    <h5 id="offcanvasRightLabel4">工业机器人</h5>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body" id="projekt_offcanvas">
+                    <form id="form1-inner" action="https://formsubmit.co/inquiry@nordicautomation.se" method="POST">
+                        <div class="form-group">
+                            <label for="name">公司?*</label>
+                            <input type="text" class="form-control" id="name" name="Company" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="question1">联系人?*</label>
+                            <input type="text" class="form-control" id="question1" name="Contact Person" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">电子邮件?*</label>
+                            <input type="email" class="form-control" id="email" name="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="question2">组织编号?*</label>
+                            <input type="text" class="form-control" id="question2" name="Organization Number*" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="question3">手机号码?*</label>
+                            <input type="text" class="form-control" id="question3" name="Mobile Number" required>
+                        </div>
+                       
+                        <div class="form-group">
+                            <label for="question5">机器人所需的负载能力？</label>
+                            <input type="text" class="form-control" id="question5" name="Desired load capacity for the robot?">
+                        </div>
+                       
+                        <div class="form-group">
+                            <label for="question6">机器人所需的工作范围或区域？</label>
+                            <input type="text" class="form-control" id="question6" name="Required reach or workspace for the robot?">
+                        </div>
+                        <div class="form-group">
+                            <label for="question7">机器人所需的精度或重复性？</label>
+                            <input type="text" class="form-control" id="question7" name="Required precision or repeatability for the robot?">
+                        </div>
+                        <div class="form-group">
+                            <label for="question8">机器人所需的最大速度？</label>
+                            <input type="text" class="form-control" id="question8" name="Maximum required speed for the robot?">
+                        </div>
+                       
+                        <div class="form-group">
+                            <label for="question9">机器人使用的末端执行器或夹具类型？</label>
+                            <input type="text" class="form-control" id="question9" name="Type of end-effector or gripper to be used with the robot?">
+                        </div>
+                        <div class="form-group">
+                            <label for="question10">机器人所需的控制系统？</label>
+                            <input type="text" class="form-control" id="question10" name="Required control system for the robot?">
+                        </div>
+                        <div class="form-group">
+                            <label for="question11">机器人所需的电源？</label>
+                            <input type="text" class="form-control" id="question11" name="Expected power supply for the robot?">
+                        </div>
+                        <div class="form-group">
+                            <label for="question12">机器人所需的通信协议？</label>
+                            <input type="text" class="form-control" id="question12" name="Expected communication protocol for the robot?">
+                        </div>
+                        <div class="form-group">
+                            <label for="question13">机器人所需的工作温度范围？</label>
+                            <input type="text" class="form-control" id="question13" name="Expected operating temperature range for the robot?">
+                        </div>
+                        <div class="form-group">
+                            <label for="question14">机器人所需的工作周期？</label>
+                            <input type="text" class="form-control" id="question14" name="Expected duty cycle for the robot?">
+                        </div>
+                    
+                        <div class="form-group">
+                            <label for="question15">机器人所需的传感器类型？</label>
+                            <input type="text" class="form-control" id="question15" name="Type of sensors to be used with the robot?">
+                        </div>
+                        <div class="form-group">
+                            <label for="question16">机器人是否用于危险或安全关键应用？</label>
+                            <input type="text" class="form-control" id="question16" name="Will the robot be used for hazardous or safety-critical applications?">
+                        </div>
+                    
+                        <div class="form-group">
+                            <label for="question17">机器人预期的寿命或维护要求？</label>
+                            <input type="text" class="form-control" id="question17" name="Expected lifespan or maintenance requirements for the robot?">
+                        </div>
+                    
+                        <div class="form-group">
+                            <label for="question18">机器人预期的操作环境？</label>
+                            <input type="text" class="form-control" id="question18" name="Expected operating environment for the robot?">
+                        </div>
+                    
+                        <!-- Submit button -->
+                        <div class="form-group">
+                            <input type="hidden" name="_cc" value="rp@nordicautomation.se">
+                            <input type="hidden" name="_next" value="https://nordicautomation.se/thank_you.html">
+                            <button type="submit" class="btn btn-success">发送</button>
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+            
+        </div>
+        
+    
+    
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-6 right-half">
+                    <button class="btn btn-primary large-button" id="project_button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight4" aria-controls="offcanvasRight4">编程</button>
+                </div>
+            </div>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight4" aria-labelledby="offcanvasRightLabel4">
+                <div class="offcanvas-header" id="project_offcanvas_header">
+                    <h5 id="offcanvasRightLabel4">编程</h5>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body" id="project_offcanvas">
+                    <form id="form1-inner" action="https://formsubmit.co/inquiry@nordicautomation.se" method="POST">
+                        <div class="form-group">
+                            <label for="name">公司*</label>
+                            <input type="text" class="form-control" id="name" name="Company" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="question1">联系人*</label>
+                            <input type="text" class="form-control" id="question1" name="Contact Person" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">电子邮件*</label>
+                            <input type="email" class="form-control" id="email" name="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="question2">组织编号*</label>
+                            <input type="text" class="form-control" id="question2" name="Organization Number*" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="question3">手机号码*</label>
+                            <input type="text" class="form-control" id="question3" name="Mobile Number" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="question4">需要编程的PLC数量？</label>
+                            <input type="text" class="form-control" id="question4" name="How many PLCs need to be programmed?">
+                        </div>
+                        <div class="form-group">
+                            <label for="question5">需要编程的HMI数量？</label>
+                            <input type="text" class="form-control" id="question5" name="How many HMIs need to be programmed?">
+                        </div>
+                        <div class="form-group">
+                            <label for="question6">是否有PLC和HMI集成的组件？</label>
+                            <input type="text" class="form-control" id="question6" name="Are there components where PLC and HMI are integrated?">
+                        </div>
+                        <div class="form-group">
+                            <label for="question7">是否有需要验证的所有组件的清单？</label>
+                            <input type="text" class="form-control" id="question7" name="Is there a list of all components that need to be verified?">
+                        </div>
+                        <div class="form-group">
+                            <label for="question8">每个代码是否应该单独测试？</label>
+                            <input type="text" class="form-control" id="question8" name="Should each code be tested separately?">
+                        </div>
+                        <div class="form-group">
+                            <label for="question9">是否存在特定的编码标准需要考虑？</label>
+                            <input type="text" class="form-control" id="question9" name="Are there specific code standards that need to be considered?">
+                        </div>
+                        <div class="form-group">
+                            <label for="question10">所有组件是否都有数据表？</label>
+                            <input type="text" class="form-control" id="question10" name="Are there data sheets for all components?">
+                        </div>
+                        <div class="form-group">
+                            <label for="question11">所有相关系统图纸是否都可用？</label>
+                            <input type="text" class="form-control" id="question11" name="Are all relevant system drawings available?">
+                        </div>
+                        <div class="form-group">
+                            <label for="question12">安装选择了哪种通信协议？</label>
+                            <input type="text" class="form-control" id="question12" name="What communication protocol is chosen for the installation?">
+                        </div>
+                        <div class="form-group">
+                            <label for="question13">项目所需的完成时间是多少？</label>
+                            <input type="text" class="form-control" id="question13" name="What is the desired completion time for the project?">
+                        </div>
+                        <div class="form-group">
+                            <label for="question14">项目编程是否依赖于其他项目活动？</label>
+                            <input type="text" class="form-control" id="question14" name="Does the programming project depend on other project activities?">
+                        </div>
+                        <div class="form-group">
+                            <label for="question15">项目估计需要多少程序员？</label>
+                            <input type="text" class="form-control" id="question15" name="How many programmers do you estimate are needed for the project?">
+                        </div>
+                        <div class="form-group">
+                            <label for="question16">编程可以远程进行吗？</label>
+                            <input type="text" class="form-control" id="question16" name="Can the programming be done remotely?">
+                        </div>
+                        <div class="form-group">
+                            <label for="question17">是否存在必须考虑的安全要求？</label>
+                            <input type="text" class="form-control" id="question17" name="Are there security requirements that need to be considered?">
+                        </div>
+                        
+                        <!-- Submit button -->
+                        <div class="form-group">
+                            <input type="hidden" name="_next" value="https://nordicautomation.se/thank_you.html">
+                            <button type="submit" class="btn btn-success">发送</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-6 right-half">
+                    <button class="btn btn-primary large-button" id="project_button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">项目规划</button>
+                </div>
+            </div>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                <div class="offcanvas-header" id="project_offcanvas_header">
+                    <h5 id="offcanvasRightLabel">项目规划</h5>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body" id="project_offcanvas">
+                    <form id="form1-inner" action="https://formsubmit.co/inquiry@nordicautomation.se" method="POST">
+                        <div class="form-group">
+                            <label for="name">公司*</label>
+                            <input type="text" class="form-control" id="name" name="Company" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="question1">联系人*</label>
+                            <input type="text" class="form-control" id="question1" name="Contact Person" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">电子邮件*</label>
+                            <input type="email" class="form-control" id="email" name="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="question2">组织编号*</label>
+                            <input type="text" class="form-control" id="question2" name="Organization Number*" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="question3">手机号码*</label>
+                            <input type="text" class="form-control" id="question3" name="Mobile Number" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="question4">相关流程图是否已完整？</label>
+                            <input type="text" class="form-control" id="question4" name="Are the relevant process drawings complete?">
+                        </div>
+                        <div class="form-group">
+                            <label for="question5">所有组件是否已验证、标记和组装？</label>
+                            <input type="text" class="form-control" id="question5" name="Are all components verified, labeled, and assembled?">
+                        </div>
+                        <div class="form-group">
+                            <label for="question6">控制系统结构是否有特定要求？</label>
+                            <input type="text" class="form-control" id="question6" name="Are there specific requirements for the control system structure?">
+                        </div>
+                        <div class="form-group">
+                            <label for="question7">网络配置是否有特定要求？</label>
+                            <input type="text" class="form-control" id="question7" name="Are there specific requirements for the network configuration?">
+                        </div>
+                        <div class="form-group">
+                            <label for="question8">是否有必须考虑的安全要求？</label>
+                            <input type="text" class="form-control" id="question8" name="Are there specific safety requirements that need to be considered?">
+                        </div>
+                        <div class="form-group">
+                            <label for="question9">是否有必须考虑的环境要求？</label>
+                            <input type="text" class="form-control" id="question9" name="Are there specific environmental requirements that need to be considered?">
+                        </div>
+                        <div class="form-group">
+                            <label for="question10">操作要求是否已转化为功能描述？我们是否需要选择合适的控制系统？</label>
+                            <input type="text" class="form-control" id="question10" name="Have operational requirements been converted into functional descriptions? Should we select an appropriate control system?">
+                        </div>
+                        <div class="form-group">
+                            <label for="question11">所有接口是否已定义？</label>
+                            <input type="text" class="form-control" id="question11" name="Are all interfaces defined?">
+                        </div>
+                        <div class="form-group">
+                            <label for="question12">是否需要包括电气负载计算？</label>
+                            <input type="text" class="form-control" id="question12" name="Should we include electrical load calculations for controlled components?">
+                        </div>
+                        <div class="form-group">
+                            <label for="question13">是否需要选择合适的齿轮？</label>
+                            <input type="text" class="form-control" id="question13" name="Should we select appropriate gears?">
+                        </div>
+                        <div class="form-group">
+                            <label for="question14">是否需要选择合适的通信协议？</label>
+                            <input type="text" class="form-control" id="question14" name="Should we select an appropriate communication protocol for the installation?">
+                        </div>
+                        <div class="form-group">
+                            <label for="question15">是否需要选择合适的冗余级别？</label>
+                            <input type="text" class="form-control" id="question15" name="Should we select appropriate levels of redundancy for the installation?">
+                        </div>
+                        <div class="form-group">
+                            <label for="question16">是否需要确定必要的HMI数量？</label>
+                            <input type="text" class="form-control" id="question16" name="Should we include how many HMIs are necessary?">
+                        </div>
+                        <div class="form-group">
+                            <label for="question17">是否需要确定必要的PLC数量？</label>
+                            <input type="text" class="form-control" id="question17" name="Should we select appropriate brands and types of PLCs?">
+                        </div>
+                        <div class="form-group">
+                            <label for="question18">项目中是否需要包括组件的选择？</label>
+                            <input type="text" class="form-control" id="question18" name="Should we include component selection in the project?">
+                        </div>
+                        <div class="form-group">
+                            <label for="question19">项目中是否需要定义编程标准？</label>
+                            <input type="text" class="form-control" id="question19" name="Should we define the programming standard in the project?">
+                        </div>
+                        <div class="form-group">
+                            <label for="question20">项目中是否需要创建对象库？</label>
+                            <input type="text" class="form-control" id="question20" name="Should we create an object library in the project?">
+                        </div>
+                        <div class="form-group">
+                            <label for="question21">项目中是否需要包括编程指南？</label>
+                            <input type="text" class="form-control" id="question21" name="Should we include a programming guide?">
+                        </div>
+                        <input type="hidden" name="_next" value="https://nordicautomation.se/thank_you.html">
+                        <button type="submit" class="btn btn-success">发送</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        
+
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-6 right-half">
+                    <button class="btn btn-primary large-button" id="project_button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight2" aria-controls="offcanvasRight2">购买</button>
+                </div>
+            </div>
+            
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight2" aria-labelledby="offcanvasRightLabel2">
+                <div class="offcanvas-header" id="project_offcanvas_header">
+                    <h5 id="offcanvasRightLabel2">购买</h5>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body" id="project_offcanvas">
+                    <form id="form1-inner" action="https://formsubmit.co/inquiry@nordicautomation.se" method="POST">
+                        <div class="form-group">
+                            <label for="name">公司*</label>
+                            <input type="text" class="form-control" id="name" name="Company" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="question1">联系人*</label>
+                            <input type="text" class="form-control" id="question1" name="Contact Person" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">电子邮件*</label>
+                            <input type="email" class="form-control" id="email" name="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="question2">组织编号*</label>
+                            <input type="text" class="form-control" id="question2" name="Organization Number*" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="question3">手机号码*</label>
+                            <input type="text" class="form-control" id="question3" name="Mobile Number" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="question4">您是否有所有组件的清单？</label>
+                            <input type="text" class="form-control" id="question4" name="Do you have a list of all components?">
+                        </div>
+                        <div class="form-group">
+                            <label for="question5">您是否对每个组件或所有组件有交付截止日期？</label>
+                            <input type="text" class="form-control" id="question5" name="Do you have a deadline for the delivery of each component or for all components?">
+                        </div>
+                        <div class="form-group">
+                            <label for="question6">对组件品牌是否有具体要求？</label>
+                            <input type="text" class="form-control" id="question6" name="Are there specific requirements for the brands of the components?">
+                        </div>
+                        <div class="form-group">
+                            <label for="question7">组件是否有具体的操作要求？</label>
+                            <input type="text" class="form-control" id="question7" name="Are there specific operational requirements for the components?">
+                        </div>
+                        <div class="form-group">
+                            <label for="question8">组件是否有具体的安全要求？</label>
+                            <input type="text" class="form-control" id="question8" name="Are there specific safety requirements for the components?">
+                        </div>
+                        <div class="form-group">
+                            <label for="question9">组件是否有具体的环境要求？</label>
+                            <input type="text" class="form-control" id="question9" name="Are there specific environmental requirements for the components?">
+                        </div>
+                        <div class="form-group">
+                            <label for="question10">是否有流程图显示每个组件应如何工作？</label>
+                            <input type="text" class="form-control" id="question10" name="Is there a process diagram showing how each component should function?">
+                        </div>
+                        <div class="form-group">
+                            <label for="question11">您是否需要每个组件的数据表？</label>
+                            <input type="text" class="form-control" id="question11" name="Do you want data sheets for each component?">
+                        </div>
+                        <div class="form-group">
+                            <label for="question12">组件的交货地点在哪里？</label>
+                            <input type="text" class="form-control" id="question12" name="What is the delivery location for the components?">
+                        </div>
+                        <div class="form-group">
+                            <label for="question13">您是否需要为每个组件包含功能测试？</label>
+                            <input type="text" class="form-control" id="question13" name="Do you need to include functional tests for each component?">
+                        </div>
+                        <div class="form-group">
+                            <label for="question14">您是否希望在所选组件之间进行额外的组装？</label>
+                            <input type="text" class="form-control" id="question14" name="Do you want additional assembly between the selected components?">
+                        </div>
+                        <div class="form-group">
+                            <label for="question15">收购是否旨在与项目的其他活动保持一致？</label>
+                            <input type="text" class="form-control" id="question15" name="Is the acquisition intended to align with other project activities?">
+                        </div>
+                        <div class="form-group">
+                            <label for="question16">预计收购项目需要多长时间？</label>
+                            <input type="text" class="form-control" id="question16" name="How long is the acquisition project expected to take?">
+                        </div>
+                        <div class="form-group">
+                            <label for="question17">我们是否需要调查任何组件的功能？</label>
+                            <input type="text" class="form-control" id="question17" name="Do we need to investigate the functionality of any component?">
+                        </div>
+                        <div class="form-group">
+                            <label for="question18">我们是否需要为所选组件包含合适的替代品？</label>
+                            <input type="text" class="form-control" id="question18" name="Should we include suitable replacements for your selected components?">
+                        </div>
+                        <div class="form-group">
+                            <label for="question19">您希望如何完成每个组件的付款？</label>
+                            <input type="text" class="form-control" id="question19" name="How do you wish to finalize the payment for each component?">
+                        </div>
+                        <div class="form-group">
+                            <label for="question20">您希望我们的报价有特定的有效期吗？</label>
+                            <input type="text" class="form-control" id="question20" name="Do you want a specific validity period for our offers?">
+                        </div>
+                        <input type="hidden" name="_next" value="https://nordicautomation.se/thank_you.html">
+                        <button type="submit" class="btn btn-success">发送</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        
+            
+      
+    </div>
+
+
+
+    
+
+
+
+   
+
+
+
+
+
+
+    </div>
+    <footer class="footer-project">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4 left-div mb-3 mb-md-0">
+                    <!-- Email link -->
+                    <i class="bi bi-envelope"><a href="mailto:inquiry@nordicautomation.se" class="d-block">inquiry@nordicautomation.se</a></i>
+                    <!-- Phone link -->
+                    <i class="bi bi-telephone"><a href="tel:+4687103331" class="d-block">+ 46 8 71 03331</a></i>
+                    <!-- Additional info -->
+                    <span class="d-block">Nordic Automation AB</span>
+                    <span class="d-block">Glasfibergatan 6, 125 45</span>
+                    <span class="d-block">Stockholm</span>
+                    <a href="gdpr_es.html" class="d-block">GDPR</a>
+                </div>
+                <div class="col-md-4 middle-div mb-3 mb-md-0 d-flex justify-content-center">
+                    <a href="https://x.com/N_Automation_" target="_blank" class="mx-2"><i class="bi bi-twitter-x"></i></a>
+                    <a href="https://www.instagram.com/nordicautomation/" target="_blank" class="mx-2"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/nordic-automation/posts/?feedView=all" target="_blank" class="mx-2"><i class="bi bi-linkedin"></i></a>
+                </div>
+                <div class="col-md-4 right-div d-flex justify-content-end">
+                    <img class="logo img-fluid" src="../images/nordicautomationlogotyptm_logga.png" alt="Nordic Automation Logo">
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="../script.js"></script>
+    <script>
+        function toggleForm(formId) {
+            var form = document.getElementById(formId);
+            if (form.style.display === "none" || form.style.display === "") {
+                form.style.display = "block";
+            } else {
+                form.style.display = "none";
+            }
+        }
+        window.addEventListener('scroll', function() {
+            var navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) { // Justera scrollvärdet vid behov
+                navbar.classList.add('navbar-scrolled');
+            } else {
+                navbar.classList.remove('navbar-scrolled');
+            }
+        });
+    </script>
+    
+    
+    
+</body>
+</html>
