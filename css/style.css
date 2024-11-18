@@ -103,6 +103,7 @@ background-blend-mode: overlay;
     padding: 40px 20px;
     width: 100%;
     margin-top: 15px;
+    font-size: 13px;
 }
 .footer .container-fluid, .footer-project .container-fluid {
     width: 100%;
@@ -387,7 +388,30 @@ background-blend-mode: overlay;
 }
 
 .text-overlay-about-us h1 {
-    font-size: 85px;
+    font-size: 80px;
+    /* Additional styling for your text */
+}
+
+.text-overlay-shop_project_code_background {
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    right: 5%;
+    transform: translateY(-50%);
+    z-index: 1;
+    text-align: right;
+    color: white;
+}
+
+.text-overlay-shop_project_code_background p {
+  
+ 
+    font-size: 25px;
+    
+}
+
+.text-overlay-shop_project_code_background h1 {
+    font-size: 80px;
     /* Additional styling for your text */
 }
 
@@ -424,7 +448,7 @@ background-blend-mode: overlay;
 
 }
 .text-overlay-ai_background h1 {
-font-size: 85px !important;
+font-size: 80px !important;
 
 }
 .text-overlay-ai_background p {
@@ -1103,7 +1127,7 @@ radial-gradient(circle at right, transparent, rgba(6, 11, 46, 0.5));
         margin-top: 10px;
     }
 
-    .text-overlay-ai_background {
+    .text-overlay-ai_background  {
        
         left: 30%;
         transform: translateY(-50%);
@@ -1112,8 +1136,23 @@ radial-gradient(circle at right, transparent, rgba(6, 11, 46, 0.5));
         color: white;
         margin-top: 20px;
     }
-    .text-overlay-ai_background p {
-        font-size: 15px !important;
+    .text-overlay-ai_background  p {
+        font-size: 14px !important;
+        
+        }
+
+
+    .text-overlay-shop_project_code_background  {
+       
+        left: 30%;
+        transform: translateY(-50%);
+        z-index: 1;
+       
+        color: white;
+        margin-top: 20px;
+    }
+    .text-overlay-shop_project_code_background  p {
+        font-size: 14px !important;
         
         }
 
@@ -1121,7 +1160,7 @@ radial-gradient(circle at right, transparent, rgba(6, 11, 46, 0.5));
      
         
             .text-overlay-drones p {
-                font-size: 15px !important;
+                font-size: 14px !important;
                 width: 220px;
             }
 
@@ -1137,7 +1176,7 @@ radial-gradient(circle at right, transparent, rgba(6, 11, 46, 0.5));
    
     .text-overlay-about-us p {
        
-        font-size: 15px;
+        font-size: 14px;
       }
 
       .text-overlay-robots {
@@ -1165,6 +1204,26 @@ radial-gradient(circle at right, transparent, rgba(6, 11, 46, 0.5));
     .justify-content-end {
         justify-content: center !important;
     }
+
+    .text-overlay-shop_project_code_background  {
+       
+        left: 30%;
+        transform: translateY(-50%);
+        z-index: 1;
+       
+        color: white;
+        margin-top: 20px;
+    }
+    .text-overlay-shop_project_code_background  p {
+        font-size: 14px !important;
+        
+        }
+
+        .text-overlay-shop_project_code_background  h1 {
+            font-size: 80px !important;
+            margin-left: -80px;
+            
+            }
 }
 
 
@@ -1241,3 +1300,11 @@ radial-gradient(circle at right, transparent, rgba(6, 11, 46, 0.5));
 }
 
 
+#company_title{
+
+    text-decoration: underline;
+}
+
+.office-spacing {
+    margin-top: 10px;
+}
