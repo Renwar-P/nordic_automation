@@ -121,6 +121,7 @@ background-blend-mode: overlay;
     margin-bottom: 5px;
     justify-content: space-between;
     padding-left: 60px;
+    font-size: 13px;
 }
 
 
@@ -189,6 +190,8 @@ background-blend-mode: overlay;
     margin-bottom: 5px;
     justify-content: space-between;
     padding-left: 60px;
+    font-size: 13px;
+
 }
 
 .footer_shop .middle-div {
@@ -248,6 +251,7 @@ background-blend-mode: overlay;
     margin-bottom: 5px;
     justify-content: space-between;
     padding-left: 60px;
+    font-size: 13px;
 }
 
 .footer_kod .middle-div {
