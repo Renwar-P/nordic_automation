@@ -1112,6 +1112,19 @@ radial-gradient(circle at right, transparent, rgba(6, 11, 46, 0.5));
     color: white;
 }
 
+.certification_text {
+
+    font-size: 17px;
+    color: white;
+    
+}
+
+#certification_holder {
+
+    margin-top: 100px;
+    margin-bottom: 100px;
+} 
+
 
 /* Media query to center the text on smaller screens */
 @media (max-width: 767.98px) {
@@ -1123,6 +1136,13 @@ radial-gradient(circle at right, transparent, rgba(6, 11, 46, 0.5));
         display: none;
 
       
+    }
+
+    .certification_text {
+
+        font-size: 10px;
+        
+        
     }
 
     .unique-carousel {
